@@ -68,7 +68,7 @@ class User{
 
 	public function set_password($password)
 	{
-		$this->password = $password;
+		$this->password = md5($password);
 	}
 
 	public function set_course($course)
