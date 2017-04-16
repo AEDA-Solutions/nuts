@@ -5,13 +5,14 @@
 
  	class UserController{
  		
- 		private $Dbcon = new Dbcon(); //users é o nome da tabela em sql que guarda os usuarios
+ 		private $DbController = new DbController(); 
+ 		
+ 		public function login($User){
+ 			session_start();
+ 		}
 
-
- 		//funcoes publicas
  		public function register_user($User){
  		
- 			$connection = $this->Dbcon->connect_mysql();
  			$isThereError = false;
 
  			if($this->validate_id($User)){
@@ -37,24 +38,22 @@
 
  			}
 
- 			$name = $User->get_name();
- 			$email = $User->get_email();
- 			$id = $User->get_id();
- 			$password = $User->get_password();
- 			$course = $User->get_course();
-
-
  			else{
  				//prosseguir com o cadastro
- 				$sql = "insert into users(name,email,id,password,course) values('$name','$email','$id','$password','$course')";
-				if(mysqli_query($connection,$sql)){
-				/*usuario registrado com sucesso*/
-				}
-				else{
-				/*erro no cadastro*/
-				echo "Houve um erro ao cadastrar o usuário, contate o administrador.";
-				return false;
-				}
+ 				$name = $User->get_name();
+ 				$email = $User->get_email();
+ 				$id = $User->get_id();
+ 				$password = $User->get_password();
+ 				$course = $User->get_course();
+ 				if($this->DbController->insert_user($name,$email,$id,$password,$course)){
+ 					//usuario cadastrado com sucesso
+ 				}
+
+ 				else{
+ 					echo "Houve um erro ao cadastrar o usuário, contate o administrador.";
+					return false;
+ 				}
+
  			}
 
  		}
@@ -88,42 +87,39 @@
  		private function validate_id($User){
 
  			$id = $User->get_id();
- 			$sql = "select * from users where id ='$id' ";
-			if($result = mysqli_query($connection,$sql)){
-				if(isset($result['id'])){
-					// matricula ja cadastrada
-					return false;
-				}
-				else{
-					return true;
-				}
+ 			if($result = $this->DbController->search_by_id($id)){
 
-			}
-
-			else{
-			// erro ao realizar a verificacao
-				return false;
-			}
-
+ 				if(isset($result['id'])){
+ 					return false;
+ 				}	
+ 				else{
+ 					return true;
+ 				}
+ 			}
+ 			else{
+ 				//erro na verificação no banco de dados
+ 				echo "Contate o administrador, houve um erro";
+ 				return false;
+ 			}
 		}
 
  		private function validate_email($User){
 
  			$email = $User->get_email();
-			$sql = "select * from users where email ='$email' ";
-			if($result = mysqli_query($connection,$sql)){
-				if(isset($result['email'])){
-					return false;
-				}
-				else{
-					return true;
-				}
+ 			if($result = $this->DbController->search_by_email($email)){
 
-			}
-			else{
-				//erro ao realizar verificação
-				return false;
-			}		
+ 				if(isset($result['email'])){
+ 					return false;
+ 				}	
+ 				else{
+ 					return true;
+ 				}
+ 			}
+ 			else{
+ 				//erro na verificação no banco de dados
+ 				echo "Contate o administrador, houve um erro";
+ 				return false;
+ 			}
  		}
 
  		private function update_user_data($User){
@@ -133,19 +129,15 @@
  			$id = $User->get_id();
  			$password = $User->get_password();
  			$course = $User->get_course();
- 			
- 			$connection = $this->Dbcon->connect_mysql();
- 			$sql = "update users set name = '$name', email = '$email', password = '$password', course = '$course' where id = '$id'";
-			if($result = mysqli_query($connection,$sql)){
-				//sucesso na operacao
-				}
-				else{
-					//falha na operacao
-					echo "Não foi possivel alterar seus dados, por favor contate o administrador";
-					return false;
-				}
 
-			}
+ 			if($this->DbController->update_user($name,$email,$id,$password,$course)){
+ 				//sucesso na operacao
+ 			}
+
+ 			else{
+ 				//falha na operacao
+				echo "Não foi possivel alterar seus dados, por favor contate o administrador";
+ 			}
 
  		}
 
