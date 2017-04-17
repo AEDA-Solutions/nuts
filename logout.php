@@ -3,7 +3,7 @@
 	session_start();
 
 	unset($_SESSION['id']);
-	unset($SESSION['email']);
+	unset($_SESSION['email']);
 
 	header('Location : home.php');
 
