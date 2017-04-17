@@ -5,10 +5,28 @@
 
  	class UserController{
  		
- 		private $DbController = new DbController(); 
+ 		private $DbController = new DbController();
+ 		private $home = 'home.php';
+ 		private $error = 'index.php?erro=1'; 
  		
- 		public function login($User){
+ 		public function login($id,$password){
  			session_start();
+
+ 			$user_data = $this->DbController->search_by_id_and_password($id,$password);
+ 			
+ 			if(isset($user_data['id'])){
+ 				//usuario foi encontrado
+ 				//validar session tbm na home.php
+				$_SESSION['id'] = $user_data['id'];
+				$_SESSION['email'] = $user_data['email'];
+				header("Location : $this->home");
+ 			}
+
+ 			else{
+ 				//usuario nao existe
+				//Erro pode ser recuperado via $_GET['erro'] no index.php
+				header("Location : $this->error");
+ 			}
  		}
 
  		public function register_user($User){
@@ -87,9 +105,9 @@
  		private function validate_id($User){
 
  			$id = $User->get_id();
- 			if($result = $this->DbController->search_by_id($id)){
+ 			if($user_data = $this->DbController->search_by_id($id)){
 
- 				if(isset($result['id'])){
+ 				if(isset($user_data['id'])){
  					return false;
  				}	
  				else{
@@ -106,9 +124,9 @@
  		private function validate_email($User){
 
  			$email = $User->get_email();
- 			if($result = $this->DbController->search_by_email($email)){
+ 			if($user_data = $this->DbController->search_by_email($email)){
 
- 				if(isset($result['email'])){
+ 				if(isset($user_data['email'])){
  					return false;
  				}	
  				else{
