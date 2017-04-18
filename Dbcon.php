@@ -11,28 +11,19 @@ class Dbcon{
 	 private $password = '';
 
 	 //banco de dados
-	 private $database = 'nuts';
+	 private $database = 'Nuts';
 
 	 public function connect_mysql(){
 	 //criar conexao
-	 	$connection = mysqli_connect($this->host,$this->usuario,$this->senha,$this->database);
+	 	$connection = mysqli_connect($this->host,$this->user,$this->password,$this->database);
 	 	//ajustar charset
 	 	mysqli_set_charset($connection,'utf8');
 	 	return $connection;
 
 	 }
 
-	 public function __construct($host,$user,$password,$database){
-	 	$this->host = $host;
-	 	$this->user = $user;
-	 	$this->password = $password;
-	 	$this->database= $database;
-	 }
-
 	public function __construct(){
 
-	 }
-	
+	 }	
 }
-
 ?>

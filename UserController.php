@@ -1,33 +1,39 @@
 <?php
 	
-	require_once('Dbcon.php');
+	require_once('DbController.php');
 	require_once('User.php');
 
  	class UserController{
  		
- 		private $DbController = new DbController();
- 		private $home = 'home.php';
- 		private $error = 'index.php?erro=1'; 
+ 		private $DbController;
+ 		private $home;
+ 		private $error;
+
+ 		public function __construct(){
+ 			$this->DbController = new DbController();
+ 			$this->home = 'home.php';
+ 			$this->error = 'index.php?erro=1';
+ 		} 
  		
  		public function login($id,$password){
- 			session_start();
-
- 			$user_data = $this->DbController->search_by_id_and_password($id,$password);
  			
+ 			$user_data = $this->DbController->search_by_id_and_password($id,$password);
+ 
  			if(isset($user_data['id'])){
  				//usuario foi encontrado
  				//validar session tbm na home.php
 				$_SESSION['id'] = $user_data['id'];
 				$_SESSION['email'] = $user_data['email'];
-				header("Location : $this->home");
+				header("Location: $this->home");
  			}
 
  			else{
- 				//usuario nao existe
-				//Erro pode ser recuperado via $_GET['erro'] no index.php
-				header("Location : $this->error");
+ 			//usuario nao existe
+			//Erro pode ser recuperado via $_GET['erro'] no index.php
+			header("Location: $this->error");
  			}
- 		}
+ 		 }
+
 
  		public function register_user($User){
  		
@@ -64,6 +70,7 @@
  				$password = $User->get_password();
  				$course = $User->get_course();
  				if($this->DbController->insert_user($name,$email,$id,$password,$course)){
+ 					return true;
  					//usuario cadastrado com sucesso
  				}
 
@@ -96,7 +103,7 @@
 
  		public function change_user_course($User,$course){
 
- 			$User->set_course($course));
+ 			$User->set_course($course);
 			$this->update_user_data();
  		}
 
@@ -105,38 +112,27 @@
  		private function validate_id($User){
 
  			$id = $User->get_id();
- 			if($user_data = $this->DbController->search_by_id($id)){
-
- 				if(isset($user_data['id'])){
- 					return false;
- 				}	
- 				else{
- 					return true;
- 				}
- 			}
- 			else{
- 				//erro na verificação no banco de dados
- 				echo "Contate o administrador, houve um erro";
+ 			$user_data = $this->DbController->search_by_id($id);
+ 			
+ 			if(isset($user_data['id'])){
  				return false;
+ 			}	
+ 			else{
+ 				return true;
  			}
+ 
 		}
 
  		private function validate_email($User){
 
  			$email = $User->get_email();
- 			if($user_data = $this->DbController->search_by_email($email)){
-
- 				if(isset($user_data['email'])){
- 					return false;
- 				}	
- 				else{
- 					return true;
- 				}
- 			}
- 			else{
- 				//erro na verificação no banco de dados
- 				echo "Contate o administrador, houve um erro";
+ 			$user_data = $this->DbController->search_by_email($email);
+ 			
+ 			if(isset($user_data['email'])){
  				return false;
+ 			}	
+ 			else{
+ 				return true;
  			}
  		}
 

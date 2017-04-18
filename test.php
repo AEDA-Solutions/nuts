@@ -1,12 +1,12 @@
 <?php
-	
-	session_start(); 
+
+	echo "CHEGUEI";
 	require_once('UserController.php');
+	echo "CHEGUEI";
 	$id = $_POST['id'];
-	$password = md5($_POST['password']);
+	$password = $_POST['password'];
 
 	$UserController = new UserController();
 	$UserController->login($id,$password);
 
 ?>
-

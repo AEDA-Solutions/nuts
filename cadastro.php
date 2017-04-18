@@ -100,7 +100,7 @@
 		Senha: <br> 
 		<input type="password" name="password"><br>
 		<input type="submit" value="Cadastrar" />
-
+		</form>
 </font>
 </body>
 </html>
