@@ -25,12 +25,14 @@
 				$_SESSION['id'] = $user_data['id'];
 				$_SESSION['email'] = $user_data['email'];
 				header("Location: $this->home");
+				return true;
  			}
 
  			else{
  			//usuario nao existe
 			//Erro pode ser recuperado via $_GET['erro'] no index.php
 			header("Location: $this->error");
+			return false;
  			}
  		 }
 

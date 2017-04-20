@@ -6,7 +6,13 @@
 	$password = md5($_POST['password']);
 
 	$UserController = new UserController();
-	$UserController->login($id,$password);
+	if($UserController->login($id,$password))				
+		 
+	else{
+		
+	}
+		
+
 
 ?>
 

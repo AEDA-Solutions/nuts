@@ -1,3 +1,3 @@
 <?php
-echo "ta la";
+echo "Usuário autenticado !";
 ?>
