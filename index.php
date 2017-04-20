@@ -4,7 +4,7 @@
 </head>
 <meta charset="utf-8" />
 <frameset cols="15%,*">  
-<frame src="1.php">
+<frame src="menu.php">
 <frame src="rede.html" >
 <frame src="loginnuts.html" name="LOGIN">
 </frameset>
