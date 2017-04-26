@@ -6,13 +6,9 @@
  	class UserController{
  		
  		private $DbController;
- 		private $home;
- 		private $error;
 
  		public function __construct(){
  			$this->DbController = new DbController();
- 			$this->home = 'home.php';
- 			$this->error = 'index.php?erro=1';
  		} 
  		
  		public function login($id,$password){
@@ -24,18 +20,16 @@
  				//validar session tbm na home.php
 				$_SESSION['id'] = $user_data['id'];
 				$_SESSION['email'] = $user_data['email'];
-				header("Location: $this->home");
 				return true;
  			}
 
  			else{
  			//usuario nao existe
 			//Erro pode ser recuperado via $_GET['erro'] no index.php
-			header("Location: $this->error");
 			return false;
  			}
- 		 }
 
+ 		}
 
  		public function register_user($User){
  		
