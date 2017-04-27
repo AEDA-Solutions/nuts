@@ -13,5 +13,5 @@ function checkPacketLoss($address, $count) {
     return $packetLoss;
 }
 
-echo checkPacketLoss('google.com', 40);
+echo checkPacketLoss('www.jovemnerd.com.br', 20);
 ?>

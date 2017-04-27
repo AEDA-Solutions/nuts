@@ -1,19 +1,19 @@
 <?php
 	
-	require_once('DbController.php');
+	require_once('UserDatabase.php');
 	require_once('User.php');
 
  	class UserController{
  		
- 		private $DbController;
+ 		private $UserDatabase;
 
  		public function __construct(){
- 			$this->DbController = new DbController();
+ 			$this->UserDatabase = new UserDatabase();
  		} 
  		
  		public function login($id,$password){
  			
- 			$user_data = $this->DbController->search_by_id_and_password($id,$password);
+ 			$user_data = $this->UserDatabase->search_by_id_and_password($id,$password);
  
  			if(isset($user_data['id'])){
  				//usuario foi encontrado
@@ -65,7 +65,7 @@
  				$id = $User->get_id();
  				$password = $User->get_password();
  				$course = $User->get_course();
- 				if($this->DbController->insert_user($name,$email,$id,$password,$course)){
+ 				if($this->UserDatabase->insert_user($name,$email,$id,$password,$course)){
  					return true;
  					//usuario cadastrado com sucesso
  				}
@@ -108,7 +108,7 @@
  		private function validate_id($User){
 
  			$id = $User->get_id();
- 			$user_data = $this->DbController->search_by_id($id);
+ 			$user_data = $this->UserDatabase->search_by_id($id);
  			
  			if(isset($user_data['id'])){
  				return false;
@@ -122,7 +122,7 @@
  		private function validate_email($User){
 
  			$email = $User->get_email();
- 			$user_data = $this->DbController->search_by_email($email);
+ 			$user_data = $this->UserDatabase->search_by_email($email);
  			
  			if(isset($user_data['email'])){
  				return false;
@@ -140,7 +140,7 @@
  			$password = $User->get_password();
  			$course = $User->get_course();
 
- 			if($this->DbController->update_user($name,$email,$id,$password,$course)){
+ 			if($this->UserDatabase->update_user($name,$email,$id,$password,$course)){
  				//sucesso na operacao
  			}
 

@@ -11,22 +11,20 @@
 <font size="2" face="arial">
 
 <h1>Cadastre-se</h1>
-		<form>
-		Login:<br />
-		<input type="text" /><br />
+		<form method = "post" action = "register_user.php" >
 
 		Nome: <br>
-		<input type="text" name="nome"><br>
+		<input type="text" name="name"><br>
 
 		Email: <br>
-		<input type="text" name="email"><br>
+		<input type="email" name="email"><br>
 
 		Matricula: <br>
-		<input type="text" name="matricula"><br>
+		<input type="text" name="id"><br>
 
 		Curso: <br>
 
-			<select>
+			<select name = "course">
 				<option>Administração</option>
 				<option>Agronomia</option>
 				<option>Arquitetura e Urbanismo</option>
@@ -60,7 +58,7 @@
 				<option>Engenharia de Produção</option>
 				<option>Engenharia de Software</option>
 				<option>Engenharia Elétrica</option>
-				<option> Engenharia Eletrônica</option>
+				<option>Engenharia Eletrônica</option>
 				<option>Engenharia Florestal</option>
 				<option>Engenharia Mecânica</option>
 				<option>Engenharia Mecatrônica</option>
@@ -101,7 +99,7 @@
 			<br />
 
 		Senha: <br> 
-		<input type="password" name="senha"><br>
+		<input type="password" name="password"><br>
 		<input type="submit" value="Cadastrar" />
 
 </font>

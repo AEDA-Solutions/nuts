@@ -2,7 +2,7 @@
 	
 	require_once('Dbcon.php');
 
-	class DbController{
+	class UserDatabase{
 
 		private $Dbcon;
 
