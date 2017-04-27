@@ -7,7 +7,7 @@
 		private $NetDatabase;
 
 		public function __construct(){
-			this->NetDatabase = new NetDatabase();
+			$this->NetDatabase = new NetDatabase();
 		}
 
 		//todas as funções de obtenção de dados devem ser executadas nessa função
@@ -25,6 +25,10 @@
 		 	if (!$fP) { return false; } 
  			$tA = microtime(true); 
 			return round((($tA - $tB) * 1000), 0); 
+		}
+
+		function location(){
+			header('Location: get_location.php');
 		}
 
 	}
