@@ -23,11 +23,18 @@
 <h1>Cadastre-se</h1>
 		<form method = "post" action = "register_user.php" >
 
-		Nome: <br>
-		<input type="text" name="name"><br>
+		<--Nome: <--br> >
+		<--input type="text" name="name"> <--br> >
 
-		Email: <br>
-		<input type="email" name="email"><br>
+		<div class="form-group">
+	   					<input type="name" class="form-control" id="name" placeholder="digite seu nome">
+	   				</div>
+
+		<--Email-->
+		<div class="form-group">
+						<input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+	   				</div>
+
 
 		Matricula: <br>
 		<input type="text" name="id"><br>
