@@ -19,25 +19,37 @@
 					<a href="contacto.html">Contato</a> 
 				</td>
 			</tr>
+			<tr>
+				<td colspan="2">
+					<img src="imagens/cadastro.png" />
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
 
 <h1>Cadastre-se</h1>
 		<form method = "post" action = "register_user.php" >
 
 		
-		<--input type="text" name="name"> <--br> >
-
+		Nome:
 		<div class="form-group">
-	   					<input type="name" class="form-control" id="name" placeholder="digite seu nome">
-	   				</div>
+	   				<input type="name" class="form-control" id="name" placeholder="digite seu nome">
+	   	</div>
 
-		
+		<br> 
+
+		Email:
 		<div class="form-group">
-						<input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
-	   				</div>
-
+					<input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+	   	</div>
 
 		Matricula: <br>
-		<input type="text" name="id"><br>
+		<div class="form-group">
+					<input type="matricula" class="form-control" id="matricula" placeholder="Digite sua matricula">
+	   	</div>
+
+	   	<br>
 
 		Curso: <br>
 
@@ -116,8 +128,20 @@
 			<br />
 
 		Senha: <br> 
-		<input type="password" name="password"><br>
+		<div class="form-group">
+	   				<input type="password" class="form-control" id="senha" placeholder="digite sua senha">
+	   	</div>
+
+	   	<br>
+
 		<input type="submit" value="Cadastrar" />
+
+			</td>
+			</tr>
+
+
+
+		</table>
 
 </font>
 </body>
