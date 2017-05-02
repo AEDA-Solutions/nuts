@@ -1,6 +1,6 @@
 <html>
 <head> 
-<title> LOGIN </title>
+<title> Login </title>
 <h1> Login </h1>
 <br>
 </head>
@@ -9,7 +9,7 @@
 <font size="2" face="arial"> 
 <form method="post" action="validate_user.php" >
 Para mais informações sobre a rede, efetue o login.<br>
-	Matrícua: <input type="text" name="id"><br>
+	Matrícula: <input type="text" name="id"><br>
 	Senha: <input type="password" name="password"><br>
 	<input type="submit" value="OK!">
 	<br>
