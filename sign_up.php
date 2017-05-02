@@ -1,14 +1,24 @@
 <!doctype html>
 <html>
 
-<head>
-<title> Cadastro </title>
-</head>
+	<head>
+		<title>Nuts</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
 
-<body>
-<meta charset="utf-8" />
-<body align="center">
-<font size="2" face="arial">
+		<table border="0" width="900" align="center">
+			<tr>
+				<td> <img src="imagens/logo.png" /> </td>
+				<td align="right">
+					<a href="index.php">Home</a> |
+					<a href="quemsomos.php">Quem somos</a> |
+					<a href="rede.html"> Análise de Rede </a> |
+					<a href="login.php"> Login </a> |
+					<a href="sign_up.php"> Cadastro </a> |
+					<a href="contacto.html">Contato</a> 
+				</td>
+			</tr>
 
 <h1>Cadastre-se</h1>
 		<form method = "post" action = "register_user.php" >
