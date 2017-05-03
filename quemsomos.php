@@ -1,4 +1,4 @@
-pe html>
+<!doctype html>
 <html>
 
 	<head>
@@ -15,7 +15,7 @@ pe html>
 					<a href="quemsomos.php">Quem somos</a> |
 					<a href="rede.php"> Análise de Rede </a> |
 					<a href="login.php"> Login </a> |
-					<a href="cadastro.php"> Cadastro </a> |
+					<a href="sign_up.php"> Cadastro </a> |
 					<a href="contato.php">Contato</a> 
 				</td>
 			</tr>
