@@ -1,26 +1,59 @@
 <!doctype html>
 <html>
 
-<head>
-<title> Cadastro </title>
-</head>
+<stile> 
+<body bgcolor= #FF7F50> 
+</stile>
 
-<body>
-<meta charset="utf-8" />
-<body align="center">
-<font size="2" face="arial">
+	<head>
+		<title>Nuts</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+
+		<table border="0" width="900" align="center">
+			<tr>
+				<td> <img src="images/nuts.png" /> </td>
+				<td align="right">
+					<a href="index.php">Home</a> |
+					<a href="quemsomos.php">Quem somos</a> |
+					<a href="rede.html"> Análise de Rede </a> |
+					<a href="login.php"> Login </a> |
+					<a href="sign_up.php"> Cadastro </a> |
+					<a href="contato.php">Contato</a> 
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<img src="cadastrar.png" />
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
 
 <h1>Cadastre-se</h1>
 		<form method = "post" action = "register_user.php" >
 
-		Nome: <br>
-		<input type="text" name="name"><br>
+		
+		Nome:
+		<div class="form-group">
+	   				<input type="name" class="form-control" id="name" placeholder="digite seu nome">
+	   	</div>
 
-		Email: <br>
-		<input type="email" name="email"><br>
+		<br> 
+
+		Email:
+		<div class="form-group">
+					<input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+	   	</div>
 
 		Matricula: <br>
-		<input type="text" name="id"><br>
+		<div class="form-group">
+					<input type="matricula" class="form-control" id="matricula" placeholder="Digite sua matricula">
+	   	</div>
+
+	   	<br>
 
 		Curso: <br>
 
@@ -99,8 +132,20 @@
 			<br />
 
 		Senha: <br> 
-		<input type="password" name="password"><br>
+		<div class="form-group">
+	   				<input type="password" class="form-control" id="senha" placeholder="digite sua senha">
+	   	</div>
+
+	   	<br>
+
 		<input type="submit" value="Cadastrar" />
+
+			</td>
+			</tr>
+
+
+
+		</table>
 
 </font>
 </body>
