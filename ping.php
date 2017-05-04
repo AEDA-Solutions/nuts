@@ -9,5 +9,5 @@ function ping($host, $port, $timeout) {
 }
 
 //Echoing it will display the ping if the host is up, if not it'll say "down".
-echo ping("www.google.com", 80, 10);
+echo ping("google.com.br", 80, 10);
 ?>

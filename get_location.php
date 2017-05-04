@@ -66,10 +66,12 @@ function send_position(position) {
 
 	var lat= position.coords.latitude;
 	var long = position.coords.longitude;
+    alert("daodkaokao");
 
 	$("#latitude").val(lat);
 	$("#longitude").val(long);
-    $("#form").submit();	
+    $("#form").submit();
+
 
 }
 
