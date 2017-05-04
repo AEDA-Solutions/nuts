@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 
-<<<<<<< HEAD
+
 <stile> 
 <body bgcolor= #FF7F50> 
 </stile>
@@ -18,37 +18,20 @@
 				<td align="right">
 					<a href="index.php">Home</a> |
 					<a href="quemsomos.php">Quem somos</a> |
-					<a href="rede.html"> Análise de Rede </a> |
+					<a href="rede.php"> Análise de Rede </a> |
 					<a href="login.php"> Login </a> |
 					<a href="sign_up.php"> Cadastro </a> |
 					<a href="contato.php">Contato</a> 
-=======
-	<head>
-		<title>Nuts</title>
-		<meta charset="utf-8" />
-	</head>
-	<body>
 
-		<table border="0" width="900" align="center">
-			<tr>
-				<td> <img src="imagens/logo.png" /> </td>
-				<td align="right">
-					<a href="index.php">Home</a> |
-					<a href="quemsomos.php">Quem somos</a> |
-					<a href="rede.php"> Análise de Rede </a> |
-					<a href="login.php"> Login </a> |
-					<a href="cadastro.php"> Cadastro </a> |
-					<a href="contato.php">Contato</a>
->>>>>>> bd950e921efa32cb8919fe065ee7f3d00ae2b0c5
 				</td>
 			</tr>
 			<tr>
 				<td colspan="2">
-<<<<<<< HEAD
+
 					<img src="cadastrar.png" />
-=======
+
 					<img src="imagens/cadastro.png" />
->>>>>>> bd950e921efa32cb8919fe065ee7f3d00ae2b0c5
+
 				</td>
 			</tr>
 
