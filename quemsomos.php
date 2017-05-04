@@ -15,7 +15,11 @@
 					<a href="quemsomos.php">Quem somos</a> |
 					<a href="rede.php"> Análise de Rede </a> |
 					<a href="login.php"> Login </a> |
+<<<<<<< HEAD
 					<a href="cadastro.php"> Cadastro </a> |
+=======
+					<a href="sign_up.php"> Cadastro </a> |
+>>>>>>> bd950e921efa32cb8919fe065ee7f3d00ae2b0c5
 					<a href="contato.php">Contato</a> 
 				</td>
 			</tr>
