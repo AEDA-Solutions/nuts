@@ -31,6 +31,9 @@
 				</td>
 			</tr>
 
+			<tr>
+				<td colspan="2">
+
 <font size="2" face="arial"> 
 
 
@@ -48,7 +51,8 @@ Para mais informações sobre a rede, efetue o login.<br>
 </form>
 </font>
 
-		</table>
 
-	</body>
-</html>
+			</td>
+			</tr>
+
+		</table>
