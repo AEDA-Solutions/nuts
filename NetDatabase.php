@@ -23,5 +23,19 @@
  			}
 		}
 
+		public function search_by_ping($ping){
+
+ 			$connection = $this->Dbcon->connect_mysql();
+			$sql = "SELECT * FROM netdata where ping ='ping'";
+			if($result = mysqli_query($connection,$sql)){
+				$netdata_data = mysqli_fetch_assoc($result);
+				return $netdata_data;
+			}
+			else{
+				//erro ao realizar a verificacao na tabela netdata
+				return false;
+			}	
+ 		}
+
 	}
 ?>
