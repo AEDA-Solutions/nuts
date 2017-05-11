@@ -10,14 +10,14 @@ html, body, .capa{
 }
 
 body {
-	background: url('imagens/fundo31.jpg');
+	background: url('images/fundo31.jpg');
 	background-size: 100%;
 	background-attachment: fixed;
 	font-family: Verdana, Arial, sans-serif;
 }
 
 .capa-cadastro{
-	background:url('imagens/fundo31.jpg');
+	background:url('images/fundo31.jpg');
 	padding-bottom: 80px;
 }
 
@@ -26,7 +26,7 @@ body {
 .img-logo{
 	height: 40px;
 	width: 175px;
-	background: url('imagens/logonuts2.png') no-repeat;
+	background: url('images/logonuts2.png') no-repeat;
 	display: block;
 	background-size: contain;
 	color: transparent;
