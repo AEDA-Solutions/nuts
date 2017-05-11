@@ -125,6 +125,14 @@ nav.navbar-transparente{
 	transition: background 0.4s, color 0.4s;
 }
 
+.btn-contato {
+	border-radius: 500px;
+	-webkit-border-radius: 500px;
+	-moz-border-radius:500px;
+	padding: 10px 35px;
+	transition: background 0.4s, color 0.4s;
+}
+
 .btn-cancelar {
 	color: white;
 	background:purple;
@@ -173,6 +181,10 @@ nav.navbar-transparente{
 	background: url('images/fundo-contato2.jpg');
 	padding-top: 80px;
 	padding-bottom: 80px;
+
+.botao-contato {
+	padding: 10px 0px 0px 200px;
+}
 
 }
 
