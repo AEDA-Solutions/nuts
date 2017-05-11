@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>NUTS</title>
-    <link rel="icon" href="imagens/favicon.png">
+    <link rel="icon" href="images/favicon.png">
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,7 +37,7 @@
         <span class="icon-bar"></span>
       </button>
 
-        <a href="index.html" class="navbar-brand">
+        <a href="index.php" class="navbar-brand">
           <span class="img-logo">NUTS</span>
         </a>
 
@@ -45,11 +45,11 @@
         <!-- nav -->
         <div class="collapse navbar-collapse" id="barra-navegacao">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="">Sobre</a></li>
             <li><a href="">Contato</a></li>
             <li class="divisor" role="separator"></li>
-            <li><a href="formulario.html">Registre-se</a></li>
+            <li><a href="sign_up.php">Registre-se</a></li>
             <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Login</a></li>
           </ul>
 
@@ -113,7 +113,7 @@
          <!-- Imagem Nos --> 
          <div class="col-md-6">
          <div class="row albuns">
-           <img src="imagens/nos.png" class="img-responsive">
+           <img src="images/nos.png" class="img-responsive">
          </div>
          </div>
 
@@ -141,7 +141,7 @@
 
           <!-- ImG Recursos PAREI AQUIIII -->
           <div class="col-md-8">
-              <img src="imagens/nuts-conteúdos.png" class="img-responsive">
+              <img src="images/nuts-conteúdos.png" class="img-responsive">
           </div>
               
     
