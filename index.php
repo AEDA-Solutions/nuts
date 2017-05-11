@@ -181,6 +181,13 @@
 
              <label for="Mensagem"></label>
              <textarea class="form-control" id="Mensagem" rows="3" placeholder="Mensagem"></textarea>
+
+             <br>
+             
+            <div class="botao-contato">
+            <button type="submit" class="btn btn-default btn-lg btn-white btn-contato">Enviar</button>
+            </div> 
+
            </div>
 
                </form>
@@ -202,8 +209,7 @@
             <p>
               (61) 9xxxx-xxxx
             </p>
-           
-            <h3>Email</h3>
+             <h3>Email</h3>
             <p>
               equipenuts@gmail.com
             </p>
