@@ -1,0 +1,246 @@
+/*
+*
+* @author Isabela Lobato
+* @version 0.1
+*/
+
+/* ==================== layout ================= */
+html, body, .capa{
+	height: 100%;
+}
+
+body {
+	background: url('imagens/fundo31.jpg');
+	background-size: 100%;
+	background-attachment: fixed;
+	font-family: Verdana, Arial, sans-serif;
+}
+
+.capa-cadastro{
+	background:url('imagens/fundo31.jpg');
+	padding-bottom: 80px;
+}
+
+
+/* -- Barra de navegação -- */
+.img-logo{
+	height: 40px;
+	width: 175px;
+	background: url('imagens/logonuts2.png') no-repeat;
+	display: block;
+	background-size: contain;
+	color: transparent;
+}
+
+nav.navbar-transparente{
+	padding: 15px 0px;
+	background: rgba(250, 250, 250, 0.6);
+	border: none;
+}
+
+.navbar-brand{
+	padding: 6px 15px;
+}
+
+.divisor{
+	width: 1px;
+	height: 16px;
+	background: white;
+	margin: 16px 10px;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+	color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover{
+	color: #BA55D3;
+}
+
+/* -- Imagem de capa -- */
+
+.capa {
+	display: table;
+	width: 100%;
+}
+
+.texto-capa {
+	text-align: center;
+	color: purple;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.cadastro {
+	padding-left: 30px;
+	padding-top: 120px;
+	display: table;
+	width: 100%;
+
+}
+
+/* ==== botões ==== */
+.btn-custom {
+	color: purple;
+	border-radius: 500px;
+	-webkit-border-radius: 500px;
+	-moz-border-radius:500px;
+	padding: 10px 35px;
+	transition: background 0.4s, color 0.4s;
+}
+
+.btn-marrom {
+	border:2px solid purple;
+}
+
+.btn-marrom:hover {
+	background-color: purple;
+	color: white;
+}
+
+.btn-cadastro {
+	border-radius: 500px;
+	-webkit-border-radius: 500px;
+	-moz-border-radius:500px;
+	padding: 10px 35px;
+	transition: background 0.4s, color 0.4s;
+}
+
+.btn-white {
+	border:2px solid white;
+}
+
+.btn-white:hover {
+	background-color: purple;
+	color: white;
+}
+
+.btn-login {
+	color: purple;
+	background: white;
+	border-radius: 500px;
+	-webkit-border-radius: 500px;
+	-moz-border-radius:400px;
+	padding: 10px 20px;
+	transition: background 0.4s, color 0.4s;
+}
+
+.btn-cancelar {
+	color: white;
+	background:purple;
+	border-radius: 500px;
+	-webkit-border-radius: 500px;
+	-moz-border-radius:400px;
+	padding: 10px 20px;
+	transition: background 0.4s, color 0.4s;
+}
+
+.btn-darkviolet:hover {
+	color: #BC8F8F;
+}
+
+/* ==== secao cadastro ==== */
+#cadastro {
+	background-size: 100%;
+	background: #D8BFD8;
+	padding-top: 10px;
+	padding-bottom: 40px;
+}
+
+.botao {
+	padding: 0px 0px 0px 470px;
+}
+
+/* ==== secao nos ==== */
+#nos {
+	background: purple;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.albuns{
+	padding: 10px 0px 10px 180px;
+}
+
+/* ==== secao recursos ==== */
+#recursos {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+/* ==== contato ==== */
+#contato {
+	background: url('imagens/fundo-contato2.jpg');
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+}
+
+/* ==== rodape ==== */
+#rodape{
+	padding-top: 15px;
+	padding-bottom: 10px;
+	background: black; 
+}
+
+
+
+/* ==================== tipografia ================== */
+
+h1{
+	font-size: 40px;
+	font-weight: 900px;
+	letter-spacing: -1px;
+	margin-bottom: 50px;
+}
+
+h2{
+	font-size: 50px;
+	font-weight: 700px;
+	letter-spacing: -3px;
+	padding-bottom: 10px;
+}
+
+#nos h2, #nos p{
+	color: white;
+}
+
+#nos h2{
+	padding-bottom: 20px;
+}
+
+#recursos h2{
+	color: white;
+	font-weight: bold;
+}
+
+#recursos h3{
+	color: #DEB887;
+	font-weight: bold;
+}
+
+#recursos p{
+	color: white;
+}
+
+#contato h3{
+	color: white;
+}
+
+#contato h3{
+	padding-bottom: 20px;
+}
+
+#contato p{
+	color:white;
+}
+
+#rodape p{
+	color:white;
+	text-align: center
+}
+
+#cadastro h1{
+	color: purple;
+	padding: 0px 30px 0px 380px;
+}
