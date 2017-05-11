@@ -202,6 +202,11 @@
             <p>
               (61) 9xxxx-xxxx
             </p>
+           
+            <h3>Email</h3>
+            <p>
+              equipenuts@gmail.com
+            </p>
          </div>
 
        </div>
