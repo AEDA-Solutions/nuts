@@ -1,7 +1,8 @@
 <?php
 require_once('NetController.php');
+//post de latitude conterá uma string vazia "" caso a aquisição da posição tenha falhado
 
-if (isset($_POST['latitude'])){
+if ($_POST['latitude']){
 	$NetController = new NetController();
 	$NetController->set_location($_POST['latitude'],$_POST['longitude']);
 	if($NetController->run_net_test()){
@@ -15,4 +16,5 @@ if (isset($_POST['latitude'])){
 else{
 	echo "deu banana";
 }
+
 ?>

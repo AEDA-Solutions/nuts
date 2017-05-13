@@ -21,7 +21,7 @@
 			if($ping = $this->check_ping("google.com.br", 80, 10)){}
 			else{return false;}
 
-			if($packetloss = $this->check_packet_loss('www.netflix.com', 10)){}
+			if($packetloss = $this->check_packet_loss('www.netflix.com', 20)){}
 			else{}
 
 			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss)){
@@ -66,6 +66,10 @@
 
     
     		return $packetLoss;
+		}
+
+		public function get_netdata(){
+			return $this->NetDatabase->get_all_data();
 		}
 	}
 ?>

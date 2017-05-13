@@ -28,8 +28,72 @@
  			$connection = $this->Dbcon->connect_mysql();
 			$sql = "SELECT * FROM netdata where ping ='ping'";
 			if($result = mysqli_query($connection,$sql)){
-				$netdata_data = mysqli_fetch_assoc($result);
-				return $netdata_data;
+				$netdata = mysqli_fetch_assoc($result);
+				return $netdata;
+			}
+			else{
+				//erro ao realizar a verificacao na tabela netdata
+				return false;
+			}	
+ 		}
+
+ 		public function search_by_distance($latitude,$longitude,$radius){
+ 			//Obs: distancia deve ser passada em metros
+ 			//Caso sejam adicionados mais campos a tabela netdata, a querry
+ 			//dessa função deverá ser atualizada para obter tambem esse novos campos		
+ 			$connection = $this->Dbcon->connect_mysql();
+			$sql = "SELECT latitude, longitude, ping, packetloss, distance
+  					FROM (
+ 					SELECT z.latitude,
+       						z.longitude,
+       						z.ping, 
+      						z.packetloss,
+       						p.radius,
+       					 	p.distance_unit
+                 			* DEGREES(ACOS(COS(RADIANS(p.latpoint))
+                 			* COS(RADIANS(z.latitude))
+                 			* COS(RADIANS(p.longpoint - z.longitude))
+                 			+ SIN(RADIANS(p.latpoint))
+                 			* SIN(RADIANS(z.latitude)))) AS distance
+  					FROM netdata AS z
+  					JOIN (   /* these are the query parameters */
+       					SELECT  '$latitude'  AS latpoint, '$longitude' AS longpoint,
+      			        '$radius' AS radius, 111045 AS distance_unit
+    				) AS p ON 1=1
+  					
+  					WHERE z.latitude
+     					BETWEEN p.latpoint  - (p.radius / p.distance_unit)
+         			AND p.latpoint  + (p.radius / p.distance_unit)
+    				AND z.longitude
+    				 BETWEEN p.longpoint - (p.radius / (p.distance_unit * COS(RADIANS(p.latpoint))))
+         				AND p.longpoint + (p.radius / (p.distance_unit * COS(RADIANS(p.latpoint))))
+ 					) AS d
+ 					WHERE distance <= radius
+ 					ORDER BY distance";
+			
+			if($result = mysqli_query($connection,$sql)){
+				$netdata = array();
+				foreach($result as $row){
+					array_push($netdata,$row);
+				}
+				return $netdata;
+			}
+			else{
+				//erro ao realizar a verificacao na tabela netdata
+				return false;
+			}	
+ 		}
+
+ 		public function get_all_data(){
+ 			//retorna a tabela netdata
+ 			$connection = $this->Dbcon->connect_mysql();
+			$sql = "SELECT * FROM netdata";
+			if($result = mysqli_query($connection,$sql)){
+				$netdata = array();
+				foreach($result as $row){
+					array_push($netdata,$row);
+				}
+				return $netdata;
 			}
 			else{
 				//erro ao realizar a verificacao na tabela netdata
