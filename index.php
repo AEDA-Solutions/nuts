@@ -82,11 +82,13 @@
             </div>
 
              <div class="modal-footer">
-                <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">
-              Cancelar</button>      
 
-                <button type="submit" class=" btn btn-login btn-white">
-              Logar</button>             
+              <a href="sign_up.php" type="button" class=" btn btn-login btn-white">Cadastrar</a> 
+              
+              <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">Cancelar</button>      
+
+              <a href="analise.php" type="button" class="btn btn-login btn-white">Logar</a> 
+                         
             </div>
 
           </div>
