@@ -35,19 +35,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
 
-        <a href="index.html" class="navbar-brand">
+        <a href="index.php" class="navbar-brand">
           <span class="img-logo">NUTS</span>
         </a>
 
       </div>
         <!-- nav -->
         <div class="collapse navbar-collapse" id="barra-navegacao">
-          <ul class="nav navbar-nav navbar-right">
+           <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
             <li><a href="">Sobre</a></li>
             <li><a href="">Contato</a></li>
+            <li><a href="analise.php"> Análise de Rede</a></li>
             <li class="divisor" role="separator"></li>
             <li><a href="sign_up.php">Registre-se</a></li>
             <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Login</a></li>
@@ -80,11 +82,13 @@
             </div>
 
              <div class="modal-footer">
-                <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">
-              Cancelar</button>      
 
-                <button type="submit" class=" btn btn-login btn-white">
-              Logar</button>             
+              <a href="sign_up.php" type="button" class=" btn btn-login btn-white">Cadastrar</a> 
+              
+              <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">Cancelar</button>      
+
+              <a href="analise.php" type="button" class="btn btn-login btn-white">Logar</a> 
+                         
             </div>
 
           </div>
