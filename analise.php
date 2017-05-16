@@ -59,9 +59,44 @@
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
 
+<form class="modal fade" id="janela">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span>&times;</span>
+              </button> 
+              <h4 class="modal-tittle" style="color: purple">LOGIN</h4>             
+            </div>
+
+             <div class="modal-body">
+              
+            <div class="form-group">
+            <input type="text" class="form-control" id="matricula" placeholder="Matrícula">
+            </div>
+
+            <div class="form-group">
+            <input type="password" class="form-control" id="senha" placeholder="Senha">
+            </div>
+           
+            </div>
+
+             <div class="modal-footer">
+                <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">
+              Cancelar</button>      
+
+                <button type="submit" class=" btn btn-login btn-white">
+              Logar</button>             
+            </div>
+
+          </div>
+        </div>
+      </form>
      <div class="capa">
       <div class="texto-capa">
         <h1>Análise de rede</h1>
+
+
       </div>
     </div>
 
