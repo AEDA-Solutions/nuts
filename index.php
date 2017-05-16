@@ -96,7 +96,7 @@
     <div class="capa">
       <div class="texto-capa">
         <h1>QUALIDADE PARA TODOS</h1>
-        <a href="" class="btn btn-custom btn-marrom btn-lg">Análise de Rede</a>
+        <a href="" class="btn btn-custom btn-marrom btn-lg">Teste sua Velocidade</a>
       </div>
     </div>
 
