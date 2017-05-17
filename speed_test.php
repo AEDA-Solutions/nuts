@@ -97,6 +97,14 @@
 
 
 <body>
+  <div class="capa">
+      <div class="texto-capa">
+        <h1>Teste sua velocidade </h1>
+
+          <div align="center"> <iframe name="Teste de Velocidade da Internet" height="160" width="160" scrolling="no" frameborder="0" longdesc="" src="http://www.minhaconexao.com.br/mini-velocimetro/velocimetro.php?model=2&width=160&height=160"></iframe><br /><font size="2" face="Arial"><a  rel="nofollow" target="_blank" style="text-decoration:none"></a></font></div>
+
+      </div>
+  </div>
   
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
