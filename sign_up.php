@@ -222,7 +222,10 @@
       </div>
 
       <div class="botao">
-        <button type="submit" class="btn btn-default btn-lg btn-white btn-cadastro">Cadastrar</button>
+
+
+      <a href="analise.php" type="button" class="btn btn-default btn-lg btn-white btn-cadastro">Cadastrar</a> 
+        <!-- <button type="submit" class="btn btn-default btn-lg btn-white btn-cadastro">Cadastrar</button> -->
       </div>
 
       </div>
