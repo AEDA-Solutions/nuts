@@ -111,10 +111,10 @@
       <hr> 
       <div class="row">
         <div class="col-sm-5">
-          <form>
+          <form method = "post" action = "register_user.php">
             <div class="form-group">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome">
+            <input type="text" class="form-control" id="nome" name = "name">
             </div>
 
             <div class="form-group">
@@ -195,9 +195,7 @@
         <option>Visuais</option>
       </select>
             </div>
-            
-          </form>
-        </div>
+                </div>
 
         <div class="col-sm-1">
           
@@ -206,12 +204,12 @@
         <div class="col-sm-5">
             <div class="form-group">
             <label for="matricula">Matrícula</label>
-            <input type="text" class="form-control" id="matricula">
+            <input type="text" class="form-control" id="matricula" name = "id">
             </div>
 
             <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" class="form-control" id="senha">
+            <input type="password" class="form-control" id="senha" name = "password">
             </div>
 
       </div>
@@ -224,11 +222,13 @@
       <div class="botao">
 
 
-      <a href="analise.php" type="button" class="btn btn-default btn-lg btn-white btn-cadastro">Cadastrar</a> 
+      <button type="submit" class="btn btn-default btn-lg btn-white btn-cadastro">Cadastrar</a> 
         <!-- <button type="submit" class="btn btn-default btn-lg btn-white btn-cadastro">Cadastrar</button> -->
       </div>
 
       </div>
+
+          </form>
 
 </section>
         

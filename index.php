@@ -58,8 +58,8 @@
         </div>
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
-
-          <form class="modal fade" id="janela">
+            <!-- Login  --> 
+          <form class="modal fade" id="janela" method = "post" action = "validate_user.php">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -72,11 +72,11 @@
              <div class="modal-body">
               
             <div class="form-group">
-            <input type="text" class="form-control" id="matricula" placeholder="Matrícula">
+            <input type="text" class="form-control" id="matricula" name = "id" placeholder="Matrícula">
             </div>
 
             <div class="form-group">
-            <input type="password" class="form-control" id="senha" placeholder="Senha">
+            <input type="password" class="form-control" id="senha" name = "password" placeholder="Senha">
             </div>
            
             </div>
@@ -87,14 +87,14 @@
               
               <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">Cancelar</button>      
 
-              <a href="analise.php" type="button" class="btn btn-login btn-white">Logar</a> 
+              <button type = "submit" class="btn btn-login btn-white">Logar</a> 
                          
             </div>
 
           </div>
         </div>
       </form>
-
+      <!-- /Login  -->
     <div class="capa">
       <div class="texto-capa">
         <h1>QUALIDADE PARA TODOS</h1>
