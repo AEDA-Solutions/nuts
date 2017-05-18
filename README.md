@@ -6,7 +6,7 @@
 
 ## Dependências e Linguagens utilizadas ## 
 
-- Front-end:
+## Front-end: ##
 
 * Bootstrap v3.3.7;
 
@@ -14,15 +14,15 @@
 * HTML/HTML5;
 * CSS;
 
-- Back-end: 
+## Back-end: ##
 
 * PHP 5;
 
-- Banco de Dados:
+## Banco de Dados: ##
 
 * MySQL;
 
-- Servidor de Aplicação:
+## Servidor de Aplicação: ##
 
 * XAMPP v5.6.30
 
