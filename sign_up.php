@@ -114,12 +114,12 @@
           <form method = "post" action = "register_user.php">
             <div class="form-group">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome" name = "name">
+            <input type="text" required="required" class="form-control" pattern="[a-Z\s]+$" id="nome" name = "name" placeholder="Nome">
             </div>
 
             <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" required="required" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+            <input type="email" required="required" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" />
             </div>
 
             <div class="form-group">
@@ -204,12 +204,12 @@
         <div class="col-sm-5">
             <div class="form-group">
             <label for="matricula">Matrícula</label>
-            <input type="text" class="form-control" id="matricula" name = "id">
+            <input type="text" required="required" class="form-control" id="matricula" maxlength="9" pattern="[0-9]{2}[0-9]{7}" placeholder="100000000" name = "id">
             </div>
 
             <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" class="form-control" id="senha" name = "password">
+            <input type="password" required="required" class="form-control" minlength="6" id="senha" name = "password" placeholder="xxxxxx">
             </div>
 
       </div>

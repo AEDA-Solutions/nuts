@@ -171,20 +171,19 @@
              
            <div class="form-group">
              <label class="sr-only" for="nome">Nome</label>
-             <input type="text"  class="form-control mb-2 mr-sm-2 mb-sm-0" id="nome" placeholder="Nome">
+             <input type="text" required="required" class="form-control mb-2 mr-sm-2 mb-sm-0" id="nome" placeholder="Nome">
 
              <label class="sr-only" for="email">Email</label>
-             <input type="text"  class="form-control mb-2 mr-sm-2 mb-sm-0" id="email" placeholder="Email">
+              <input type="text"  required="required" class="form-control mb-2 mr-sm-2 mb-sm-0" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email">
+             
              </div> 
-              </form>
-
-              <form>
+              
               <div class="form-group">
              <label for="Assunto"></label>
-             <input type="text"  class="form-control" id="assunto" placeholder="Assunto">
+             <input type="text" required="required" class="form-control" id="assunto" placeholder="Assunto">
 
              <label for="Mensagem"></label>
-             <textarea class="form-control" id="Mensagem" rows="3" placeholder="Mensagem"></textarea>
+             <textarea required="required" class="form-control" id="Mensagem" rows="3" placeholder="Mensagem"></textarea>
 
              <br>
              
