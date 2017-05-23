@@ -1,16 +1,3 @@
-<?php
-session_start();
-
-if(isset($_SESSION['id'])){
-  //o usuario esta autenticado
-  echo "Usuário autenticado !";
-}
-else{
-  //o usuario nao foi autenticado
-  header('Location: index.php?erro=1');
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -63,50 +50,15 @@ else{
             <li><a href="analise.php"> Análise de Rede</a></li>
             <<li><a href="perfil.php"> Perfil </a></li>
             <li class="divisor" role="separator"></li>
-            <li><a href="sign_up.php">Registre-se</a></li>
+            <li><a href="index.php">Sair</a></li>
           </ul>
 
         </div>
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
 
-          <form class="modal fade" id="janela">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">
-                <span>&times;</span>
-              </button> 
-              <h4 class="modal-tittle" style="color: purple">LOGIN</h4>             
-            </div>
-
-             <div class="modal-body">
-              
-            <div class="form-group">
-            <input type="text" class="form-control" id="matricula" placeholder="Matrícula">
-            </div>
-
-            <div class="form-group">
-            <input type="password" class="form-control" id="senha" placeholder="Senha">
-            </div>
-           
-            </div>
-
-             <div class="modal-footer">
-
-              <a href="sign_up.php" type="button" class=" btn btn-login btn-white">Cadastrar</a> 
-              
-              <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">Cancelar</button>      
-
-              <a href="indexusuario.php" type="button" class="btn btn-login btn-white">Logar</a> 
-                         
-            </div>
-
-          </div>
-        </div>
-      </form>
     
-      <section id="capa-indexusuario">
+      <section id="capa-perfil">
         <br>
         <br>
         <br>
@@ -114,11 +66,13 @@ else{
         <br>
         
       </section>
-
-      <section id="indexusuario">
-      <div class="container">
-        <div id="indexusuario" class="indexusuario">
-
+    <section id="cadastro">
+    <div class="container">
+      <div id="cadastro" class="cadastro">
+      <h1>Análise da Rede</h1>
+      <hr> 
+      <div class="row">
+        <div class="col-sm-5">
 
         </div>
       </div>

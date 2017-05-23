@@ -26,6 +26,11 @@ body {
 	padding-bottom: 80px;
 }
 
+.capa-perfil{
+	background:url('images/fundo10.jpg');
+	padding-bottom: 80px;
+}
+
 /* -- Barra de navegação -- */
 .img-logo{
 	height: 40px;
@@ -76,6 +81,14 @@ nav.navbar-transparente{
 }
 
 .cadastro {
+	padding-left: 30px;
+	padding-top: 120px;
+	display: table;
+	width: 100%;
+
+}
+
+.perfil {
 	padding-left: 30px;
 	padding-top: 120px;
 	display: table;

@@ -114,9 +114,13 @@ $user_data = end($net_data);
         
       </section>
 
-      <section id="indexusuario">
-        <div class="container">
-        <div id="indexusuario" class="indexusuario">
+     <section id="cadastro">
+    <div class="container">
+      <div id="cadastro" class="cadastro">
+      <h1>Análise da Rede</h1>
+      
+      <div class="row">
+       
         
         <table class="table table-inverse">
         <thead>
@@ -165,6 +169,13 @@ $user_data = end($net_data);
                     </tr>
                   </tbody>
                 </table>
+
+
+        </div>
+      </div>
+      </div>
+      </div>
+      </section>
 
 
  </div>

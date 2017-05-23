@@ -87,7 +87,7 @@
               
               <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">Cancelar</button>      
 
-              <a href="analise.php" type="button" class="btn btn-login btn-white">Logar</a> 
+              <a href="indexusuario.php" type="button" class="btn btn-login btn-white">Logar</a> 
                          
             </div>
 
