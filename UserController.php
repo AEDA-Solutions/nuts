@@ -149,6 +149,20 @@
 				echo "Não foi possivel alterar seus dados, por favor contate o administrador";
  			}
 
+ 		private function delete_user($User){
+
+ 			$id = $User->get_id();
+
+ 			if($this->UserDatabase->delete_user_($id)){
+ 				// deu certo \o/
+ 				return true;
+ 			}
+
+ 			else{
+ 				// deu ruim :(
+ 				return false;
+ 		}
+
  		}
 
  	}
