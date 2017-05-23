@@ -62,7 +62,19 @@
 				else{
 					return false;
 				}
+		}
 
+		public function delete_user_data($id){
+
+ 			$connection = $this->Dbcon->connect_mysql();
+ 			$sql = "DELETE from users WHERE id = '$id'";
+			if(mysqli_query($connection,$sql)){
+				/*usuario apagado com sucesso*/
+				return true;
+			}
+			else{
+				return false;
+ 			}
 		}
 
 		public function search_by_id_and_password($id,$password){
