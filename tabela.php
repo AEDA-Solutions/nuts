@@ -1,3 +1,13 @@
+<?php
+
+require_once('NetController.php');
+$Uc = new NetController();
+$net_data = $Uc->get_netdata();
+$user_data = end($net_data);
+?>
+
+<? $user_data['latitude']?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -120,37 +130,37 @@
                   <tbody>
                     <tr>
                       <th scope="row">Latitude</th>
-                     <td> </td>
+                     <td> <?= $user_data['latitude']?></td>
 
                     </tr>
                    
                     <tr>
                       <th scope="row">Longitude</th>
-                      <td> </td>
+                      <td><?= $user_data['longitude']?> </td>
 
                     </tr>
                     
                     <tr>
                       <th scope="row">Ping</th>
-                      <td> </td>
+                      <td> <?= $user_data['ping']?></td>
 
                     </tr>
 
                     <tr>
                       <th scope="row">Perda de pacote</th>
-                      <td> </td>
+                      <td> <?= $user_data['packetloss']?> </td>
 
                     </tr>
 
                     <tr>
                       <th scope="row">Velocidade download</th>
-                      <td> </td>
+                      <td> <?= $user_data['id']?></td>
 
                     </tr>
 
                     <tr>
                       <th scope="row">Velocidade upload</th>
-                      <td> </td>
+                      <td> <?= $user_data['id']?></td>
 
                     </tr>
                   </tbody>

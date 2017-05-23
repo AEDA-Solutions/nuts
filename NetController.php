@@ -18,7 +18,7 @@
 		//para que os dados sejam inseridos na tabela de qualidade de rede permanente
 		public function run_net_test(){
 			
-			if($ping = $this->check_ping("google.com.br", 80, 10)){}
+			if($ping = $this->check_ping("matriculaweb.unb.br", 80, 10)){}
 			else{return false;}
 
 			if($packetloss = $this->check_packet_loss('www.netflix.com', 20)){}
