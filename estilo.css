@@ -21,6 +21,10 @@ body {
 	padding-bottom: 80px;
 }
 
+.capa-indexusuario{
+	background:url('images/fundo10.jpg');
+	padding-bottom: 80px;
+}
 
 /* -- Barra de navegação -- */
 .img-logo{
