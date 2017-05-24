@@ -8,6 +8,7 @@ $user_data = end($net_data);
 
 <? $user_data['latitude']?>
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,7 +32,9 @@ $user_data = end($net_data);
   </head>
 
   <body>
-    
+
+
+
     <nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
       <div class="container">
 
@@ -57,53 +60,15 @@ $user_data = end($net_data);
         <div class="collapse navbar-collapse" id="barra-navegacao">
            <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
-            <li><a href="">Sobre</a></li>
-            <li><a href="">Contato</a></li>
             <li><a href="analise.php"> Análise de Rede</a></li>
+            <li><a href="perfil.php"> Perfil </a></li>
             <li class="divisor" role="separator"></li>
-            <li><a href="sign_up.php">Registre-se</a></li>
-            <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Login</a></li>
+            <li><a href="index.php">Sair</a></li>
           </ul>
 
         </div>
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
-
-          <form class="modal fade" id="janela">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">
-                <span>&times;</span>
-              </button> 
-              <h4 class="modal-tittle" style="color: purple">LOGIN</h4>             
-            </div>
-
-             <div class="modal-body">
-              
-            <div class="form-group">
-            <input type="text" class="form-control" id="matricula" placeholder="Matrícula">
-            </div>
-
-            <div class="form-group">
-            <input type="password" class="form-control" id="senha" placeholder="Senha">
-            </div>
-           
-            </div>
-
-             <div class="modal-footer">
-
-              <a href="sign_up.php" type="button" class=" btn btn-login btn-white">Cadastrar</a> 
-              
-              <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">Cancelar</button>      
-
-              <a href="analise.php" type="button" class="btn btn-login btn-white">Logar</a> 
-                         
-            </div>
-
-          </div>
-        </div>
-      </form>
     
       <section id="capa-indexusuario">
         <br>
@@ -114,11 +79,12 @@ $user_data = end($net_data);
         
       </section>
 
-     <section id="perfil">
+      <section id="cadastro">
     <div class="container">
-      <div id="perfil" class="perfil">
+      <div id="cadastro" class="cadastro">
       <h1>Análise da Rede</h1>
-      
+      <h4>Aqui estão os dados analisados da sua rede!</h4> 
+      <hr>
       <div class="row">
        
         
@@ -169,7 +135,118 @@ $user_data = end($net_data);
                     </tr>
                   </tbody>
                 </table>
+                </div>
 
+      <h1>Análise das suas proximidades</h1>
+      <h4>Aqui estão os dados analisados das 10 redes mais próximas de você</h4> 
+      <hr>
+      <div class="row">
+
+      <table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Ping</th>
+      <th>Perda de pacote</th>
+      <th>Velocidade de Download</th>
+      <th>Velocidade de Upload</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+    </tr>
+    <tr>
+          <th scope="row">4</th>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      </tr>
+       <tr>
+          <th scope="row">5</th>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      </tr>
+       <tr>
+          <th scope="row">6</th>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      </tr>
+       <tr>
+          <th scope="row">7</th>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      </tr>
+       <tr>
+          <th scope="row">8</th>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      </tr>
+       <tr>
+          <th scope="row">9</th>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      </tr>
+       <tr>
+          <th scope="row">10</th>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      <td>  </td>
+      <td>  </td>
+      <td> </td>
+      </tr>
+  </tbody>
+</table>
 
         </div>
       </div>

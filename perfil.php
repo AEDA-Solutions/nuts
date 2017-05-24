@@ -50,7 +50,7 @@
            <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
             <li><a href="analise.php"> Análise de Rede</a></li>
-            <<li><a href="perfil.php"> Perfil </a></li>
+            <li><a href="perfil.php"> Perfil </a></li>
             <li class="divisor" role="separator"></li>
             <li><a href="index.php">Sair</a></li>
           </ul>
