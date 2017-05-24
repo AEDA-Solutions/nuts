@@ -21,7 +21,9 @@
   </head>
 
   <body>
-    
+
+
+
     <nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
       <div class="container">
 
@@ -69,14 +71,12 @@
     <section id="cadastro">
     <div class="container">
       <div id="cadastro" class="cadastro">
-      <h1>Análise da Rede</h1>
-      <hr> 
+      <h1>Perfil do usuário</h1>
       <div class="row">
-        <div class="col-sm-5">
 
         </div>
       </div>
-
+      </div>
       </div>
       </section>
 

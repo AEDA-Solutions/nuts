@@ -9,12 +9,14 @@ html, body, .capa{
 	height: 100%;
 }
 
+
 body {
 	background: url('images/fundo31.jpg');
 	background-size: 100%;
 	background-attachment: fixed;
 	font-family: Verdana, Arial, sans-serif;
 }
+
 
 .capa-cadastro{
 	background:url('images/fundo31.jpg');

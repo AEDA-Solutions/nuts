@@ -114,9 +114,9 @@ $user_data = end($net_data);
         
       </section>
 
-     <section id="cadastro">
+     <section id="perfil">
     <div class="container">
-      <div id="cadastro" class="cadastro">
+      <div id="perfil" class="perfil">
       <h1>Análise da Rede</h1>
       
       <div class="row">
