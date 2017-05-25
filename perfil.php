@@ -59,23 +59,30 @@
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
 
-    
-      <section id="capa-perfil">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        
-      </section>
-    <section id="cadastro">
-    <div class="container">
-      <div id="cadastro" class="cadastro">
-      <h1>Perfil do usuário</h1>
-      <div class="row">
+       <section id="nos">
+     <div class="container">
+       <div class="row">
 
-        </div>
-      </div>
+          <!-- Texto Nos --> 
+         <div class="col-md-6">
+           <h2>Perfil do usuário</h2>
+           <p> Bem vindo a sua página! Aqui você pode editar seus dados e ver seu histórico de analíses feitas pelo nosso site! Fique a vontade, sinta-se em casa! </p>
+           <a href="MUDAR AQUI AGORA" type="button" class=" btn btn-login btn-white">Histórico</a> 
+           <br>    
+           <br>     
+           <a href="MUDAR AQUI AGORA" type="button" class=" btn btn-login btn-white">  Perfil  </a> 
+         </div>
+
+         <!-- Imagem Nos --> 
+         <div class="col-md-6">
+         <div class="row albuns">
+           <img src="images/usuario.gif" class="img-responsive">
+         </div>
+         </div>
+
+       </div>
+     </div>
+   </section>
       </div>
       </div>
       </section>
