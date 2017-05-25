@@ -1,6 +1,7 @@
 <?php
 	
 	require_once('Dbcon.php');
+	require_once('User.php');
 
 	class UserDatabase{
 
@@ -38,7 +39,13 @@
 			}	
  		}
 
- 		public function insert_user($name,$email,$id,$password,$course){
+ 		public function insert_user($User){
+
+ 			$name = $User->get_name();
+			$email = $User->get_email();
+			$id = $User->get_id();
+			$password =$User->get_password();
+			$course = $User->get_course();
 
  			$connection = $this->Dbcon->connect_mysql();
  			$sql = "insert into users(name,email,id,password,course) values('$name','$email','$id','$password','$course')";
@@ -51,7 +58,13 @@
  			}
 		}
 
-		public function update_user($name,$email,$id,$password,$course){
+		public function update_user_data($User){
+
+			$name = $User->get_name();
+			$email = $User->get_email();
+			$id = $User->get_id();
+			$password =$User->get_password();
+			$course = $User->get_course();
 
 			$connection = $this->Dbcon->connect_mysql();
  			$sql = "update users set name = '$name', email = '$email', password = '$password', course = '$course' where id = '$id'";

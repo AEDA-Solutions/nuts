@@ -79,28 +79,28 @@
 
  		}
 
- 		public function change_user_name($User,$name){
+ 		public function change_user_name($User){
 
- 			$User->set_name($name);
-			$this->update_user_data();
+ 			
+			$this->update_user_data($User);
  		}
 
  		public function change_user_email($User,$email){
 
  			$User->set_email($email);
-			$this->update_user_data();
+			$this->update_user_data($User);
  		}
 
  		public function change_user_password($User,$password){
 
  			$User->set_password($password);
-			$this->update_user_data();
+			$this->update_user_data($User);
  		}
 
  		public function change_user_course($User,$course){
 
  			$User->set_course($course);
-			$this->update_user_data();
+			$this->update_user_data($User);
  		}
 
  		// funcoes privadas
@@ -132,7 +132,7 @@
  			}
  		}
 
- 		private function update_user_data($User){
+ 		private function update_user($User){
 
  			$name = $User->get_name();
  			$email = $User->get_email();
@@ -140,20 +140,22 @@
  			$password = $User->get_password();
  			$course = $User->get_course();
 
- 			if($this->UserDatabase->update_user($name,$email,$id,$password,$course)){
+ 			if($this->UserDatabase->update_user_data($name,$email,$id,$password,$course)){
  				//sucesso na operacao
+ 				return true;
  			}
 
  			else{
  				//falha na operacao
 				echo "Não foi possivel alterar seus dados, por favor contate o administrador";
+				return false;
  			}
 
  		private function delete_user($User){
 
  			$id = $User->get_id();
 
- 			if($this->UserDatabase->delete_user_($id)){
+ 			if($this->UserDatabase->delete_user_data($id)){
  				// deu certo \o/
  				return true;
  			}
