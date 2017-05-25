@@ -59,12 +59,8 @@
 
  			else{
  				//prosseguir com o cadastro
- 				$name = $User->get_name();
- 				$email = $User->get_email();
- 				$id = $User->get_id();
- 				$password = $User->get_password();
- 				$course = $User->get_course();
- 				if($this->UserDatabase->insert_user($name,$email,$id,$password,$course)){
+ 
+ 				if($this->UserDatabase->insert_user($User)){
  					return true;
  					//usuario cadastrado com sucesso
  				}
@@ -149,6 +145,7 @@
 				echo "Não foi possivel alterar seus dados, por favor contate o administrador";
 				return false;
  			}
+ 		}	
 
  		public function delete_user($User){
 
