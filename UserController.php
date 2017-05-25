@@ -1,7 +1,6 @@
 <?php
 	
 	require_once('UserDatabase.php');
-	require_once('User.php');
 
  	class UserController{
  		
@@ -132,7 +131,7 @@
  			}
  		}
 
- 		private function update_user($User){
+ 		public function update_user($User){
 
  			$name = $User->get_name();
  			$email = $User->get_email();
@@ -151,7 +150,7 @@
 				return false;
  			}
 
- 		private function delete_user($User){
+ 		public function delete_user($User){
 
  			$id = $User->get_id();
 
