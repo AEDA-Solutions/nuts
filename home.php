@@ -7,6 +7,6 @@ if(isset($_SESSION['id'])){
 }
 else{
 	//o usuario nao foi autenticado
-	header('Location: index.php?erro=1');
+	//header('Location: index.php?erro=2');
 }
 ?>

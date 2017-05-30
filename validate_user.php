@@ -7,11 +7,11 @@
 		
 	$UserController = new UserController();
 	if($UserController->login($id,$password)){
-		header('Location: home.php');
+		//header('Location: home.php');
 	}			
 		 
 	else{
-		header('Location: index.php?erro=1');
+		//header('Location: index.php?erro=1');
 	}
 
 ?>

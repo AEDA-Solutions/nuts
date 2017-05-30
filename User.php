@@ -33,22 +33,22 @@ class User{
 
 	public function get_id()
 	{
-		return $this->id;
+		return $this->$id;
 	}
 
 	public function get_email()
 	{
-		return $this->email;
+		return $this->$email;
 	}
 
 	public function get_password()
 	{
-		return $this->password;
+		return $this->$password;
 	}
 
 	public function get_course()
 	{
-		return $this->course;
+		return $this->$course;
 	}
 
 	public function set_name($name)
@@ -79,3 +79,4 @@ class User{
 }
 
 ?>
+ 
