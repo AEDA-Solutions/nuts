@@ -9,6 +9,7 @@
 		private $NetDatabase;
 		private $latitude;
 		private $longitude;
+		private $download_speed;
 
 		public function __construct(){
 			$this->NetDatabase = new NetDatabase();
@@ -21,10 +22,10 @@
 			if($ping = $this->check_ping("matriculaweb.unb.br", 80, 10)){}
 			else{return false;}
 
-			if($packetloss = $this->check_packet_loss('www.netflix.com', 20)){}
+			if($packetloss = $this->check_packet_loss('www.youtube.com', 20)){}
 			else{}
 
-			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss)){
+			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss,$this->download_speed)){
 				return true;
 			}
 
@@ -49,6 +50,10 @@
 			$this->longitude=$longitude;
 		}
 
+		function set_download_speed($download_speed){
+			$this->download_speed = $download_speed;
+		}
+
 
 		function check_packet_loss($host, $count) {
     		$command = 'ping -c %d %s';
@@ -70,6 +75,15 @@
 
 		public function get_netdata(){
 			return $this->NetDatabase->get_all_data();
+		}
+
+		public function get_nearby_data($latitude,$longitude){
+			return $this->NetDatabase->search_by_distance($latitude,$longitude,2000000);
+		}
+
+		public function get_last_data(){
+			$net_data = $this->get_netdata();
+			return end($net_data);
 		}
 	}
 ?>

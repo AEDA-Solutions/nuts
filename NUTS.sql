@@ -9,6 +9,7 @@ create table netdata
 	longitude float DEFAULT NULL,
     ping float DEFAULT NULL,
     packetloss float DEFAULT NULL
+    download_speed float
 
 );
 

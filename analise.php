@@ -111,21 +111,29 @@
   </body>
 </html>
 
-<form style = "display: hidden" action = "treat_location.php" method = "post" id = "form">
+<form style = "display: hidden" action = "treat_data.php" method = "post" id = "form">
   <input type="hidden" id="latitude" name="latitude" value=""/>
-    <input type="hidden" id="longitude" name="longitude" value=""/>
+  <input type="hidden" id="longitude" name="longitude" value=""/>
+  <input type="hidden" id="download_speed" name="download_speed" value=""/>
 </form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src = "get_location.js"></script>
+<script src = "download_speed.js"></script>
 <script type="text/javascript">
+  
   window.onload = getLocation(function (x){
   if(x!=false){
     $("#latitude").val(x['latitude']);
     $("#longitude").val(x['longitude']);
+    MeasureConnectionSpeed(function (download_speed){
+      $("#download_speed").val(download_speed);
+      $("#form").submit();
+    })
+  }
+  else{
     $("#form").submit();
   }
-  else{}
-    $("#form").submit();
+  
 });
 </script>
