@@ -1,4 +1,4 @@
-var imageAddr = "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5mb.jpg"; 
+var imageAddr = "https://static.cineclick.com.br/sites/adm/uploads/banco_imagens/31/602x0_1446828744.jpg"; 
 var downloadSize = 4995374; //bytes
 
 function ShowProgressMessage(msg) {
