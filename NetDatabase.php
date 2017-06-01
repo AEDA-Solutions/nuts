@@ -9,10 +9,10 @@
 			$this->Dbcon = new Dbcon();
 		}
 
-		public function insert_net_data($latitude,$longitude,$ping,$packetloss,$download_rate,$upload_rate){
+		public function insert_net_data($latitude,$longitude,$ping,$packetloss){
 
  			$connection = $this->Dbcon->connect_mysql();
- 			$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_rate,upload_rate) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_rate','$upload_rate')";
+ 			$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss')";
 			if(mysqli_query($connection,$sql)){
 				//dados registrados com sucesso
 				return true;
@@ -27,34 +27,6 @@
 
  			$connection = $this->Dbcon->connect_mysql();
 			$sql = "SELECT * FROM netdata where ping ='ping'";
-			if($result = mysqli_query($connection,$sql)){
-				$netdata = mysqli_fetch_assoc($result);
-				return $netdata;
-			}
-			else{
-				//erro ao realizar a verificacao na tabela netdata
-				return false;
-			}	
- 		}
-
- 		public function search_by_download_rate($download_rate){
-
- 			$connection = $this->Dbcon->connect_mysql();
-			$sql = "SELECT * FROM netdata where download_rate ='download_rate'";
-			if($result = mysqli_query($connection,$sql)){
-				$netdata = mysqli_fetch_assoc($result);
-				return $netdata;
-			}
-			else{
-				//erro ao realizar a verificacao na tabela netdata
-				return false;
-			}	
- 		}
-
- 		public function search_by_upload_rate($upload_rate){
-
- 			$connection = $this->Dbcon->connect_mysql();
-			$sql = "SELECT * FROM netdata where upload_rate ='upload_rate'";
 			if($result = mysqli_query($connection,$sql)){
 				$netdata = mysqli_fetch_assoc($result);
 				return $netdata;
