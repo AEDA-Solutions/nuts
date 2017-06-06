@@ -136,6 +136,7 @@
         <option>Artes Cênicas</option>
         <option>Artes Plásticas</option>
         <option>Biblioteconomia</option>
+        <option>Biotecnologia</option>
         <option>Ciência da Computação </option>
         <option>Ciência Política</option>
         <option>Ciências Ambientais</option>
