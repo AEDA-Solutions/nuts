@@ -1,10 +1,8 @@
-//JUST AN EXAMPLE, PLEASE USE YOUR OWN PICTURE!
-var imageAddr = "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5mb.jpg"; 
+var imageAddr = "https://static.cineclick.com.br/sites/adm/uploads/banco_imagens/31/602x0_1446828744.jpg"; 
 var downloadSize = 4995374; //bytes
 
 
 function InitiateSpeedDetection() {
-    ShowProgressMessage("Loading the image, please wait...");
     window.setTimeout(MeasureConnectionSpeed, 1);
 };    
 
@@ -38,10 +36,7 @@ function MeasureConnectionSpeed(callback) {
         var speedMbps = (speedKbps / 1024).toFixed(2);
         callback(speedMbps);
         ShowProgressMessage([
-            "Your connection speed is:", 
-            speedBps + " bps", 
-            speedKbps + " kbps", 
-            speedMbps + " Mbps"
+            "Your connection speed is " + speedMbps + " Mbps"
         ]);
     }
 }

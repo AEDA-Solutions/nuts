@@ -28,7 +28,7 @@ class User{
 
 	public function get_name()
 	{
-		return $this->name;
+		return $this->$name;
 	}
 
 	public function get_id()
