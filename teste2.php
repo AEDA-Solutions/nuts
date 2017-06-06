@@ -2,7 +2,7 @@
 
 require_once('UserController.php');
 $UD = new UserController();
-$user_teste = $UD->delete_user(160010152);
-echo ($user_teste);
+$User = new User("bla",111,"BLA","BLA","BLA");
+echo ($UD->delete_user($User));
 
 ?>
