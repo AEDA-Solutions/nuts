@@ -46,7 +46,7 @@
 
       </div>
         <!-- nav -->
-        <div class="collapse navbar-collapse" id="barra-navegacao">
+       <div class="collapse navbar-collapse" id="barra-navegacao">
            <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
             <li><a href="tabela.php"> Análise de Rede</a></li>
@@ -68,40 +68,53 @@
           </ul>
 
         </div>
-      </div> <!-- /container --> 
+      </div><!-- /container --> 
     </nav>  <!-- /nav -->
 
-       <section id="nos">
+<section id="nos">
      <div class="container">
        <div class="row">
+       <div class="col-sm-5">
+          <form method = "post" action = "#">
+            <div class="form-group">
 
-          <!-- Texto Perfil --> 
-         <div class="col-md-6">
-           <h2>Perfil do usuário</h2>
-           <p> Bem vindo a sua página! Aqui você pode editar seus dados e ver seu histórico de analíses feitas pelo nosso site! Fique a vontade, sinta-se em casa! </p>
-           <a href="historico.php" type="button" class=" btn btn-login btn-white">Histórico</a> 
-           <br>    
-           <br>     
-           <a href="configuracoes.php" type="button" class=" btn btn-login btn-white">  Configurações </a> 
+          <!-- Configurações de senha --> 
+         <!--<div class="col-md-6"> -->
+           <h2> Trocar senha </h2>
+
+            <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" required="required" class="form-control" minlength="6" id="senha" name = "password" placeholder="******">
+            </div>
+           
+
+           
+                </div>
+
+        <div class="col-sm-1">
+          
+        </div>
+          <br>     
+          <button type="submit" class="btn btn-default btn-lg btn-white btn-alteracoes">Salvar alterações</a></button>
          </div>
 
-         <!-- Imagem Perfil --> 
+
+         <!-- Imagem Esquilo senha --> 
          <div class="col-md-6">
          <div class="row albuns">
-           <img src="images/usuario.gif" class="img-responsive">
+           <img src="images/esquilete.png" class="img-responsive">
          </div>
          </div>
 
+
+      </form>
        </div>
      </div>
    </section>
       </div>
       </div>
       </section>
-
-              
-
-
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
