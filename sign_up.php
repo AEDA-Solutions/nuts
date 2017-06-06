@@ -135,7 +135,7 @@
         <option>Arquivologia</option>
         <option>Artes Cênicas</option>
         <option>Artes Plásticas</option>
-        <option>Biblioteconomia</option>
+        <option>Biblioteconomia</option>   
         <option>Biotecnologia</option>
         <option>Ciência da Computação </option>
         <option>Ciência Política</option>
