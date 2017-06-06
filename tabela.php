@@ -2,11 +2,22 @@
 
 require_once('NetController.php');
 $Uc = new NetController();
-$net_data = $Uc->get_netdata();
-$user_data = end($net_data);
+$user_data = $Uc->get_last_data();
+$nearby_data = $Uc->get_nearby_data($user_data['latitude'],$user_data['longitude']);
+
+function validate_data($d){
+  if(isset($d)){
+    echo $d;
+  }
+
+  else{
+    
+  }
+}
 ?>
 
-<? $user_data['latitude']?>
+
+
 
 
 <!DOCTYPE html>
@@ -61,7 +72,13 @@ $user_data = end($net_data);
            <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
             <li><a href="tabela.php"> Análise de Rede</a></li>
-            <li><a href="perfil.php"> Perfil </a></li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Perfil <b class="caret"></b></a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="historico.php">Histórico</a></li>
+                                <li><a href="configuracoes.php">Configurações</a></li>
+                            </ul>
+            </li>    
             <li class="divisor" role="separator"></li>
             <li><a href="index.php">Sair</a></li>
           </ul>
@@ -124,13 +141,13 @@ $user_data = end($net_data);
 
                     <tr>
                       <th scope="row">Velocidade download</th>
-                      <td> <?= $user_data['id']?></td>
+                      <td> <?= $user_data['download_speed']?></td>
 
                     </tr>
 
                     <tr>
                       <th scope="row">Velocidade upload</th>
-                      <td> <?= $user_data['id']?></td>
+                      <td></td>
 
                     </tr>
                   </tbody>
@@ -157,92 +174,92 @@ $user_data = end($net_data);
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>  </td>
-      <td>  </td>
-      <td> </td>
-      <td>  </td>
-      <td>  </td>
+      <td><?php validate_data($nearby_data[0]['latitude']);?>  </td>
+      <td><?php validate_data($nearby_data[0]['longitude']);?></td>
+      <td><?php validate_data($nearby_data[0]['ping']);?> </td>
+      <td><?php validate_data($nearby_data[0]['packetloss']);?>  </td>
+      <td><?php validate_data($nearby_data[0]['download_speed']);?>  </td>
       <td> </td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>  </td>
-      <td>  </td>
-      <td> </td>
-      <td>  </td>
-      <td>  </td>
+      <td><?php validate_data($nearby_data[1]['latitude']);?>  </td>
+      <td><?php validate_data($nearby_data[1]['longitude']);?></td>
+      <td><?php validate_data($nearby_data[1]['ping']);?> </td>
+      <td><?php validate_data($nearby_data[1]['packetloss']);?>  </td>
+      <td><?php validate_data($nearby_data[1]['download_speed']);?>  </td>
       <td> </td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>  </td>
-      <td>  </td>
-      <td> </td>
-      <td>  </td>
-      <td>  </td>
+      <td><?php validate_data($nearby_data[2]['latitude']);?>  </td>
+      <td><?php validate_data($nearby_data[2]['longitude']);?></td>
+      <td><?php validate_data($nearby_data[2]['ping']);?> </td>
+      <td><?php validate_data($nearby_data[2]['packetloss']);?>  </td>
+      <td><?php validate_data($nearby_data[2]['download_speed']);?>  </td>
       <td> </td>
     </tr>
     <tr>
           <th scope="row">4</th>
-      <td>  </td>
-      <td>  </td>
-      <td> </td>
-      <td>  </td>
-      <td>  </td>
+      <td><?php validate_data($nearby_data[3]['latitude']);?>  </td>
+      <td><?php validate_data($nearby_data[3]['longitude']);?></td>
+      <td><?php validate_data($nearby_data[3]['ping']);?> </td>
+      <td><?php validate_data($nearby_data[3]['packetloss']);?>  </td>
+      <td><?php validate_data($nearby_data[3]['download_speed']);?>  </td>
       <td> </td>
       </tr>
        <tr>
           <th scope="row">5</th>
-      <td>  </td>
-      <td>  </td>
-      <td> </td>
-      <td>  </td>
-      <td>  </td>
+      <td><?php validate_data($nearby_data[4]['latitude']);?>  </td>
+      <td><?php validate_data($nearby_data[4]['longitude']);?></td>
+      <td><?php validate_data($nearby_data[4]['ping']);?> </td>
+      <td><?php validate_data($nearby_data[4]['packetloss']);?>  </td>
+      <td><?php validate_data($nearby_data[4]['download_speed']);?>  </td>
       <td> </td>
       </tr>
        <tr>
           <th scope="row">6</th>
-      <td>  </td>
-      <td>  </td>
-      <td> </td>
-      <td>  </td>
-      <td>  </td>
+     <td><?php validate_data($nearby_data[5]['latitude']);?>  </td>
+      <td><?php validate_data($nearby_data[5]['longitude']);?></td>
+      <td><?php validate_data($nearby_data[5]['ping']);?> </td>
+      <td><?php validate_data($nearby_data[5]['packetloss']);?>  </td>
+      <td><?php validate_data($nearby_data[5]['download_speed']);?>  </td>
       <td> </td>
       </tr>
        <tr>
           <th scope="row">7</th>
-      <td>  </td>
-      <td>  </td>
-      <td> </td>
-      <td>  </td>
-      <td>  </td>
+      <td><?php validate_data($nearby_data[6]['latitude']);?>  </td>
+      <td><?php validate_data($nearby_data[6]['longitude']);?></td>
+      <td><?php validate_data($nearby_data[6]['ping']);?> </td>
+      <td><?php validate_data($nearby_data[6]['packetloss']);?>  </td>
+      <td><?php validate_data($nearby_data[6]['download_speed']);?>  </td>
       <td> </td>
       </tr>
        <tr>
           <th scope="row">8</th>
-      <td>  </td>
-      <td>  </td>
-      <td> </td>
-      <td>  </td>
-      <td>  </td>
+      <td><?php validate_data($nearby_data[7]['latitude']);?>  </td>
+      <td><?php validate_data($nearby_data[7]['longitude']);?></td>
+      <td><?php validate_data($nearby_data[7]['ping']);?> </td>
+      <td><?php validate_data($nearby_data[7]['packetloss']);?>  </td>
+      <td><?php validate_data($nearby_data[7]['download_speed']);?>  </td>
       <td> </td>
       </tr>
        <tr>
           <th scope="row">9</th>
-      <td>  </td>
-      <td>  </td>
-      <td> </td>
-      <td>  </td>
-      <td>  </td>
+      <td><?php validate_data($nearby_data[8]['latitude']);?>  </td>
+      <td><?php validate_data($nearby_data[8]['longitude']);?></td>
+      <td><?php validate_data($nearby_data[8]['ping']);?> </td>
+      <td><?php validate_data($nearby_data[8]['packetloss']);?>  </td>
+      <td><?php validate_data($nearby_data[8]['download_speed']);?>  </td>
       <td> </td>
       </tr>
        <tr>
           <th scope="row">10</th>
-      <td>  </td>
-      <td>  </td>
-      <td> </td>
-      <td>  </td>
-      <td>  </td>
+      <td><?php validate_data($nearby_data[9]['latitude']);?>  </td>
+      <td><?php validate_data($nearby_data[9]['longitude']);?></td>
+      <td><?php validate_data($nearby_data[9]['ping']);?> </td>
+      <td><?php validate_data($nearby_data[9]['packetloss']);?>  </td>
+      <td><?php validate_data($nearby_data[9]['download_speed']);?>  </td>
       <td> </td>
       </tr>
   </tbody>

@@ -9,10 +9,10 @@
 			$this->Dbcon = new Dbcon();
 		}
 
-		public function insert_net_data($latitude,$longitude,$ping,$packetloss){
+		public function insert_net_data($latitude,$longitude,$ping,$packetloss,$download_speed){
 
  			$connection = $this->Dbcon->connect_mysql();
- 			$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss')";
+ 			$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed')";
 			if(mysqli_query($connection,$sql)){
 				//dados registrados com sucesso
 				return true;
@@ -42,12 +42,13 @@
  			//Caso sejam adicionados mais campos a tabela netdata, a querry
  			//dessa função deverá ser atualizada para obter tambem esse novos campos		
  			$connection = $this->Dbcon->connect_mysql();
-			$sql = "SELECT latitude, longitude, ping, packetloss, distance
+			$sql = "SELECT latitude, longitude, ping, packetloss,download_speed, distance
   					FROM (
  					SELECT z.latitude,
        						z.longitude,
        						z.ping, 
       						z.packetloss,
+      						z.download_speed,
        						p.radius,
        					 	p.distance_unit
                  			* DEGREES(ACOS(COS(RADIANS(p.latpoint))
@@ -69,7 +70,8 @@
          				AND p.longpoint + (p.radius / (p.distance_unit * COS(RADIANS(p.latpoint))))
  					) AS d
  					WHERE distance <= radius
- 					ORDER BY distance";
+ 					ORDER BY distance
+ 					LIMIT 10";
 			
 			if($result = mysqli_query($connection,$sql)){
 				$netdata = array();
