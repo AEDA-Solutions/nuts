@@ -265,6 +265,12 @@ h2{
 
 #contato p{
 	color:white;
+	font-weight: bold;
+}
+
+#contato h2{
+	color: white;
+	font-weight: bold;
 }
 
 #rodape p{
