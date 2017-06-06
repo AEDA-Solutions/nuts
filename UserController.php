@@ -74,28 +74,48 @@
 
  		}
 
- 		public function change_user_name($User){
+ 		public function change_user_name($User,$name){
 
- 			
-			$this->update_user_data($User);
+ 			$User->set_name($name);
+			if($this->UserDatabase->update_user_data($User)){
+				//sucesso
+			}
+			else{
+
+			}
  		}
 
  		public function change_user_email($User,$email){
 
  			$User->set_email($email);
-			$this->update_user_data($User);
+			if($this->UserDatabase->update_user_data($User)){
+				//sucesso
+			}
+			else{
+
+			}
  		}
 
  		public function change_user_password($User,$password){
 
  			$User->set_password($password);
-			$this->update_user_data($User);
+			if($this->UserDatabase->update_user_data($User)){
+				//sucesso
+			}
+			else{
+
+			}
  		}
 
  		public function change_user_course($User,$course){
 
  			$User->set_course($course);
-			$this->update_user_data($User);
+			if($this->UserDatabase->update_user_data($User)){
+				//sucesso
+			}
+			else{
+
+			}
  		}
 
  		// funcoes privadas
@@ -126,26 +146,6 @@
  				return true;
  			}
  		}
-
- 		public function update_user($User){
-
- 			$name = $User->get_name();
- 			$email = $User->get_email();
- 			$id = $User->get_id();
- 			$password = $User->get_password();
- 			$course = $User->get_course();
-
- 			if($this->UserDatabase->update_user_data($name,$email,$id,$password,$course)){
- 				//sucesso na operacao
- 				return true;
- 			}
-
- 			else{
- 				//falha na operacao
-				echo "Não foi possivel alterar seus dados, por favor contate o administrador";
-				return false;
- 			}
- 		}	
 
  		public function delete_user($User){
 
