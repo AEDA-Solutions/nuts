@@ -130,11 +130,13 @@
             <label>Curso</label>
         <select class="form-control" name = "course">
         <option>Administração</option>
+        <option>Administração Pública</option>
         <option>Agronomia</option>
         <option>Arquitetura e Urbanismo</option>
         <option>Arquivologia</option>
         <option>Artes Cênicas</option>
         <option>Artes Plásticas</option>
+        <option>Artes Visuais</option>
         <option>Biblioteconomia</option>   
         <option>Biotecnologia</option>
         <option>Ciência da Computação </option>
@@ -146,6 +148,7 @@
         <option>Ciências Farmacêuticas</option>
         <option>Ciências Naturais</option>
         <option>Ciências Sociais</option>
+        <option>Computação</option>
         <option>Comunicação Organizacional</option>
         <option>Comunicação Social </option>
         <option>Design</option>
@@ -182,6 +185,8 @@
         <option>Gestão em Saúde Coletiva</option>
         <option>História</option>
         <option>Letras</option>
+        <option>Letras-Tradução</option>
+        <option>Línguas EStrangeiras Aplicadas - MSI</option>
         <option>Matemática</option>
         <option>Medicina</option>
         <option>Medicina Veterinária</option>
@@ -194,10 +199,11 @@
         <option>Química</option>
         <option>Química Tecnológica</option>
         <option>Relações Internacionais</option>
+        <option>Saúde Coletiva</option>
         <option>Serviço Social</option>
+        <option>Teoria Crítica e História da Arte</option>
         <option>Terapia Ocupacional</option>
         <option>Turismo</option>
-        <option>Visuais</option>
       </select>
             </div>
                 </div>
