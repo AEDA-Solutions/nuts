@@ -13,6 +13,9 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="estilo.css" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link href="bootstrap/css/scrolling-nav.css" rel="stylesheet">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,18 +24,18 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body  id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     
     <nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
       <div class="container">
 
       <!-- header -->
-      <div class="navbar-header">
+      <div class="navbar-header page-scroll">
 
       <!-- botao toggle -->
       <button type="button" class="navbar-toggle collapsed"
               data-toggle="collapse" data-target="#barra-navegacao">
-              <span class="sr-only">alternar navegação</span>
+        <span class="sr-only">alternar navegação</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -47,9 +50,9 @@
         <!-- nav -->
         <div class="collapse navbar-collapse" id="barra-navegacao">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="">Sobre</a></li>
-            <li><a href="">Contato</a></li>
+            <li><a class="page-scroll" href="#page-top">Home</a></li>
+            <li><a class="page-scroll" href="#nos">Sobre</a></li>
+            <li><a class="page-scroll" href="#contato">Contato</a></li>
             <li><a href="analise.php"> Análise de Rede</a></li>
             <li class="divisor" role="separator"></li>
             <li><a href="sign_up.php">Registre-se</a></li>
@@ -106,7 +109,7 @@
     </div>
 
    <!-- Conteudos -->
-   <section id="nos">
+   <section id="nos" class=nos-section>
      <div class="container">
        <div class="row">
 
@@ -146,14 +149,10 @@
             <p>Encontre lugares novos que ninguém conhece para fazer downloads e acessar a internet mais rápido!</p>
           </div>
 
-          <!-- ImG Recursos PAREI AQUIIII -->
+          <!-- ImG Recursos -->
           <div class="col-md-8">
               <img src="images/nuts-conteúdos.png" class="img-responsive">
           </div>
-              
-    
-
-
 
           </div>
 
@@ -165,45 +164,37 @@
    <!-- Contato --> 
    <section id="contato">
      <div class="container">
-       <div class="row">
+      <div class="row">
+        <!-- Texto Contato --> 
+        <div class="col-md-6">
+        <h2>Contato</h2>
+        <form>
+        <div class="col-md-9">
+          <label class="sr-only" for="nome">Nome</label>
+          <input type="text" required="required" class="form-control mb-2 mr-sm-2 mb-sm-0" id="nome" placeholder="Nome">
+          <br>
+          <label class="sr-only" for="email">Email</label>
+          <input type="text"  required="required" class="form-control mb-2 mr-sm-2 mb-sm-0" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email">
 
-          <!-- Texto Contato --> 
-         <div class="col-md-6">
-           <h3>Contato</h3>
-           <form class="form-inline">
-             
-           <div class="form-group">
-             <label class="sr-only" for="nome">Nome</label>
-             <input type="text" required="required" class="form-control mb-2 mr-sm-2 mb-sm-0" id="nome" placeholder="Nome">
+          <label for="Assunto"></label>
+          <input type="text" required="required" class="form-control" id="assunto" placeholder="Assunto">
 
-             <label class="sr-only" for="email">Email</label>
-              <input type="text"  required="required" class="form-control mb-2 mr-sm-2 mb-sm-0" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email">
-             
-             </div> 
-              
-              <div class="form-group">
-             <label for="Assunto"></label>
-             <input type="text" required="required" class="form-control" id="assunto" placeholder="Assunto">
-
-             <label for="Mensagem"></label>
-             <textarea required="required" class="form-control" id="Mensagem" rows="3" placeholder="Mensagem"></textarea>
-
-             <br>
-             
+          <label for="Mensagem"></label>
+          <textarea required="required" class="form-control" id="Mensagem" rows="3" placeholder="Mensagem"></textarea>
+        
+          <br>   
             <div class="botao-contato">
             <button type="submit" class="btn btn-default btn-lg btn-white btn-contato">Enviar</button>
             </div> 
+        </div>
 
-           </div>
+        </form>
+        </div>
 
-               </form>
- 
 
-           </div>
-
-         <!-- Endereço --> 
+          <!-- Endereço --> 
          <div class="col-md-3">
-            <h3>Endereço</h3>
+         <h3>Endereço</h3>
             <p>
               Campus Universitário Darcy Ribeiro, Faculdade de Tecnologia Universidade de Brasília – UnB, Asa Norte, Brasília - DF
             </p>
@@ -221,23 +212,12 @@
             </p>
          </div>
 
-       </div>
+      </div>
      </div>
-   </section>
+     </section>
 
-       <!-- Endereço -->
-       <section id="rodape">
-       <div class="container">
-         <div class="row">
-           <footer>
-             <p>
-               NUTS 
-             </p>
-           </footer>
-         </div>
-       </div>
-         
-       </section>
+
+
 
 
 
@@ -245,5 +225,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+
+      <!-- Scrolling Nav JavaScript -->
+    <script src="bootstrap/js/jquery.easing.min.js"></script>
+    <script src="bootstrap/js/scrolling-nav.js"></script>
+
   </body>
 </html>          
