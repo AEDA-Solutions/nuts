@@ -1,8 +1,10 @@
-var imageAddr = "https://static.cineclick.com.br/sites/adm/uploads/banco_imagens/31/602x0_1446828744.jpg"; 
+//JUST AN EXAMPLE, PLEASE USE YOUR OWN PICTURE!
+var imageAddr = "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5mb.jpg"; 
 var downloadSize = 4995374; //bytes
 
 
 function InitiateSpeedDetection() {
+    ShowProgressMessage("Loading the image, please wait...");
     window.setTimeout(MeasureConnectionSpeed, 1);
 };    
 
@@ -17,26 +19,23 @@ function MeasureConnectionSpeed(callback) {
     var download = new Image();
     download.onload = function () {
         endTime = (new Date()).getTime();
-        showResults();
+        treatResuts();
     }
     
     download.onerror = function (err, msg) {
-        ShowProgressMessage("Invalid image, or error downloading");
+        //ShowProgressMessage("Invalid image, or error downloading");
     }
     
     startTime = (new Date()).getTime();
     var cacheBuster = "?nnn=" + startTime;
     download.src = imageAddr + cacheBuster;
     
-    function showResults() {
+    function treatResuts() {
         var duration = (endTime - startTime) / 1000;
         var bitsLoaded = downloadSize * 8;
         var speedBps = (bitsLoaded / duration).toFixed(2);
         var speedKbps = (speedBps / 1024).toFixed(2);
         var speedMbps = (speedKbps / 1024).toFixed(2);
         callback(speedMbps);
-        ShowProgressMessage([
-            "Your connection speed is " + speedMbps + " Mbps"
-        ]);
     }
 }
