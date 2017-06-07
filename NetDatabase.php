@@ -36,7 +36,21 @@
 				return false;
 			}	
  		}
+/*
+ 		public function search_by_jitter($jitter){
 
+
+ 			$connection = $this->Dbcon->connect_mysql();
+			$sql = "SELECT * FROM netdata where jitter ='jitter'";
+			if($result = mysqli_query($connection,$sql)){
+				$netdata = mysqli_fetch_assoc($result);
+				return $netdata;
+			}
+			else{
+				//erro ao realizar a verificacao na tabela netdata
+				return false;
+ 		}
+*/
  		public function search_by_distance($latitude,$longitude,$radius){
  			//Obs: distancia deve ser passada em metros
  			//Caso sejam adicionados mais campos a tabela netdata, a querry
