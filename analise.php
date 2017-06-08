@@ -129,6 +129,10 @@
     MeasureConnectionSpeed(function (download_speed){
       $("#download_speed").val(download_speed);
       $("#form").submit();
+        })
+    checkUploadSpeed(function (speed){
+      $("#speed").val(speed);
+      $("#form").submit();
     })
   }
   else{
