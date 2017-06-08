@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+<?php
+session_start();
+?>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -75,7 +80,7 @@
      <div class="container">
        <div class="row">
        <div class="col-sm-5">
-          <form method = "post" action = "#">
+          <form method = "post" action = "change_user_data.php">
             <div class="form-group">
 
           <!-- Configurações de perfil --> 
@@ -83,80 +88,102 @@
            <h2> Configurações </h2>
 
            <label>Email</label>
-           <input type="email" required="required" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" />
+           <input type="email" required="required" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" value = "<?= $_SESSION['email']?>" />
            
 
            <div class="form-group">
             <label>Curso</label>
-        <select class="form-control" name = "course">
-        <option>Administração</option>
-        <option>Agronomia</option>
-        <option>Arquitetura e Urbanismo</option>
-        <option>Arquivologia</option>
-        <option>Artes Cênicas</option>
-        <option>Artes Plásticas</option>
-        <option>Biblioteconomia</option>
-        <option>Ciência da Computação </option>
-        <option>Ciência Política</option>
-        <option>Ciências Ambientais</option>
-        <option>Ciências Biológicas</option>
-        <option>Ciências Contábeis</option>
-        <option>Ciências Econômicas</option>
-        <option>Ciências Farmacêuticas</option>
-        <option>Ciências Naturais</option>
-        <option>Ciências Sociais</option>
-        <option>Comunicação Organizacional</option>
-        <option>Comunicação Social </option>
-        <option>Design</option>
-        <option>Direito </option>
-        <option>Educação Física </option>
-        <option>Educação do Campo</option>
-        <option>Enfermagem e Obstetrícia</option>
-        <option>Engenharia Aeroespacial</option>
-        <option>Engenharia Ambiental </option>
-        <option>Engenharia Automotiva</option>
-        <option>Engenharia Civil</option>
-        <option>Engenharia de Computação</option>
-        <option>Engenharia de Energia</option>
-        <option>Engenharia de Redes de Comunicação</option>
-        <option>Engenharia de Produção</option>
-        <option>Engenharia de Software</option>
-        <option>Engenharia Elétrica</option>
-        <option>Engenharia Eletrônica</option>
-        <option>Engenharia Florestal</option>
-        <option>Engenharia Mecânica</option>
-        <option>Engenharia Mecatrônica</option>
-        <option>Estatística</option>
-        <option>Farmácia</option>
-        <option>Filosofia</option>
-        <option>Física</option>
-        <option>Fisioterapia</option>
-        <option>Fonoaudiologia</option>
-        <option>Geofísica</option>
-        <option>Geografia</option>
-        <option>Geologia</option>
-        <option>Gestão Ambiental</option>
-        <option>Gestão de Políticas Públicas</option>
-        <option>Gestão de Agronegócio</option>
-        <option>Gestão em Saúde Coletiva</option>
-        <option>História</option>
-        <option>Letras</option>
-        <option>Matemática</option>
-        <option>Medicina</option>
-        <option>Medicina Veterinária</option>
-        <option>Museologia</option>
-        <option>Música</option>
-        <option>Nutrição</option>
-        <option>Odontologia</option>
-        <option>Pedagogia</option>
-        <option>Psicologia</option>
-        <option>Química</option>
-        <option>Química Tecnológica</option>
-        <option>Relações Internacionais</option>
-        <option>Serviço Social</option>
-        <option>Terapia Ocupacional</option>
-        <option>Turismo</option>
-        <option>Visuais</option>
+        <select class="form-control" value  = "Agronomia" name = "course">
+        <?php
+          session_start();
+          $courses= array('Administração',
+          'Administração Pública',
+           'Agronomia',
+         'Arquitetura e Urbanismo',
+          'Arquivologia',
+         'Artes Cênicas',
+        'Artes Plásticas',
+        'Artes Visuais',
+        'Biblioteconomia',   
+        'Biotecnologia',
+        'Ciência da Computação',
+        'Ciência Política',
+        'Ciências Ambientais',
+        'Ciências Biológicas',
+        'Ciências Contábeis',
+        'Ciências Econômicas',
+        'Ciências Farmacêuticas',
+        'Ciências Naturais',
+        'Ciências Sociais',
+        'Computação',
+        'Comunicação Organizacional',
+        'Comunicação Social',
+        'Design',
+        'Direito',
+        'Educação Física',
+        'Educação do Campo',
+        'Enfermagem e Obstetrícia',
+        'Engenharia Aeroespacial',
+        'Engenharia Ambiental',
+        'Engenharia Automotiva',
+        'Engenharia Civil',
+        'Engenharia de Computação',
+        'Engenharia de Energia',
+        'Engenharia de Redes e Comunicação',
+        'Engenharia de Produção',
+        'Engenharia de Software',
+        'Engenharia Elétrica',
+        'Engenharia Eletrônica',
+        'Engenharia Florestal',
+        'Engenharia Mecânica',
+        'Engenharia Mecatrônica',
+        'Estatística',
+        'Farmácia',
+        'Filosofia',
+        'Física',
+        'Fisioterapia',
+        'Fonoaudiologia',
+        'Geofísica',
+        'Geografia',
+        'Geologia',
+        'Gestão Ambiental',
+        'Gestão de Políticas Públicas',
+        'Gestão de Agronegócio',
+        'Gestão em Saúde Coletiva',
+        'História',
+        'Letras',
+        'Letras-Tradução',
+        'Línguas EStrangeiras Aplicadas - MSI',
+        'Matemática',
+        'Medicina',
+        'Medicina Veterinária',
+        'Museologia',
+        'Música',
+        'Nutrição',
+        'Odontologia',
+        'Pedagogia',
+        'Psicologia',
+        'Química',
+        'Química Tecnológica',
+        'Relações Internacionais',
+        'Saúde Coletiva',
+        'Serviço Social',
+        'Teoria Crítica e História da Arte',
+        'Terapia Ocupacional',
+        'Turismo');
+        foreach($courses AS $key => $value) {
+
+        if($_SESSION['course'] == $value){
+             $selected = "selected";
+
+        }
+
+       else{
+         $selected = "";
+        }
+        echo "<option value= '{$value}' {$selected}>{$value}</option>";
+      }
+   ?>
       </select>
             </div>
                 </div>
@@ -189,5 +216,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+
             </body>
 </html>

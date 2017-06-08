@@ -17,8 +17,12 @@
  			if(isset($user_data['id'])){
  				//usuario foi encontrado
  				//validar session tbm na home.php
-				$_SESSION['id'] = $user_data['id'];
+ 				$_SESSION['id'] = $user_data['id'];
+				$_SESSION['course'] = $user_data['course'];
 				$_SESSION['email'] = $user_data['email'];
+				$_SESSION['password'] = $user_data['password'];
+				$_SESSION['name'] = $user_data['name'];
+				
 				return true;
  			}
 
@@ -147,8 +151,20 @@
  			else{
  				// deu ruim :(
  				return false;
+ 			}
+
  		}
 
+ 		public function update_user(){
+ 			//função que atualiza os dados do usuário logado, com base nas variáveis de SESSAO
+ 			$User = new User($_SESSION['name'],$_SESSION['id'],$_SESSION['email'],$_SESSION['password'],$_SESSION['course']);
+ 			if($this->UserDatabase->update_user_data($User)){
+ 				return true;
+ 			}
+
+ 			else{
+ 				return false;
+ 			}
  		}
 
  	}

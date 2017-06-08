@@ -71,10 +71,10 @@
 			if($result = mysqli_query($connection,$sql)){
 				return true;
 				//sucesso na operacao
-				}
+			}
 				else{
 					return false;
-				}
+			}
 		}
 
 		public function delete_user_data($id){
