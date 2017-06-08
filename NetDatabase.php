@@ -50,6 +50,7 @@
 				//erro ao realizar a verificacao na tabela netdata
 				return false;
  		}
+ 	}
  		public function search_by_distance($latitude,$longitude,$radius){
  			//Obs: distancia deve ser passada em metros
  			//Caso sejam adicionados mais campos a tabela netdata, a querry
