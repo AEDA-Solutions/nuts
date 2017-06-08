@@ -16,7 +16,7 @@
 
 ## Back-end: ##
 
-* PHP 5;
+* PHP;
 
 ## Banco de Dados: ##
 
