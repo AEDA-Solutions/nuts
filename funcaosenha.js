@@ -2,7 +2,7 @@ $(document).ready(function(){
   $('#showPassword').on('click', function(){
     
     var passwordField = $('#password');
-    var passwordFieldType = passwordField.attr('type');
+    var passwordFieldType = $('#passwordField').attr('type');
     if(passwordFieldType == 'password')
     {
         passwordField.attr('type', 'text');
