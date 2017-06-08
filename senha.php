@@ -82,10 +82,9 @@
          <!--<div class="col-md-6"> -->
            <h2> Trocar senha </h2>
 
-            <div class="form-group">
             <label for="senha">Senha</label>
             <input type="password" required="required" class="form-control" minlength="6" id="senha" name = "password" placeholder="******">
-            </div>
+         
            
 
            
