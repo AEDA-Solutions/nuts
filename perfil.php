@@ -20,11 +20,9 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body class="user-page">
 
-
-
-    <nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
+    <nav class="navbar navbar-fixed-top navbar-inverse-user navbar-transparente-user">
       <div class="container">
 
       <!-- header -->
@@ -52,18 +50,14 @@
             <li><a href="tabela.php"> Análise de Rede</a></li>
             <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Perfil<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="historico.php">Histórico</a></li>
-                                <li><a href="configuracoes.php">Configurações</a></li>
-                                <li><a href="senha.php">Trocar senha</a></li>
-      
-                                        
-                                                         
-                            </ul>
-               </li>                
+              <ul class="dropdown-menu">
+                <li><a href="historico.php">Histórico</a></li>
+                <li><a href="configuracoes.php">Configurações</a></li>
+                <li><a href="senha.php">Trocar senha</a></li>
+              </ul>
+            </li>                
            
-
-            <li class="divisor" role="separator"></li>
+            <li class="divisor-user" role="separator"></li>
             <li><a href="index.php">Sair</a></li>
           </ul>
 
@@ -71,35 +65,38 @@
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
 
-       <section id="nos">
-     <div class="container">
-       <div class="row">
+      
+  <div class="container">
 
-          <!-- Texto Perfil --> 
-         <div class="col-md-6">
-           <h2>Perfil do usuário</h2>
-           <p> Bem vindo a sua página! Aqui você pode editar seus dados e ver seu histórico de analíses feitas pelo nosso site! Fique a vontade, sinta-se em casa! </p>
-           <a href="historico.php" type="button" class=" btn btn-login btn-white">Histórico</a> 
-           <br>    
-           <br>     
-           <a href="configuracoes.php" type="button" class=" btn btn-login btn-white">  Configurações </a> 
-         </div>
+      <header class="row">
+        
+      </header>
 
-         <!-- Imagem Perfil --> 
-         <div class="col-md-6">
-         <div class="row albuns">
-           <img src="images/usuario.gif" class="img-responsive">
+      <section id="s-analise">
+        <div class="col-md-10">
+        <div class="analise" class="row">
+         <h2>Análise de Rede</h2>
          </div>
-         </div>
-
-       </div>
-     </div>
-   </section>
-      </div>
-      </div>
+        </div>
       </section>
 
-              
+      <section id="s-historico">
+        <div class="col-md-10">
+        <div class="historico" class="row"> 
+            <h2>Histórico</h2> 
+        </div>
+        </div>
+      </section>  
+
+      <section id="s-configuracoes">
+        <div class="col-md-10">
+        <div class="configuracoes">
+           <h3>Configurações</h3>
+        </div>   
+        </div>
+      </section>
+
+  </div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

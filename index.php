@@ -53,7 +53,7 @@
             <li><a class="page-scroll" href="#page-top">Home</a></li>
             <li><a class="page-scroll" href="#nos">Sobre</a></li>
             <li><a class="page-scroll" href="#contato">Contato</a></li>
-            <li><a href="analise.php"> Análise de Rede</a></li>
+            <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Análise de Rede</a></li>
             <li class="divisor" role="separator"></li>
             <li><a href="sign_up.php">Registre-se</a></li>
             <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Login</a></li>

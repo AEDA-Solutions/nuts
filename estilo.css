@@ -17,10 +17,45 @@ body {
 	font-family: Verdana, Arial, sans-serif;
 }
 
+header {
+	padding-bottom: 160px;
+}
 
-.capa-cadastro{
-	background:url('images/fundo31.jpg');
-	padding-bottom: 80px;
+footer {
+	padding-top: 50px;
+}
+
+
+.sing-up-page {
+	background: url('images/fundo26.jpg');
+	background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-size: cover;
+}
+
+.user-page {
+	background: url('images/fundo8.jpg');
+	background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-size: cover;
 }
 
 .capa-indexusuario{
@@ -33,7 +68,7 @@ body {
 	padding-bottom: 80px;
 }
 
-/* -- Barra de navegação -- */
+/* -- Barra de navegação HOME -- */
 .img-logo{
 	height: 40px;
 	width: 175px;
@@ -68,6 +103,30 @@ nav.navbar-transparente{
 	color: #BA55D3;
 }
 
+/* -- Barra de navegação PERFIL USUÁRIO -- */
+
+nav.navbar-transparente-user{
+	padding: 15px 0px;
+	background: rgba(0, 0, 0, 0.4);
+	border: none;
+}
+
+.divisor-user{
+	width: 1px;
+	height: 16px;
+	background: white;
+	margin: 16px 10px;
+}
+
+.navbar-inverse-user .navbar-nav>li>a{
+	color: white;
+}
+
+.navbar-inverse-user .navbar-nav>li>a:hover{
+	color: #BA55D3;
+}
+
+
 /* -- Imagem de capa -- */
 
 .capa {
@@ -82,13 +141,6 @@ nav.navbar-transparente{
 	vertical-align: middle;
 }
 
-.cadastro {
-	padding-left: 30px;
-	padding-top: 120px;
-	display: table;
-	width: 100%;
-
-}
 
 .perfil {
 	padding-left: 30px;
@@ -119,10 +171,10 @@ nav.navbar-transparente{
 }
 
 .btn-cadastro {
-	border-radius: 500px;
-	-webkit-border-radius: 500px;
-	-moz-border-radius:500px;
-	padding: 10px 35px;
+	border-radius: 300px;
+	-webkit-border-radius: 300px;
+	-moz-border-radius:300px;
+	padding: 3px 20px;
 	transition: background 0.4s, color 0.4s;
 }
 
@@ -153,6 +205,49 @@ nav.navbar-transparente{
 	transition: background 0.4s, color 0.4s;
 }
 
+.btn-analise-cinza {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.btn-analise-cinza:hover {
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+.btn-analise {
+	text-align: center;
+	color: white;
+	border: none;
+	padding-right: 385px;
+	padding-left: 445px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	transition: background 0.4s, color 0.4s;
+	/* superior, direito, inferior e esquerdo */
+}
+
+section.flat button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  width: 1100px; 
+  height: 100px;
+  text-align: center;
+  position: absolute;
+  left: 20px;
+}
+
+section.flat button:hover,
+section.flat button.hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+section.flat button:active,
+section.flat button.active {
+  background-color: white;
+}
+
+
 .btn-cancelar {
 	color: white;
 	background:purple;
@@ -167,7 +262,53 @@ nav.navbar-transparente{
 	color: #BC8F8F;
 }
 
-/* ==== secao cadastro ==== */
+/* ==== PERFIL USUÁRIO ==== */
+#s-analise {
+	color: white;
+	background: rgba(0, 0, 0, 0.4);
+	padding-bottom: 120px;
+}
+
+#s-historico {
+	color: white;
+	background: rgba(0, 0, 0, 0.6);
+	padding-bottom: 120px;
+}
+
+#s-configuracoes {
+	color: white;
+	background: rgba(0, 0, 0, 0.8);
+	padding-bottom: 80px;
+}
+
+.analise {
+	padding: 10px 0px 15px 385px;
+
+	/* superior, direito, inferior e esquerdo */
+}
+
+.historico {
+	padding: 10px 0px 15px 455px;
+}
+
+.configuracoes {
+	padding: 6px 0px 10px 460px;
+}
+
+
+
+/* ==== CADASTRO ==== */
+
+.cadastro {
+	text-align: center;
+	padding-top: 50px;
+	color: purple;
+}
+
+.cadastro-formulario {
+	color: purple;
+}
+
 #cadastro {
 	background-size: 100%;
 	background: #D8BFD8;
@@ -281,4 +422,8 @@ h2{
 #cadastro h1{
 	color: purple;
 	padding: 0px 30px 0px 380px;
+}
+
+#analise p{
+	word-break: normal;
 }

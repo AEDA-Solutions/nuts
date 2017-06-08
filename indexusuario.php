@@ -67,7 +67,6 @@ else{
                             <ul class="dropdown-menu">
                                 <li><a href="historico.php">Histórico</a></li>
                                 <li><a href="configuracoes.php">Configurações</a></li>
-                                <li><a href="senha.php">Trocar senha</a></li>
                             </ul>
             </li>    
             <li class="divisor" role="separator"></li>

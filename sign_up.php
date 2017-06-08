@@ -20,8 +20,8 @@
     <![endif]-->
   </head>
 
-  <body>
-    
+  <body class="sing-up-page">
+   
     <nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
       <div class="container">
 
@@ -99,23 +99,16 @@
       </form>
       <!-- /Login  -->
 
-      <section id="capa-cadastro">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+  <div class="container">
+        <div class="cadastro" class="row">
+          <h1>Cadastre-se</h1>
+          <hr>
+        </div>
         
-      </section>
+        <div class="cadastro-formulario" class="row">
+          <div class="col-md-6 col-md-push-3">
 
-    <section id="cadastro">
-    <div class="container">
-      <div id="cadastro" class="cadastro">
-      <h1>Cadastre-se</h1>
-      <hr> 
-      <div class="row">
-        <div class="col-sm-5">
-          <form method = "post" action = "register_user.php">
+            <form method = "post" action = "register_user.php">
             <div class="form-group">
             <label for="nome">Nome</label>
             <input type="text" required="required" class="form-control" pattern="[a-Z\s]+$" id="nome" name = "name" placeholder="Nome">
@@ -206,13 +199,7 @@
         <option>Turismo</option>
       </select>
             </div>
-                </div>
 
-        <div class="col-sm-1">
-          
-        </div>
-
-        <div class="col-sm-5">
             <div class="form-group">
             <label for="matricula">Matrícula</label>
             <input type="text" required="required" class="form-control" id="matricula" maxlength="9" pattern="[0-9]{2}[0-9]{7}" placeholder="123456789" name = "id">
@@ -223,27 +210,26 @@
             <input type="password" required="required" class="form-control" minlength="6" id="senha" name = "password" placeholder="******">
             </div>
 
-      </div>
+            <br>
 
-
-        </div>
-
-      </div>
-
-      <div class="botao">
-
-
-      <button type="submit" class="btn btn-default btn-lg btn-white btn-cadastro">Cadastrar</a> 
-        <!-- <button type="submit" class="btn btn-default btn-lg btn-white btn-cadastro">Cadastrar</button> -->
-      </div>
-
-      </div>
+          <div class="botao">
+            <button type="submit" class="btn btn-default btn-lg btn-white btn-cadastro">Cadastrar</button> 
+          </div>
 
           </form>
-
-</section>
-        
+        </div>
       </div>
+  </div>
+        
+          <aside role="complementary" class="col-md-3 col-md-push-3">
+            
+          </aside>
+          <nav class="col-md-3 col-md-pull-9">
+           
+          </nav>
+        </div>
+    
+  </div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
