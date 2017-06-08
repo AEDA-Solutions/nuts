@@ -84,11 +84,15 @@
 
             <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" required="required" class="form-control" minlength="6" id="senha" name = "password" placeholder="******">
+            <input type="password" required="required" class="form-control" minlength="6" id="password" name = "password" placeholder="******">
+            <input type="button" id="showPassword" value="show" class="button" /></p>
             </div>
-           
 
-           
+            <div class="container">
+
+</div>
+
+            
                 </div>
 
         <div class="col-sm-1">
@@ -120,4 +124,22 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
             </body>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $('#showPassword').on('click', function(){
+    var passwordField = $('#password').val();
+    var passwordFieldType = $('#password').attr('type');
+    if(passwordFieldType == 'password')
+    {
+        $('#password').attr('type', 'text');
+        $(this).val('Hide');
+    } else {
+        $('#password').attr('type', 'password');
+        $(this).val('Show');
+    }
+  });
+});
+    </script>
+
 </html>

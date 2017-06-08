@@ -74,20 +74,8 @@
 
  		}
 
- 		public function change_user_name($User,$name){
+ 		public function change_user_email($email){
 
- 			$User->set_name($name);
-			if($this->UserDatabase->update_user_data($User)){
-				//sucesso
-			}
-			else{
-
-			}
- 		}
-
- 		public function change_user_email($User,$email){
-
- 			$User->set_email($email);
 			if($this->UserDatabase->update_user_data($User)){
 				//sucesso
 			}
