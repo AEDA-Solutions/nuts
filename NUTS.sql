@@ -10,7 +10,7 @@ create table netdata
     ping float DEFAULT NULL,
     packetloss float DEFAULT NULL,
     download_speed float DEFAULT NULL,
-    gitter float
+    jitter float
 
 );
 
