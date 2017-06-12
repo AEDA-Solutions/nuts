@@ -51,6 +51,7 @@ session_start();
 
       </div>
         <!-- nav -->
+
         <div class="collapse navbar-collapse" id="barra-navegacao">
            <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
@@ -76,18 +77,28 @@ session_start();
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
 
-<section id="nos">
+
+
+
      <div class="container">
-       <div class="row">
-       <div class="col-sm-5">
+        <div class="cadastro" class="row">
+           <h2> Configurações </h2>
+          <hr>
+        </div>
+        
+        <div class="cadastro-formulario" class="row">
+          <div class="col-md-6 col-md-push-3">
           <form method = "post" action = "change_user_data.php">
+            
+            
+
+          <!-- Configurações de usuário --> 
+        
+      
+
             <div class="form-group">
 
-          <!-- Configurações de perfil --> 
-         <!--<div class="col-md-6"> -->
-           <h2> Configurações </h2>
-
-           <label>Email</label>
+<label>Email</label>
            <input type="email" required="required" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" value = "<?= $_SESSION['email']?>" />
            
 
@@ -188,29 +199,20 @@ session_start();
             </div>
                 </div>
 
-        <div class="col-sm-1">
-          
+
+                <button type="submit" class="btn btn-default btn-lg btn-white btn-alteracoes">Salvar alterações</a></button>
+        </form>
         </div>
-          <br>     
-          <button type="submit" class="btn btn-default btn-lg btn-white btn-alteracoes">Salvar alterações</a></button>
-         </div>
+        </div>
+        </div>
 
 
-         <!-- Imagem Esquilo Perfil --> 
-         <div class="col-md-6">
-         <div class="row albuns">
-           <img src="images/squille.png" class="img-responsive">
-         </div>
-         </div>
+
+           
+
+      
 
 
-      </form>
-       </div>
-     </div>
-   </section>
-      </div>
-      </div>
-      </section>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -71,53 +71,39 @@
       </div><!-- /container --> 
     </nav>  <!-- /nav -->
 
-<section id="nos">
+
      <div class="container">
-       <div class="row">
-       <div class="col-sm-5">
+        <div class="cadastro" class="row">
+           <h2> Trocar senha </h2>
+          <hr>
+        </div>
+        
+        <div class="cadastro-formulario" class="row">
+          <div class="col-md-6 col-md-push-3">
           <form method = "post" action = "#">
-            <div class="form-group">
+            
 
           <!-- Configurações de senha --> 
-         <!--<div class="col-md-6"> -->
-           <h2> Trocar senha </h2>
+        
+      
 
             <div class="form-group">
             <label for="senha">Senha</label>
+            <br>
             <input type="password" required="required" class="form-control" minlength="6" id="password" name = "password" placeholder="******">
-            <input type="button" id="showPassword" value="show" class="button" /></p>
+            <br>
+            <input type="button" id="showPassword" value="Mostrar Senha" class="button" /></p>
+            <br>
+            <br>
+
+             <button type="submit" class="btn btn-default btn-lg btn-white btn-alteracoes">Salvar alterações</a></button>
+            </div>
+            </form>
+            </div>
             </div>
 
-            <div class="container">
+        </div>    
 
-</div>
-
-            
-                </div>
-
-        <div class="col-sm-1">
-          
-        </div>
-          <br>     
-          <button type="submit" class="btn btn-default btn-lg btn-white btn-alteracoes">Salvar alterações</a></button>
-         </div>
-
-
-         <!-- Imagem Esquilo senha --> 
-         <div class="col-md-6">
-         <div class="row albuns">
-           <img src="images/esquilete.png" class="img-responsive">
-         </div>
-         </div>
-
-
-      </form>
-       </div>
-     </div>
-   </section>
-      </div>
-      </div>
-      </section>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -133,10 +119,10 @@
     if(passwordFieldType == 'password')
     {
         $('#password').attr('type', 'text');
-        $(this).val('Hide');
+        $(this).val('Ocultar senha');
     } else {
         $('#password').attr('type', 'password');
-        $(this).val('Show');
+        $(this).val('Mostrar Senha');
     }
   });
 });
