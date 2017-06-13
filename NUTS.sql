@@ -6,11 +6,11 @@ create table netdata
 (
 	id int (11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     latitude float DEFAULT NULL,
-	longitude float DEFAULT NULL,
+    longitude float DEFAULT NULL,
     ping float DEFAULT NULL,
     packetloss float DEFAULT NULL,
     download_speed float DEFAULT NULL,
-    jitter float
+    jitter float DEFAULT NULL
 
 );
 
