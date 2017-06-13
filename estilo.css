@@ -262,6 +262,26 @@ section.flat button.active {
 	color: #BC8F8F;
 }
 
+
+/* ==== CONFIGURAÇÕES DO USUÁRIO ==== */
+#page-configurações {
+	color: white;
+	background: rgba(0, 0, 0, 0.4);
+	padding-bottom: 350px;
+	padding-right: 50px;
+}
+
+.configurações {
+	padding: 10px 20px 15px 385px;
+
+	/* superior, direito, inferior e esquerdo */
+}
+
+.configurações-formulario {
+	color: white;
+}
+
+
 /* ==== PERFIL USUÁRIO ==== */
 #s-analise {
 	color: white;
@@ -304,6 +324,7 @@ section.flat button.active {
 	padding-top: 50px;
 	color: purple;
 }
+
 
 .cadastro-formulario {
 	color: purple;

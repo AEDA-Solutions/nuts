@@ -72,28 +72,27 @@ session_start();
 
 
 
+    <div class="container">
 
-     <div class="container">
-        <div class="cadastro" class="row">
-           <h2> Configurações </h2>
-          <hr>
-        </div>
+      <header class="row">
         
-        <div class="cadastro-formulario" class="row">
-          <div class="col-md-6 col-md-push-3">
+      </header>
+
+      <section id="page-configurações">
+        <div class="col-md-10">
+        <div class="configurações" class="row">
+         <h2>Configurações</h2>
+         <div class="configurações-formulario" class="row">
           <form method = "post" action = "change_user_data.php">
-            
-            
 
           <!-- Configurações de usuário --> 
-        
-      
 
             <div class="form-group">
 
-<label>Email</label>
+           <label>Email</label>
            <input type="email" required="required" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" value = "<?= $_SESSION['email']?>" />
            
+           <br>
 
            <div class="form-group">
             <label>Curso</label>
@@ -192,12 +191,22 @@ session_start();
             </div>
                 </div>
 
-
+                <br>
+                
                 <button type="submit" class="btn btn-default btn-lg btn-white btn-alteracoes">Salvar alterações</a></button>
         </form>
         </div>
         </div>
         </div>
+         </div>
+        </div>
+      </section>
+
+
+
+
+
+     
 
 
 
