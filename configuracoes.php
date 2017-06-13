@@ -63,7 +63,7 @@ session_start();
             </li>                
            
             <li class="divisor-user" role="separator"></li>
-            <li><a href="index.php">Sair</a></li>
+            <li><a href="logout.php">Sair</a></li>
           </ul>
 
         </div>

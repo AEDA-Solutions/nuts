@@ -3,8 +3,11 @@
 	session_start();
 
 	unset($_SESSION['id']);
-	unset($_SESSION['email']);
+	unset($_SESSION['course']);
+	unset($_SESSION['email']); 
+	unset($_SESSION['password']);
+	unset($_SESSION['name']);
 
-	header('Location: home.php');
+	header('Location: index.php');
 
 ?>
