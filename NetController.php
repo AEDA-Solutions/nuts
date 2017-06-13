@@ -25,7 +25,10 @@
 			if($packetloss = $this->check_packet_loss('www.youtube.com', 20)){}
 			else{}
 
-			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss,$this->download_speed)){
+			if($jitter = $this->check_jitter("matriculaweb.unb.br", 80, 10)){}
+			else{return false;}
+
+			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss,$this->download_speed,$jitter)){
 				return true;
 			}
 
