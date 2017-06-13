@@ -88,17 +88,6 @@
 			}
  		}
 
- 		public function change_user_password($User,$password){
-
- 			$User->set_password($password);
-			if($this->UserDatabase->update_user_data($User)){
-				//sucesso
-			}
-			else{
-
-			}
- 		}
-
  		public function change_user_course($User,$course){
 
  			$User->set_course($course);
