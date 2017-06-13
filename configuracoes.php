@@ -25,7 +25,7 @@ session_start();
     <![endif]-->
   </head>
 
-      <body class="user-page">
+     <body class="user-page">
 
     <nav class="navbar navbar-fixed-top navbar-inverse-user navbar-transparente-user">
       <div class="container">
@@ -68,7 +68,10 @@ session_start();
 
         </div>
       </div> <!-- /container --> 
-    </nav>  <!-- /nav -->  
+    </nav>  <!-- /nav -->
+
+
+
 
      <div class="container">
         <div class="cadastro" class="row">
@@ -88,7 +91,7 @@ session_start();
 
             <div class="form-group">
 
-           <label>Email</label>
+<label>Email</label>
            <input type="email" required="required" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" value = "<?= $_SESSION['email']?>" />
            
 
@@ -195,6 +198,13 @@ session_start();
         </div>
         </div>
         </div>
+
+
+
+           
+
+      
+
 
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -20,9 +20,9 @@
     <![endif]-->
   </head>
 
-  <body>
-    
-    <nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
+   <body class="user-page">
+
+    <nav class="navbar navbar-fixed-top navbar-inverse-user navbar-transparente-user">
       <div class="container">
 
       <!-- header -->
@@ -38,21 +38,27 @@
         <span class="icon-bar"></span>
       </button>
 
-        <a href="index.html" class="navbar-brand">
+        <a href="index.php" class="navbar-brand">
           <span class="img-logo">NUTS</span>
         </a>
 
       </div>
         <!-- nav -->
         <div class="collapse navbar-collapse" id="barra-navegacao">
-          <ul class="nav navbar-nav navbar-right">
+           <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
-            <li><a href="">Sobre</a></li>
-            <li><a href="">Contato</a></li>
             <li><a href="analise.php"> Análise de Rede</a></li>
-            <li class="divisor" role="separator"></li>
-            <li><a href="sign_up.php">Registre-se</a></li>
-            <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Login</a></li>
+            <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Perfil<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="historico.php">Histórico</a></li>
+                <li><a href="configuracoes.php">Configurações</a></li>
+                <li><a href="senha.php">Trocar senha</a></li>
+              </ul>
+            </li>                
+           
+            <li class="divisor-user" role="separator"></li>
+            <li><a href="index.php">Sair</a></li>
           </ul>
 
         </div>
