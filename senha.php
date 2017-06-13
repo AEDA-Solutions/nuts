@@ -86,11 +86,11 @@
             <div class="form-group">
 
             <label for="old_password"> Senha atual</label>
-            <input type="old-password" required="required" class="form-control" minlength="6" id="old_password" name = "old_password" placeholder="******">
+             <input type="password" required="required" class="form-control" id="old_password" name = "old_password" minlength="6" placeholder="******">
 
             <label for="senha">Nova Senha</label>
             <br>
-            <input type="password" required="required" class="form-control" minlength="6" id="password" name = "password" placeholder="******">
+            <input type="password" required="required" class="form-control" minlength="6" id="new_password" name = "new_password" placeholder="******">
             <br>
             <input type="button" id="showPassword" value="Mostrar Senha" class="button" /></p>
             <br>
