@@ -9,7 +9,7 @@
 			$this->Dbcon = new Dbcon();
 		}
 
-		public function insert_net_data($latitude,$longitude,$ping,$packetloss,$download_speed){
+		public function insert_net_data($latitude,$longitude,$ping,$packetloss,$download_speed,$jitter){
 
  			$connection = $this->Dbcon->connect_mysql();
  			$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed')";
