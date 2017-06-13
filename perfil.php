@@ -75,7 +75,7 @@
       <section id="s-analise">
         <div class="col-md-10">
         <div class="analise" class="row">
-         <h2>Análise de Rede</h2>
+         <a href="analise.php"><h2>Análise de Rede</h2></a>
          </div>
         </div>
       </section>
@@ -83,7 +83,7 @@
       <section id="s-historico">
         <div class="col-md-10">
         <div class="historico" class="row"> 
-            <h2>Histórico</h2> 
+            <a href="historico.php"><h2>Histórico</h2></a>
         </div>
         </div>
       </section>  
@@ -91,7 +91,7 @@
       <section id="s-configuracoes">
         <div class="col-md-10">
         <div class="configuracoes">
-           <h3>Configurações</h3>
+           <a href="configuracoes.php"><h3>Configurações</h3></a>
         </div>   
         </div>
       </section>

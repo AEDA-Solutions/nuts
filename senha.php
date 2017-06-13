@@ -22,9 +22,9 @@
 
   <body>
 
+    <body class="user-page">
 
-
-    <nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
+    <nav class="navbar navbar-fixed-top navbar-inverse-user navbar-transparente-user">
       <div class="container">
 
       <!-- header -->
@@ -46,30 +46,26 @@
 
       </div>
         <!-- nav -->
-       <div class="collapse navbar-collapse" id="barra-navegacao">
+        <div class="collapse navbar-collapse" id="barra-navegacao">
            <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
-            <li><a href="tabela.php"> Análise de Rede</a></li>
+            <li><a href="analise.php"> Análise de Rede</a></li>
             <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Perfil<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="historico.php">Histórico</a></li>
-                                <li><a href="configuracoes.php">Configurações</a></li>
-                                <li><a href="senha.php">Trocar senha</a></li>
-      
-                                        
-                                                         
-                            </ul>
-               </li>                
+              <ul class="dropdown-menu">
+                <li><a href="historico.php">Histórico</a></li>
+                <li><a href="configuracoes.php">Configurações</a></li>
+                <li><a href="senha.php">Trocar senha</a></li>
+              </ul>
+            </li>                
            
-
-            <li class="divisor" role="separator"></li>
+            <li class="divisor-user" role="separator"></li>
             <li><a href="index.php">Sair</a></li>
           </ul>
 
         </div>
-      </div><!-- /container --> 
-    </nav>  <!-- /nav -->
+      </div> <!-- /container --> 
+    </nav>  <!-- /nav -->  
 
 
      <div class="container">

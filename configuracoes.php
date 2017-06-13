@@ -25,11 +25,9 @@ session_start();
     <![endif]-->
   </head>
 
-  <body>
+      <body class="user-page">
 
-
-
-    <nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
+    <nav class="navbar navbar-fixed-top navbar-inverse-user navbar-transparente-user">
       <div class="container">
 
       <!-- header -->
@@ -51,34 +49,26 @@ session_start();
 
       </div>
         <!-- nav -->
-
         <div class="collapse navbar-collapse" id="barra-navegacao">
            <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
-            <li><a href="tabela.php"> Análise de Rede</a></li>
+            <li><a href="analise.php"> Análise de Rede</a></li>
             <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Perfil<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="historico.php">Histórico</a></li>
-                                <li><a href="configuracoes.php">Configurações</a></li>
-                                <li><a href="senha.php">Trocar senha</a></li>
-      
-                                        
-                                                         
-                            </ul>
-               </li>                
+              <ul class="dropdown-menu">
+                <li><a href="historico.php">Histórico</a></li>
+                <li><a href="configuracoes.php">Configurações</a></li>
+                <li><a href="senha.php">Trocar senha</a></li>
+              </ul>
+            </li>                
            
-
-            <li class="divisor" role="separator"></li>
+            <li class="divisor-user" role="separator"></li>
             <li><a href="index.php">Sair</a></li>
           </ul>
 
         </div>
       </div> <!-- /container --> 
-    </nav>  <!-- /nav -->
-
-
-
+    </nav>  <!-- /nav -->  
 
      <div class="container">
         <div class="cadastro" class="row">
@@ -98,7 +88,7 @@ session_start();
 
             <div class="form-group">
 
-<label>Email</label>
+           <label>Email</label>
            <input type="email" required="required" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" value = "<?= $_SESSION['email']?>" />
            
 
@@ -205,13 +195,6 @@ session_start();
         </div>
         </div>
         </div>
-
-
-
-           
-
-      
-
 
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

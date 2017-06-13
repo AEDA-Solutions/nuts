@@ -424,6 +424,17 @@ h2{
 	padding: 0px 30px 0px 380px;
 }
 
-#analise p{
-	word-break: normal;
+#s-analise h2, a{
+	color: white;
 }
+
+#s-historico h2, a{
+	color: white;
+}
+
+#s-configuracoes h3, a{
+	color: white;
+}
+
+
+
