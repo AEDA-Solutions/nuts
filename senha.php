@@ -90,7 +90,7 @@
 
             <label for="senha">Nova Senha</label>
             <br>
-            <input type="password" required="required" class="form-control" minlength="6" id="new_password" name = "new_password" placeholder="******">
+            <input type="password" required="required" class="form-control" minlength="6" id="password" name = "password" placeholder="******">
             <br>
             <input type="button" id="showPassword" value="Mostrar Senha" class="button" /></p>
             <br>

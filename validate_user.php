@@ -9,8 +9,7 @@
 	if($UserController->login($id,$password)){
 		header('Location: indexusuario.php');
 		
-	}			
-		 
+	}				 
 	else{
 		header('Location: index.php?erro=1');
 	}
