@@ -58,8 +58,29 @@
         </div>
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
+         
+          <!-- Login  --> 
+          <form class="modal fade" id="janela" method = "post" action = "validate_user.php">
 
-          <form class="modal fade" id="janela">
+
+          <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 1)
+              {
+                ?>
+                <div class="alert alert-danger" role="alert">
+                <strong>ERRO!</strong> <a href="#" class="alert-link"> Essa matrícula não existe</a> Digite-a corretamente ou faça nosso cadastro!
+                </div>
+          <?php 
+              } 
+            }
+          ?>
+
+
+
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
