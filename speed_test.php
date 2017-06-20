@@ -108,13 +108,42 @@
               
               <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">Cancelar</button>      
 
-              <button type="submit" class="btn btn-login btn-white">Logar</a>
+              <button type="submit" class="btn btn-login btn-white">Login</a>
                          
             </div>
 
           </div>
         </div>
       </form>
+
+        <!-- Mensagem de erro matricula  -->
+
+<div class="page-header">
+  </div>
+  
+       <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 1)
+              {
+                ?>
+
+               <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            <strong> EPA! </strong> Tem algo errado ai!
+              </div>
+
+          <?php 
+              } 
+            }
+          ?>
+
+
+          <!-- // Mensagem de erro -->
 
 
 <body>
