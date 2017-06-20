@@ -262,6 +262,11 @@ section.flat button.active {
 	color: #BC8F8F;
 }
 
+.page-header {
+	border:none;
+	padding-bottom: 10px;
+
+}
 
 /* ==== CONFIGURAÇÕES DO USUÁRIO ==== */
 #page-configurações {
