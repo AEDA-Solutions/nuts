@@ -37,22 +37,24 @@
  		public function register_user($User){
  		
  			$isThereError = false;
-
- 			if($this->validate_id($User)){
+ 			$email = $User->get_email();
+ 			$id = $User->get_id();
+ 			
+ 			if($this->validate_id($id)){
 
  			}
  			else{
  				// erro na procura do banco de dados ou id ja cadastrada
-				echo "Esta matrícula já está cadastrada";
+				//echo "Esta matrícula já está cadastrada";
  				$isThereError = true;
  			}
 
- 			if($this->validate_email($User)){
+ 			if($this->validate_email($email)){
 
  			}
  			else{
  				// erro na procura do banco de dados ou email ja cadastrado
- 				echo "Este email já está cadastrado";
+ 				//echo "Este email já está cadastrado";
  				$isThereError = true;
  			}
 
@@ -101,9 +103,8 @@
 
  		// funcoes privadas
  		
- 		private function validate_id($User){
+ 		public function validate_id($id){
 
- 			$id = $User->get_id();
  			$user_data = $this->UserDatabase->search_by_id($id);
  			
  			if(isset($user_data['id'])){
@@ -115,9 +116,8 @@
  
 		}
 
- 		private function validate_email($User){
+ 		public function validate_email($email){
 
- 			$email = $User->get_email();
  			$user_data = $this->UserDatabase->search_by_email($email);
  			
  			if(isset($user_data['email'])){

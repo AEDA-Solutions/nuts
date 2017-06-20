@@ -96,7 +96,7 @@ session_start();
 
            <div class="form-group">
             <label>Curso</label>
-        <select class="form-control" value  = "Agronomia" name = "course">
+        <select class="form-control" name = "course">
         <?php
           session_start();
           $courses= array('Administração',
