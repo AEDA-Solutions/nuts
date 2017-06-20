@@ -37,3 +37,20 @@ create table users
     alter table netdata
     add foreign key (fk_user)
     references users (id);
+    
+    
+
+
+	/*		***FUNÇÃO SELECT DE USUARIOS ASSOCIADOS AOS SEUS NETDATAS A SER APLICADO***
+	
+	
+	
+		select users.name, netdata.latitude, netdata.longitude, netdata.ping, netdata.download_speed, netdta.upload_speed,
+		netdata.pacletloss, netdata.gitter
+		
+		from netdata join users
+		
+		on users.id = netdata.fk_users;
+	
+	
+	*/
