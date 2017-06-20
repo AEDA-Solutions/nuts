@@ -118,8 +118,11 @@
 
         <!-- Mensagem de erro matricula  -->
 
-<div class="page-header">
-  </div>
+<br>
+<br>
+<br>
+<br>
+ 
   
        <?php 
             if (isset($_GET['erro'])) 
