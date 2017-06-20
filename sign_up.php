@@ -118,6 +118,38 @@
       </form>
       <!-- /Login  -->
 
+       <!-- Mensagem de erro matricula  -->
+
+<br>
+<br>
+<br>
+<br>
+ 
+  
+       <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 1)
+              {
+                ?>
+
+               <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            <strong> EPA! </strong> Tem algo errado ai!
+              </div>
+
+          <?php 
+              } 
+            }
+          ?>
+
+
+          <!-- // Mensagem de erro -->
+
   <div class="container">
         <div class="cadastro" class="row">
           <h1>Cadastre-se</h1>
