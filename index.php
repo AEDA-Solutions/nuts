@@ -62,25 +62,11 @@
         </div>
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
+
             <!-- Login  --> 
 
             
           <form class="modal fade" id="janela" method = "post" action ="validate_user.php">
-          <?php 
-            if (isset($_GET['erro'])) 
-            {
-              $erro = $_GET['erro'];
-
-              if($erro == 1)
-              {
-                ?>
-                <div class="alert alert-danger" role="alert">
-                <strong>ERRO!</strong> <a href="#" class="alert-link"> Essa matrícula não existe</a> Digite-a corretamente ou faça nosso cadastro!
-                </div>
-          <?php 
-              } 
-            }
-          ?>
 
 
         <div class="modal-dialog modal-lg">
@@ -119,7 +105,38 @@
           </div>
         </div>
       </form>
+
       <!-- /Login  -->
+
+      
+      <!-- Mensagem de erro matricula  -->
+
+<div class="page-header">
+  </div>
+  
+       <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 1)
+              {
+                ?>
+
+               <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            <strong> EPA! </strong> Tem algo errado ai!
+              </div>
+
+          <?php 
+              } 
+            }
+          ?>
+
+
+          <!-- // Mensagem de erro -->
     <div class="capa">
       <div class="texto-capa">
         <h1>QUALIDADE PARA TODOS</h1>

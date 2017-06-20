@@ -7,7 +7,7 @@
 		
 	$UserController = new UserController();
 	if($UserController->login($id,$password)){
-		header('Location: indexusuario.php');
+		header('Location: perfil.php');
 		
 	}				 
 	else{
