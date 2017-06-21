@@ -10,15 +10,14 @@
 		}
 
 		public function insert_net_data($latitude,$longitude,$ping,$packetloss,$download_speed,$jitter){
-
  			$connection = $this->Dbcon->connect_mysql();
- 			$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed')";
+ 			$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed,jitter) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed','$jitter')";
 			if(mysqli_query($connection,$sql)){
 				//dados registrados com sucesso
 				return true;
 			}
-			else{
-				echo "aqui";
+			else{		
+				echo "aqui";		
 				return false;
  			}
 		}
@@ -26,7 +25,7 @@
 		public function search_by_ping($ping){
 
  			$connection = $this->Dbcon->connect_mysql();
-			$sql = "SELECT * FROM netdata where ping ='ping'";
+			$sql = "SELECT * FROM netdata where ping ='$ping'";
 			if($result = mysqli_query($connection,$sql)){
 				$netdata = mysqli_fetch_assoc($result);
 				return $netdata;
@@ -41,7 +40,7 @@
 
 
  			$connection = $this->Dbcon->connect_mysql();
-			$sql = "SELECT * FROM netdata where jitter ='jitter'";
+			$sql = "SELECT * FROM netdata where jitter ='$jitter'";
 			if($result = mysqli_query($connection,$sql)){
 				$netdata = mysqli_fetch_assoc($result);
 				return $netdata;

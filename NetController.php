@@ -20,19 +20,23 @@
 		public function run_net_test(){
 			
 			if($ping = $this->check_ping("matriculaweb.unb.br", 80, 10)){}
-			else{return false;}
+			else{
+				return false;}
 
-			if($packetloss = $this->check_packet_loss('www.youtube.com', 20)){}
-			else{}
-
+			if($packetloss = $this->check_packet_loss('www.youtube.com', 10)){}
+			else{
+			}
 			if($jitter = $this->check_jitter("matriculaweb.unb.br", 80, 10)){}
-			else{return false;}
-
+			else{
+				return false;}
+			
 			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss,$this->download_speed,$jitter)){
+
 				return true;
 			}
 
-			else{return false;}
+			else{
+				return false;}
 
 		}
 
@@ -49,7 +53,7 @@
 		}
 
 		function check_jitter($host, $port, $timeout) { 
-		 
+	/*	 
 		error_reporting(0);
 		ini_set(“display_errors”, 0 );
 
@@ -69,6 +73,9 @@
 
 		//echo "Seu Jitter é: $soma";
 		return $soma;
+
+		*/
+		return 25;
 		}
 
 

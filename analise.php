@@ -124,10 +124,10 @@
 </form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script src = "get_location.js"></script>
-<script src = "download_speed.js"></script>
+<script src="get_location.js"></script>
+<script src="download_speed.js"></script>
 <script type="text/javascript">
-  
+
   window.onload = getLocation(function (x){
   if(x!=false){
     $("#latitude").val(x['latitude']);
@@ -135,11 +135,11 @@
     MeasureConnectionSpeed(function (download_speed){
       $("#download_speed").val(download_speed);
       $("#form").submit();
-        })
-    checkUploadSpeed(function (speed){
+        });
+    /*checkUploadSpeed(function (speed){
       $("#speed").val(speed);
       $("#form").submit();
-    })
+    });*/
   }
   else{
     $("#form").submit();

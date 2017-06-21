@@ -5,7 +5,7 @@ function getLocation(callback) {
             function (position){
                 var x = {
                     latitude : position.coords.latitude,
-                    longitude: position.coords.longitude
+                    longitude : position.coords.longitude
                 }
 
                 callback(x);
