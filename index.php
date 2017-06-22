@@ -82,12 +82,12 @@
               
             <div class="form-group">
             <label for="matricula">Matrícula</label>
-            <input type="text" required="required" class="form-control" id="matricula" name = "id"maxlength="9" pattern="[0-9]{2}[0-9]{7}" placeholder="123456789">
+            <input type="text" class="form-control" id="matricula" name = "id"maxlength="9" pattern="[0-9]{2}[0-9]{7}" placeholder="123456789"  required oninvalid="setCustomValidity('Por favor, preencha com uma matrícula válida')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com uma matrícula de 9 dígitos">
             </div> 
 
             <div class="form-group">
             <label for="matricula">Senha</label>
-            <input type="password" required="required" class="form-control" id="password" name = "password" minlength="6" placeholder="******">
+            <input type="password" class="form-control" id="password" name = "password" minlength="6" placeholder="******" required oninvalid="setCustomValidity('Por favor, preencha com sua senha')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com sua senha. Ela precisa ter no mínimo 6 dígitos">
             </div>
            
             </div>
