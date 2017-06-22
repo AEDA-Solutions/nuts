@@ -35,48 +35,63 @@
  		}
 
  		public function register_user($User){
+ 			//0 erro de sql
+ 			//1 sucesso
+ 			//2 matricula
+ 			//3 email
+ 			//4 ambos
  		
- 			$isThereError = false;
+ 			$valid_id = false;
+ 			$valid_email = false;
  			$email = $User->get_email();
  			$id = $User->get_id();
  			
  			if($this->validate_id($id)){
-
+ 				$valid_id = true;
  			}
  			else{
  				// erro na procura do banco de dados ou id ja cadastrada
-				//echo "Esta matrícula já está cadastrada";
- 				$isThereError = true;
+				// echo "Esta matrícula já está cadastrada";
+
  			}
 
  			if($this->validate_email($email)){
-
+ 				$valid_email = true;
  			}
  			else{
  				// erro na procura do banco de dados ou email ja cadastrado
  				//echo "Este email já está cadastrado";
- 				$isThereError = true;
+ 				
  			}
 
- 			if($isThereError){
- 				return false;
-
- 			}
-
- 			else{
+ 			if($valid_email && $valid_id){
  				//prosseguir com o cadastro
  
  				if($this->UserDatabase->insert_user($User)){
- 					return true;
+ 					return 1;
  					//usuario cadastrado com sucesso
  				}
 
  				else{
- 					echo "Houve um erro ao cadastrar o usuário, contate o administrador.";
+ 					//echo "Houve um erro ao cadastrar o usuário, contate o administrador.";
 					return false;
  				}
 
  			}
+
+
+ 			else if(!($valid_id) && !($valid_email)){// ambos email a matricula estão invalidos
+ 				return 4;
+ 			}
+
+ 			else if (!($valid_id) && ($valid_email)){ // apenas a matricula está invalida
+ 				return 2;
+ 			}
+
+ 			else if($valid_email && !($valid_id)){ // apenas o email está invalido 
+ 				return 3;
+ 			}
+ 			
 
  		}
 
