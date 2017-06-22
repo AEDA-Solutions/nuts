@@ -6,9 +6,10 @@ use `Nuts`;
 
 create table netdata 
 (
-	id int (11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id int (11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     latitude float DEFAULT NULL,
-	longitude float DEFAULT NULL,
+    longitude float DEFAULT NULL,
+    usertime datetime DEFAULT NULL,
     ping float DEFAULT NULL,
     packetloss float DEFAULT NULL,
     download_speed float DEFAULT NULL,
@@ -19,7 +20,7 @@ create table netdata
 
 create table users 
 (
-	id int (11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id int (11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     reg varchar (12) NOT NULL,
     name varchar (100) NOT NULL,
     email varchar (100) NOT NULL,
@@ -38,19 +39,22 @@ create table users
     add foreign key (fk_user)
     references users (id);
     
+
+   ;
+    
     
 
 
-	/*		***FUNÇÃO SELECT DE USUARIOS ASSOCIADOS AOS SEUS NETDATAS A SER APLICADO***
-	
-	
-	
-		select users.name, netdata.latitude, netdata.longitude, netdata.ping, netdata.download_speed, netdta.upload_speed,
-		netdata.pacletloss, netdata.gitter
-		
-		from netdata join users
-		
-		on users.id = netdata.fk_users;
-	
-	
-	*/
+    /*      ***FUNÇÃO SELECT DE USUARIOS ASSOCIADOS AOS SEUS NETDATAS A SER APLICADO***
+    
+    
+    
+        select users.name, netdata.latitude, netdata.longitude, netdata.ping,
+        netdata.download_speed, netdta.upload_speed, netdata.pacletloss, netdata.gitter
+        
+        from netdata join users
+        
+        on users.id = netdata.fk_users;
+    
+    
+    */
