@@ -152,6 +152,84 @@
 
           <!-- // Mensagem de erro -->
 
+
+          <!-- Mensagem de erro matricula já cadastrada -->
+       <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 2)
+              {
+                ?>
+                <div class="container">
+                <div class="page-header">
+                </div>
+               <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            <strong> EPA! </strong> Essa matrícula já foi cadastrada! Tente outra!
+              </div>
+
+              </div>
+          <?php 
+              } 
+            }
+          ?>
+          <!-- // Mensagem de erro matricula já cadastrada -->
+
+          <!-- Mensagem de erro email já cadastrado -->
+       <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 3)
+              {
+                ?>
+                <div class="container">
+                <div class="page-header">
+                </div>
+               <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            <strong> EPA! </strong> Esse email já foi cadastro! Tente outro!
+              </div>
+
+              </div>
+          <?php 
+              } 
+            }
+          ?>
+          <!-- // Mensagem de erro email já cadastrado -->
+
+          <!-- Mensagem de erro email e matricula já cadastrados -->
+       <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 4)
+              {
+                ?>
+                <div class="container">
+                <div class="page-header">
+                </div>
+               <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            <strong> EPA! </strong> Esse email  e essa matrícula já foram cadastros! 
+              </div>
+
+              </div>
+          <?php 
+              } 
+            }
+          ?>
+          <!-- // Mensagem de erro email e matricula já cadastrados -->
   <div class="container">
         <div class="cadastro" class="row">
           <h1>Cadastre-se</h1>

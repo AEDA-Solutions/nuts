@@ -14,24 +14,24 @@
 	if($err == 1){
 		session_start();		
 		if($UserController->login($id,$password)){
-			header('Location: perfil.php');
+			header('Location: perfil.php?sucesso=1');
 		}			
 	}
 
 	else if($err == 2){ // matricula ja cadastrada
-		header('Location: index.php?erro=2');
+		header('Location: sign_up.php?erro=2');
 	}
 
 	else if($err == 3){ // email ja cadastrado
-		header('Location: index.php?erro=3');
+		header('Location: sign_up.php?erro=3');
 	}
 
 	else if($err == 4){ // email e matricula ja cadastrados
-		header('Location: index.php?erro=4');
+		header('Location: sign_up.php?erro=4');
 	}
 
 	else{ // erro no banco de dados
-		header('Location: index.php?erro=5');
+		header('Location: sign_up.php?erro=5');
 	}
 	
 ?>
