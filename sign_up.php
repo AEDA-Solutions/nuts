@@ -3,8 +3,6 @@
   <head class="page-header">
   
 
-  
-  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,24 +63,6 @@
 
           <!-- Login  --> 
           <form class="modal fade" id="janela" method = "post" action = "validate_user.php">
-
-
-          <?php 
-            if (isset($_GET['erro'])) 
-            {
-              $erro = $_GET['erro'];
-
-              if($erro == 1)
-              {
-                ?>
-                <div class="alert alert-danger" role="alert">
-                <strong>ERRO!</strong> <a href="#" class="alert-link"> Essa matrícula não existe</a> Digite-a corretamente ou faça nosso cadastro!
-                </div>
-          <?php 
-              } 
-            }
-          ?>
-
           
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
@@ -122,8 +102,6 @@
       </form>
       <!-- /Login  -->    
         <!-- Mensagem de erro matricula  -->
-
-
   
        <?php 
             if (isset($_GET['erro'])) 
@@ -140,15 +118,13 @@
             <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span>
             </button>
-            <strong> EPA! </strong> Tem algo errado ai!
-              </div>
+            <strong> EPA! </strong> Essa matrícula não está cadastrada! </div>
 
               </div>
           <?php 
               } 
             }
           ?>
-
 
           <!-- // Mensagem de erro -->
 

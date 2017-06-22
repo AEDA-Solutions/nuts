@@ -134,7 +134,7 @@
             <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span>
             </button>
-            <strong> EPA! </strong> Tem algo errado ai!
+            <strong> EPA! </strong> Essa matrícula não está cadastrada!
               </div>
 
               </div>
