@@ -115,10 +115,8 @@
           </div>
         </div>
       </form>
-      <!-- Mensagem de erro matricula  -->
 
-
-  
+      <!-- Mensagem de erro matricula  -->  
        <?php 
             if (isset($_GET['erro'])) 
             {
@@ -142,8 +140,6 @@
               } 
             }
           ?>
-
-
           <!-- // Mensagem de erro -->
 
 
