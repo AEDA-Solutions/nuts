@@ -209,16 +209,16 @@
         <form>
         <div class="col-md-9">
           <label class="sr-only" for="nome">Nome</label>
-          <input type="text" required="required" class="form-control mb-2 mr-sm-2 mb-sm-0" id="nome" placeholder="Nome">
+          <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="nome" placeholder="Nome" required oninvalid="setCustomValidity('Por favor, preencha o nome')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com o seu nome ">
           <br>
           <label class="sr-only" for="email">Email</label>
-          <input type="text"  required="required" class="form-control mb-2 mr-sm-2 mb-sm-0" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email">
+          <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" required oninvalid="setCustomValidity('Por favor, preencha com um e-mail válido')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com seu e-mail">
 
           <label for="Assunto"></label>
-          <input type="text" required="required" class="form-control" id="assunto" placeholder="Assunto">
+          <input type="text" class="form-control" id="assunto" placeholder="Assunto" required oninvalid="setCustomValidity('Por favor, preencha com um assunto')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com um assunto">
 
           <label for="Mensagem"></label>
-          <textarea required="required" class="form-control" id="Mensagem" rows="3" placeholder="Mensagem"></textarea>
+          <textarea class="form-control" id="Mensagem" rows="3" placeholder="Mensagem" required oninvalid="setCustomValidity('Por favor, preencha com um mensagem')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com uma mensagem"></textarea>
         
           <br>   
             <div class="botao-contato">
