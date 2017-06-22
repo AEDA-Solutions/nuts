@@ -69,14 +69,67 @@
 
 
      <div class="container">
-        <div class="cadastro" class="row">
+        <header class="row">
+        </header>
+
+<!-- Mensagem de sucesso (ALTERAÇÃO SALVA)  -->
+
+       <?php 
+            if (isset($_GET['sucesso'])) 
+            {
+              $sucesso = $_GET['sucesso'];
+
+              if($sucesso == 1)
+              {
+                ?>
+
+               <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            <strong> UHUL! </strong> Você tem uma nova senha!
+              </div>
+          <?php 
+              } 
+            }
+          ?>
+
+
+<!-- // Mensagem de sucesso (ALTERAÇÃO SALVA) -->
+
+<!-- Mensagem de erro (Senha atual não está certa) -->
+       <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 1)
+              {
+                ?>
+
+               <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            <strong> EPA! Calma lá! </strong> Você digitou a senha atual errada!
+              </div>
+          <?php 
+              } 
+            }
+          ?>
+<!--  //Mensagem de erro  (Senha atual não está certa) -->)        
+
+
+
+        <div class="cadastro">
            <h2> Trocar senha </h2>
           <hr>
         </div>
         
         <div class="cadastro-formulario" class="row">
           <div class="col-md-6 col-md-push-3">
-          <form method = "post" action = "#">
+          <form method = "post" action = "change_user_password.php">
+                  
             
 
           <!-- Configurações de senha --> 

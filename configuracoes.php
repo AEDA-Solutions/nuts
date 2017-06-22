@@ -73,10 +73,91 @@ session_start();
 
 
     <div class="container">
-
-      <header class="row">
+    <header class="row">
         
       </header>
+
+ <!-- Mensagem de sucesso 1 (ALTERAÇÕES SALVAS)  -->
+
+       <?php 
+            if (isset($_GET['sucesso'])) 
+            {
+              $sucesso = $_GET['sucesso'];
+
+              if($sucesso == 1)
+              {
+                ?>
+
+               <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            <strong> UHUL! </strong> As alterações foram salvas!
+              </div>
+          <?php 
+              } 
+            }
+          ?>
+
+
+          <!-- // Mensagem de sucesso 1 (ALTERAÇÕES SALVAS) -->
+
+
+          <!-- Mensagem de sucesso 2 (SEM ALTERAÇÕES) -->
+                       <?php 
+            if (isset($_GET['sucesso'])) 
+            {
+              $sucesso = $_GET['sucesso'];
+
+              if($sucesso == 2)
+              {
+                ?>
+ 
+
+                <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert">
+                    <span>&times;</span>
+                    </button>
+                    <strong> ORAS BOLAS! </strong> Nada foi alterado aqui!
+                </div>
+
+
+          <?php 
+              } 
+            }
+          ?>
+          <!-- // Mensagem de sucesso 2 (SEM ALTERAÇÕES) -->
+
+ <!-- Mensagem de erro email  -->
+
+
+  
+       <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 1)
+              {
+                ?>
+                <div class="container">
+                <div class="page-header">
+                </div>
+               <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            <strong> EPA! </strong> Esse email já foi cadastro por outro usuário!
+
+              </div>
+          <?php 
+              } 
+            }
+          ?>
+
+
+          <!-- // Mensagem de erro email -->
+      
 
       <section id="page-configurações">
         <div class="col-md-10">
@@ -194,6 +275,10 @@ session_start();
                 <br>
                 
                 <button type="submit" class="btn btn-default btn-lg btn-white btn-alteracoes">Salvar alterações</a></button>
+
+
+  
+
         </form>
         </div>
         </div>

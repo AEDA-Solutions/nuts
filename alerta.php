@@ -79,11 +79,11 @@
   </div>
  
   
-  <div class="alert alert-danger">
+  <div class="alert alert-info">
     <button type="button" class="close" data-dismiss="alert">
       <span>&times;</span>
     </button>
-    <strong> EPA! </strong> Tem algo errado ai!
+    <strong> ORAS BOLAS! </strong> Nada foi alterado aqui!
   </div>
 
 </div>

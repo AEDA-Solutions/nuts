@@ -120,12 +120,10 @@
           </div>
         </div>
       </form>
-      <!-- /Login  -->
+      <!-- /Login  -->    
+        <!-- Mensagem de erro matricula  -->
 
-       <!-- Mensagem de erro matricula  -->
 
-
- 
   
        <?php 
             if (isset($_GET['erro'])) 
@@ -135,7 +133,9 @@
               if($erro == 1)
               {
                 ?>
-
+                <div class="container">
+                <div class="page-header">
+                </div>
                <div class="alert alert-danger">
             <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span>
@@ -143,6 +143,7 @@
             <strong> EPA! </strong> Tem algo errado ai!
               </div>
 
+              </div>
           <?php 
               } 
             }
