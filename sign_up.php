@@ -3,6 +3,8 @@
   <head class="page-header">
   
 
+  
+  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,6 +65,24 @@
 
           <!-- Login  --> 
           <form class="modal fade" id="janela" method = "post" action = "validate_user.php">
+
+
+          <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 1)
+              {
+                ?>
+                <div class="alert alert-danger" role="alert">
+                <strong>ERRO!</strong> <a href="#" class="alert-link"> Essa matrícula não existe</a> Digite-a corretamente ou faça nosso cadastro!
+                </div>
+          <?php 
+              } 
+            }
+          ?>
+
           
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
@@ -77,12 +97,12 @@
               
             <div class="form-group">
             <label for="matricula">Matrícula</label>
-            <input type="text" required="required" class="form-control" id="matricula" name = "id"maxlength="9" pattern="[0-9]{2}[0-9]{7}" placeholder="123456789">
+            <input type="text" class="form-control" id="matricula" name = "id"maxlength="9" pattern="[0-9]{2}[0-9]{7}" placeholder="123456789" required oninvalid="setCustomValidity('Por favor, preencha com uma matrícula válida')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com uma matrícula de 9 dígitos">
             </div> 
 
             <div class="form-group">
             <label for="matricula">Senha</label>
-            <input type="password" required="required" class="form-control" id="password" name = "password" minlength="6" placeholder="******">
+            <input type="password" class="form-control" id="password" name = "password" minlength="6" placeholder="******" required oninvalid="setCustomValidity('Por favor, preencha com sua senha')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com sua senha. Ela precisa ter no mínimo 6 dígitos">
             </div>
            
             </div>
@@ -102,6 +122,8 @@
       </form>
       <!-- /Login  -->    
         <!-- Mensagem de erro matricula  -->
+
+
   
        <?php 
             if (isset($_GET['erro'])) 
@@ -118,13 +140,15 @@
             <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span>
             </button>
-            <strong> EPA! </strong> Essa matrícula não está cadastrada! </div>
+            <strong> EPA! </strong> Tem algo errado ai!
+              </div>
 
               </div>
           <?php 
               } 
             }
           ?>
+
 
           <!-- // Mensagem de erro -->
 
@@ -140,12 +164,12 @@
             <form method = "post" action = "register_user.php">
             <div class="form-group">
             <label for="nome">Nome</label>
-            <input type="text" required="required" class="form-control" pattern="[a-Z\s]+$" id="nome" name = "name" placeholder="Nome">
+            <input type="text" class="form-control" pattern="[a-Z\s]+$" id="nome" name = "name" placeholder="Nome" required oninvalid="setCustomValidity('Por favor, preencha com o seu nome')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com o seu nome ">
             </div>
 
             <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" required="required" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" />
+            <input type="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email"  required oninvalid="setCustomValidity('Por favor, preencha com um e-mail válido')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com seu e-mail"/>
             </div>
 
             <div class="form-group">
@@ -231,12 +255,12 @@
 
             <div class="form-group">
             <label for="matricula">Matrícula</label>
-            <input type="text" required="required" class="form-control" id="matricula" maxlength="9" pattern="[0-9]{2}[0-9]{7}" placeholder="123456789" name = "id">
+            <input type="text" class="form-control" id="matricula" maxlength="9" pattern="[0-9]{2}[0-9]{7}" placeholder="123456789" name = "id" required oninvalid="setCustomValidity('Por favor, preencha com uma matrícula válida')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com uma matrícula de 9 dígitos">
             </div>
 
             <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" required="required" class="form-control" minlength="6" id="senha" name = "password" placeholder="******">
+            <input type="password" class="form-control" minlength="6" id="senha" name = "password" placeholder="******" required oninvalid="setCustomValidity('Por favor, preencha com sua senha')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com a senha que você deseja. Ela precisa ter no mínimo 6 dígitos">
             </div>
 
             <br>
