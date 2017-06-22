@@ -55,7 +55,7 @@
  			//Caso sejam adicionados mais campos a tabela netdata, a querry
  			//dessa função deverá ser atualizada para obter tambem esse novos campos		
  			$connection = $this->Dbcon->connect_mysql();
-			$sql = "SELECT latitude, longitude, ping, packetloss,download_speed, distance
+			$sql = "SELECT latitude, longitude, ping, packetloss,download_speed, distance, jitter
   					FROM (
  					SELECT z.latitude,
        						z.longitude,
@@ -64,6 +64,7 @@
       						z.download_speed,
        						p.radius,
        					 	p.distance_unit
+       					 	z.jitter
                  			* DEGREES(ACOS(COS(RADIANS(p.latpoint))
                  			* COS(RADIANS(z.latitude))
                  			* COS(RADIANS(p.longpoint - z.longitude))

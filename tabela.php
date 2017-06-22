@@ -155,6 +155,13 @@ function validate_data($d){
                       <th scope="row">Velocidade upload</th>
                       <td></td>
 
+                      </tr>
+
+                    <tr>
+                      <th scope="row">Jitter</th>
+                      <td> <?= $user_data['jitter']?></td>
+                      <td></td>
+
                     </tr>
                   </tbody>
                 </table>
