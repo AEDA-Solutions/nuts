@@ -61,8 +61,8 @@
 			$fP = fSockOpen($host, $port, $errno, $errstr, $timeout); 
 			if (!$fP) { return "down"; } 
 			$tA = microtime(true); 
-			$ping1 = round((($tA - $tB) * 1000), 0); 
-			return $ping1;
+			$ping = round((($tA - $tB) * 1000), 0); 
+			return $ping;
 			$i = 10;
 
 			$ping1 = jitter("google.com.br", 80, 10); 
