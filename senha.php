@@ -54,7 +54,7 @@
               <ul class="dropdown-menu">
                 <li><a href="analise.php">Mapa</a></li>
                 <li><a href="tabela.php">Avançado</a></li>
-                <li><a href=" MODAL AQUI ">Avaliação</a></li>
+                <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Avaliação</a></li>
               </ul>
             </li>       
             <li>
@@ -73,7 +73,39 @@
         </div>
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->  
+<!-- modal de avaliação-->
+<form class="modal fade" id="janela" method = "post" action ="validate_user.php">
 
+
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span>&times;</span>
+              </button> 
+              <h4 class="modal-tittle" style="color: #FF6347">AVALIE SEU LOCAL!</h4>             
+            </div>
+
+             <div class="modal-body">
+              
+            
+
+            
+           
+            </div>
+
+             <div class="modal-footer">
+
+              
+
+              <button type="submit" class="btn btn-login btn-white">Enviar avaliação</a>
+
+            </div>
+
+          </div>
+        </div>
+      </form>
+<!-- /Modal de avaliação -->
 
      <div class="container">
         <header class="row">
