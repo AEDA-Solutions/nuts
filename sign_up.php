@@ -229,7 +229,7 @@
               } 
             }
           ?>
-          <!-- // Mensagem de erro email e matricula já cadastrados -->
+          <!-- // Mensagem de erro email e matricula já cadastrados --> 
   <div class="container">
         <div class="cadastro" class="row">
           <h1>Cadastre-se</h1>
