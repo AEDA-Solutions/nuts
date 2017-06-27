@@ -206,7 +206,7 @@
         <!-- Texto Contato --> 
         <div class="col-md-6">
         <h2>Contato</h2>
-        <form>
+        <form action="enviar_email.php" method="post">
         <div class="col-md-9">
           <label class="sr-only" for="nome">Nome</label>
           <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="nome" placeholder="Nome" required oninvalid="setCustomValidity('Por favor, preencha o nome')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com o seu nome ">
