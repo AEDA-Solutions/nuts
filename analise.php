@@ -105,6 +105,7 @@
      <div class="capa">
       <div class="texto-capa">
         <h1>Análise de rede</h1>
+        <img src="images/loading.gif" height="50" width="50">
 
 
       </div>
