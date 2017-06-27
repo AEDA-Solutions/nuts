@@ -71,7 +71,14 @@ function validate_data($d){
  <div class="collapse navbar-collapse" id="barra-navegacao">
            <ul class="nav navbar-nav navbar-right">
            <li><a href="perfil.php">Home</a></li>
-            <li><a href="tabela.php"> Análise de Rede</a></li>
+            <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Análise de Rede<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="analise.php">Mapa</a></li>
+                <li><a href="tabela.php">Avançado</a></li>
+                <li><a href=" MODAL AQUI ">Avaliação</a></li>
+              </ul>
+            </li>       
             <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Perfil<b class="caret"></b></a>
                             <ul class="dropdown-menu">
