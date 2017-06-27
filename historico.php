@@ -47,14 +47,7 @@
         <div class="collapse navbar-collapse" id="barra-navegacao">
            <ul class="nav navbar-nav navbar-right">
             <li><a href="perfil.php">Home</a></li>
-             <li>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Análise de Rede<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="analise.php">Mapa</a></li>
-                <li><a href="tabela.php">Avançado</a></li>
-                <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Avaliação</a></li>
-              </ul>
-            </li>       
+            <li><a href="analise.php"> Análise de Rede</a></li>
             <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Perfil<b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -71,39 +64,7 @@
         </div>
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
-<!-- modal de avaliação-->
-<form class="modal fade" id="janela" method = "post" action ="validate_user.php">
 
-
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">
-                <span>&times;</span>
-              </button> 
-              <h4 class="modal-tittle" style="color: #FF6347">AVALIE SEU LOCAL!</h4>             
-            </div>
-
-             <div class="modal-body">
-              
-            
-
-            
-           
-            </div>
-
-             <div class="modal-footer">
-
-              
-
-              <button type="submit" class="btn btn-login btn-white">Enviar avaliação</a>
-
-            </div>
-
-          </div>
-        </div>
-      </form>
-<!-- /Modal de avaliação -->
 
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

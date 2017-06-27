@@ -47,14 +47,7 @@
         <div class="collapse navbar-collapse" id="barra-navegacao">
            <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
-            <li>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Análise de Rede<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="analise.php">Mapa</a></li>
-                <li><a href="tabela.php">Avançado</a></li>
-               <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Avaliação</a></li>
-              </ul>
-            </li>       
+            <li><a href="analise.php"> Análise de Rede</a></li>
             <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Perfil<b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -72,40 +65,43 @@
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
 
-<!-- modal de avaliação-->
-<form class="modal fade" id="janela" method = "post" action ="validate_user.php">
-
-
+<form class="modal fade" id="janela">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
                 <span>&times;</span>
               </button> 
-              <h4 class="modal-tittle" style="color: #FF6347">AVALIE SEU LOCAL!</h4>             
+              <h4 class="modal-tittle" style="color: purple">LOGIN</h4>             
             </div>
 
              <div class="modal-body">
               
-            
+            <div class="form-group">
+            <label for="matricula">Matrícula</label>
+            <input type="text" required="required" class="form-control" id="matricula" maxlength="9" pattern="[0-9]{2}[0-9]{7}" placeholder="123456789">
+            </div>
 
-            
+            <div class="form-group">
+            <label for="matricula">Senha</label>
+            <input type="password" required="required" class="form-control" id="senha" minlength="6" placeholder="******">
+            </div>
            
             </div>
 
              <div class="modal-footer">
 
+              <a href="sign_up.php" type="button" class=" btn btn-login btn-white">Cadastrar</a> 
               
+              <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">Cancelar</button>      
 
-              <button type="submit" class="btn btn-login btn-white">Enviar avaliação</a>
-
+              <a href="indexusuario.php" type="button" class="btn btn-login btn-white">Logar</a> 
+                         
             </div>
 
           </div>
         </div>
       </form>
-<!-- /Modal de avaliação -->
-
      <div class="capa">
       <div class="texto-capa">
         <h1>Análise de rede</h1>
