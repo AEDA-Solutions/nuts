@@ -26,7 +26,7 @@
 
   <body  id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     
-    <nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
+    <nav class="navbar navbar-inverse navbar-transparente">
       <div class="container">
 
       <!-- header -->
@@ -75,7 +75,7 @@
               <button type="button" class="close" data-dismiss="modal">
                 <span>&times;</span>
               </button> 
-              <h4 class="modal-tittle" style="color: purple">LOGIN</h4>             
+              <h4 class="modal-tittle" style="color: #FF6347">LOGIN</h4>             
             </div>
 
              <div class="modal-body">

@@ -80,7 +80,7 @@ footer {
 
 nav.navbar-transparente{
 	padding: 15px 0px;
-	background: rgba(250, 250, 250, 0.6);
+	background: rgba(0, 0, 0, 0.4);
 	border: none;
 }
 
@@ -100,7 +100,7 @@ nav.navbar-transparente{
 }
 
 .navbar-inverse .navbar-nav>li>a:hover{
-	color: #BA55D3;
+	color: #FF7F50;
 }
 
 /* -- Barra de navegação PERFIL USUÁRIO -- */
@@ -132,6 +132,7 @@ nav.navbar-transparente-user{
 .capa {
 	display: table;
 	width: 100%;
+	padding-bottom: 140px;
 }
 
 .texto-capa {
@@ -183,12 +184,12 @@ nav.navbar-transparente-user{
 }
 
 .btn-white:hover {
-	background-color: purple;
+	background-color: black;
 	color: white;
 }
 
 .btn-login {
-	color: purple;
+	color: black;
 	background: white;
 	border-radius: 500px;
 	-webkit-border-radius: 500px;
@@ -201,7 +202,7 @@ nav.navbar-transparente-user{
 	border-radius: 500px;
 	-webkit-border-radius: 500px;
 	-moz-border-radius:500px;
-	padding: 10px 35px;
+	padding: 4px 25px;
 	transition: background 0.4s, color 0.4s;
 }
 
@@ -250,7 +251,7 @@ section.flat button.active {
 
 .btn-cancelar {
 	color: white;
-	background:purple;
+	background: black;
 	border-radius: 500px;
 	-webkit-border-radius: 500px;
 	-moz-border-radius:400px;
@@ -259,7 +260,7 @@ section.flat button.active {
 }
 
 .btn-darkviolet:hover {
-	color: #BC8F8F;
+	color: #FF7F50;
 }
 
 .page-header {
@@ -348,7 +349,7 @@ section.flat button.active {
 
 /* ==== secao nos ==== */
 #nos {
-	background: purple;
+	background: rgba(0,0,0,0.8);
 	padding-top: 80px;
 	padding-bottom: 80px;
 }
@@ -365,15 +366,17 @@ section.flat button.active {
 
 /* ==== contato ==== */
 #contato {
-	background: url('images/fundo-contato2.jpg');
-	padding-top: 80px;
+	background: rgba(0, 0, 0, 0.8);
+	padding-top: 30px;
 	padding-bottom: 40px;
+}	
+
 
 .botao-contato {
-	padding: 10px 0px 0px 200px;
+	margin-left: 275px;
 }
 
-}
+
 
 /* ==== rodape ==== */
 #rodape{
@@ -414,7 +417,7 @@ h2{
 }
 
 #recursos h3{
-	color: #DEB887;
+	color: #FF7F50;
 	font-weight: bold;
 }
 
@@ -422,22 +425,22 @@ h2{
 	color: white;
 }
 
-#contato h3{
-	color: white;
-}
 
 #contato h3{
-	padding-bottom: 20px;
+	margin-top: 90px;
+	color: #FF7F50;
 }
 
 #contato p{
 	color:white;
 	font-weight: bold;
+	margin-top: 15px; 
 }
 
 #contato h2{
 	color: white;
 	font-weight: bold;
+	margin-left: 13px;
 }
 
 #rodape p{
