@@ -101,11 +101,11 @@ $user_data = $NC->get_last_data();
              <div class="modal-body">
               
             <div class="form-group">
-            <input type="text" class="form-control" id="matricula" placeholder="Matrícula">
+            <input type="text" name = "reg" class="form-control" id="reg" placeholder="Matrícula">
             </div>
 
             <div class="form-group">
-            <input type="password" class="form-control" id="senha" placeholder="Senha">
+            <input type="password" class="form-control" name = "password" id="password" placeholder="Senha">
             </div>
            
             </div>

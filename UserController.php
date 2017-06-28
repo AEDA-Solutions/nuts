@@ -17,6 +17,7 @@
  			if(isset($user_data['reg'])){
  				//usuario foi encontrado
  				//validar session tbm na home.php
+ 				$_SESSION['id'] = $user_data['id'];
  				$_SESSION['reg'] = $user_data['reg'];
 				$_SESSION['course'] = $user_data['course'];
 				$_SESSION['email'] = $user_data['email'];
