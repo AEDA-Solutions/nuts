@@ -1,0 +1,12 @@
+{
+    "name": "nuts",
+    "authors": [
+        {
+            "name": "João Vítor de Queiroz Braga",
+            "email": "queirozbragajv@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.2.8"
+    }
+}
