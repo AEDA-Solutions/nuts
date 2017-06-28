@@ -158,7 +158,7 @@
           ?>
 <!--  //Mensagem de erro  (Senha atual não está certa) -->       
 
-                <section id=senha>
+                <section id=senha-configurações>
                   <div class="container">
                      <div class="page-senha" class="row">
                      <h1>Trocar Senha</h1>
