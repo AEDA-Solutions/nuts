@@ -2,11 +2,11 @@
 	
 	session_start(); 
 	require_once('UserController.php');
-	$id = $_POST['id'];
+	$reg = $_POST['reg'];
 	$password = md5($_POST['password']);
 		
 	$UserController = new UserController();
-	if($UserController->login($id,$password)){
+	if($UserController->login($reg,$password)){
 		header('Location: perfil.php');
 		
 	}				 

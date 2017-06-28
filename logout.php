@@ -3,6 +3,7 @@
 	session_start();
 
 	unset($_SESSION['id']);
+	unset($_SESSION['reg']);
 	unset($_SESSION['course']);
 	unset($_SESSION['email']); 
 	unset($_SESSION['password']);

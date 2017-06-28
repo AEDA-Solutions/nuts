@@ -3,17 +3,17 @@
 	require_once('UserController.php');
 
 	$name = $_POST['name'];
-	$id = $_POST['id'];
+	$reg = $_POST['reg'];
 	$email = $_POST['email'];
 	$password = md5($_POST['password']);
 	$course = $_POST['course'];
 	
-	$User = new User($name,$id,$email,$password,$course);
+	$User = new User($name,$reg,$email,$password,$course);
 	$UserController = new UserController();
 	$err = $UserController->register_user($User);
 	if($err == 1){
 		session_start();		
-		if($UserController->login($id,$password)){
+		if($UserController->login($reg,$password)){
 			header('Location: perfil.php?sucesso=1');
 		}			
 	}

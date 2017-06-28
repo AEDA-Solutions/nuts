@@ -25,10 +25,10 @@
 			}	
  		}
 
- 		public function search_by_id($id){
+ 		public function search_by_reg($reg){
 
  			$connection = $this->Dbcon->connect_mysql();
-			$sql = "SELECT * FROM users where id ='$id' ";
+			$sql = "SELECT * FROM users where reg ='$reg' ";
 			if($result = mysqli_query($connection,$sql)){
 				$user_data = mysqli_fetch_assoc($result);
 				return $user_data;
@@ -43,12 +43,12 @@
 
  			$name = $User->get_name();
 			$email = $User->get_email();
-			$id = $User->get_id();
+			$reg = $User->get_reg();
 			$password =$User->get_password();
 			$course = $User->get_course();
 
  			$connection = $this->Dbcon->connect_mysql();
- 			$sql = "insert into users(name,email,id,password,course) values('$name','$email','$id','$password','$course')";
+ 			$sql = "insert into users(name,email,reg,password,course) values('$name','$email','$reg','$password','$course')";
 			if(mysqli_query($connection,$sql)){
 				/*usuario registrado com sucesso*/
 				return true;
@@ -62,12 +62,12 @@
 
 			$name = $User->get_name();
 			$email = $User->get_email();
-			$id = $User->get_id();
+			$reg = $User->get_reg();
 			$password =$User->get_password();
 			$course = $User->get_course();
 
 			$connection = $this->Dbcon->connect_mysql();
- 			$sql = "update users set name = '$name', email = '$email', password = '$password', course = '$course' where id = '$id'";
+ 			$sql = "update users set name = '$name', email = '$email', password = '$password', course = '$course' where reg = '$reg'";
 			if($result = mysqli_query($connection,$sql)){
 				return true;
 				//sucesso na operacao
@@ -77,10 +77,10 @@
 			}
 		}
 
-		public function delete_user_data($id){
+		public function delete_user_data($reg){
 
  			$connection = $this->Dbcon->connect_mysql();
- 			$sql = "DELETE from users WHERE id = '$id'";
+ 			$sql = "DELETE from users WHERE reg = '$reg'";
 			if(mysqli_query($connection,$sql)){
 				/*usuario apagado com sucesso*/
 				return true;
@@ -90,10 +90,10 @@
  			}
 		}
 
-		public function search_by_id_and_password($id,$password){
+		public function search_by_reg_and_password($reg,$password){
 			//usada para o login do usuario
 			$connection = $this->Dbcon->connect_mysql();
-			$sql = "SELECT * FROM users WHERE id ='$id' AND password = '$password'";
+			$sql = "SELECT * FROM users WHERE reg ='$reg' AND password = '$password'";
 			if($result = mysqli_query($connection,$sql)){
 				$user_data = mysqli_fetch_assoc($result);
 				return $user_data;

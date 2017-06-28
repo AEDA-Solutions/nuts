@@ -6,7 +6,7 @@ class User{
 	private $name;
 
 	//matricula
-	private $id;
+	private $reg;
 
 	//e-mail 
 	private $email;
@@ -17,10 +17,10 @@ class User{
 	//curso
 	private $course;
 
-	public function __construct($name,$id,$email,$password,$course)
+	public function __construct($name,$reg,$email,$password,$course)
 	{
 		$this->set_name($name);
-		$this->set_id($id);
+		$this->set_reg($reg);
 		$this->set_email($email);
 		$this->set_password($password);
 		$this->set_course($course);
@@ -31,9 +31,9 @@ class User{
 		return $this->name;
 	}
 
-	public function get_id()
+	public function get_reg()
 	{
-		return $this->id;
+		return $this->reg;
 	}
 
 	public function get_email()
@@ -56,9 +56,9 @@ class User{
 		$this->name = $name;
 	}
 
-	public function set_id($id)
+	public function set_reg($reg)
 	{
-		$this->id = $id;
+		$this->reg = $reg;
 	}
 
 	public function set_email($email)
