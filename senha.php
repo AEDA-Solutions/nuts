@@ -156,52 +156,49 @@
               } 
             }
           ?>
-<!--  //Mensagem de erro  (Senha atual não está certa) -->)        
+<!--  //Mensagem de erro  (Senha atual não está certa) -->       
+
+                <section id=senha>
+                  <div class="container">
+                     <div class="page-senha" class="row">
+                     <h1>Trocar Senha</h1>
+                     </div>
+          
+                  <div class="senha-formulario" class="row">
+                  <div class="col-md-6 col-md-push-3">
+                <form method = "post" action = "change_user_password.php">
 
 
+                    <!-- Configurações de senha --> 
 
-        <div class="cadastro">
-           <h2> Trocar senha </h2>
-          <hr>
-        </div>
-        
-        <div class="cadastro-formulario" class="row">
-          <div class="col-md-6 col-md-push-3">
-          <form method = "post" action = "change_user_password.php">
-                  
-            
+                     <div class="form-group">
 
-          <!-- Configurações de senha --> 
-        
-      
+                     <label for="old_password"> Senha atual</label>
+                     <input type="password" required="required" class="form-control" id="old_password" name = "old_password" minlength="6" placeholder="******">
 
-            <div class="form-group">
+                    <label for="senha">Nova Senha</label>
+                    <br>
+                    <input type="password" required="required" class="form-control" minlength="6" id="password" name = "password" placeholder="******">
+                     
+                    <input type="button" id="showPassword" value="Mostrar Senha" class="btn btn-senha"></p>
 
-            <label for="old_password"> Senha atual</label>
-             <input type="password" required="required" class="form-control" id="old_password" name = "old_password" minlength="6" placeholder="******">
+                    <button type="submit" class="btn btn-marrom btn-alterações">Salvar alterações</a></button>
+                    </div>
+                  </form>
+            </div>  
+          </div>
 
-            <label for="senha">Nova Senha</label>
-            <br>
-            <input type="password" required="required" class="form-control" minlength="6" id="password" name = "password" placeholder="******">
-            <br>
-            <input type="button" id="showPassword" value="Mostrar Senha" class="button" /></p>
-            <br>
-            <br>
-
-             <button type="submit" class="btn btn-default btn-lg btn-white btn-alteracoes">Salvar alterações</a></button>
-            </div>
-            </form>
-            </div>
-            </div>
-
-        </div>    
-
+    <aside role="complementary" class="col-md-3 col-md-push-3"></aside>
+    <nav class="col-md-3 col-md-pull-9"></nav>
+      </div>
+      </div>
+    </section>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
-            </body>
+    </body>
 
     <script type="text/javascript">
     $(document).ready(function(){

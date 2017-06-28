@@ -91,11 +91,7 @@ session_start();
             </div>
 
              <div class="modal-body">
-              
-            
-
-            
-           
+  
             </div>
 
              <div class="modal-footer">
@@ -194,17 +190,18 @@ session_start();
               } 
             }
           ?>
-
-
           <!-- // Mensagem de erro email -->
-      
 
-      <section id="page-configurações">
-        <div class="col-md-10">
-        <div class="configurações" class="row">
-         <h2>Configurações</h2>
-         <div class="configurações-formulario" class="row">
-          <form method = "post" action = "change_user_data.php">
+          <section id=configurações>
+          <div class="container">
+            <div class="page-configurações" class="row">
+              <h1>Configurações</h1>
+            </div>
+          
+            <div class="configurações-formulario" class="row">
+            <div class="col-md-6 col-md-push-3">
+
+            <form method = "post" action = "change_user_data.php">
 
           <!-- Configurações de usuário --> 
 
@@ -311,33 +308,24 @@ session_start();
       </select>
             </div>
                 </div>
-
                 <br>
-                
-                <button type="submit" class="btn btn-default btn-lg btn-white btn-alteracoes">Salvar alterações</a></button>
-
-
-  
-
+             <button type="submit" class="btn btn-marrom btn-alterações">Salvar alterações</a></button>   
         </form>
-        </div>
-        </div>
-        </div>
-         </div>
-        </div>
-      </section>
+          </div>
+            </div>  
+          </div>
 
-
-
-
-
-     
-
-
-
+    <aside role="complementary" class="col-md-3 col-md-push-3">
+            
+          </aside>
+          <nav class="col-md-3 col-md-pull-9">
            
-
-      
+          </nav>
+        </div>
+    
+  </div>
+  </section>
+ 
 
 
     

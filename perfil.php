@@ -106,39 +106,34 @@
         </div>
       </form>
 <!-- /Modal de avaliação -->
-      
+<section id=perfil>      
   <div class="container">
-
-      <header class="row">
-        
-      </header>
-
       <section id="s-analise">
-        <div class="col-md-10">
-        <div class="analise" class="row">
+      <div class="analise" class="row">
+        <div class="col-md-12">
          <a href="analise.php"><h2>Análise de Rede</h2></a>
          </div>
         </div>
       </section>
 
       <section id="s-historico">
-        <div class="col-md-10">
-        <div class="historico" class="row"> 
+          <div class="historico" class="row"> 
+        <div class="col-md-12">
             <a href="historico.php"><h2>Histórico</h2></a>
         </div>
         </div>
       </section>  
 
       <section id="s-configuracoes">
-        <div class="col-md-10">
         <div class="configuracoes">
+        <div class="col-md-12">
            <a href="configuracoes.php"><h3>Configurações</h3></a>
         </div>   
         </div>
       </section>
 
   </div>
-
+</section>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -274,6 +274,16 @@ section.flat button.active {
 	transition: background 0.4s, color 0.4s;
 }
 
+.btn-alterações {
+	background: transparent;
+	color: white;
+	border-radius: 500px;
+	-webkit-border-radius: 500px;
+	-moz-border-radius:500px;
+	padding: 5px 15px;
+	transition: background 0.4s, color 0.4s;
+}
+
 .btn-darkviolet:hover {
 	color: #FF7F50;
 }
@@ -285,21 +295,50 @@ section.flat button.active {
 }
 
 /* ==== CONFIGURAÇÕES DO USUÁRIO ==== */
-#page-configurações {
+.page-configurações {
 	color: white;
-	background: rgba(0, 0, 0, 0.4);
-	padding-bottom: 350px;
-	padding-right: 50px;
+	width: 100%;
+	color: white;
+	text-align: center;
 }
 
-.configurações {
-	padding: 10px 20px 15px 385px;
-
-	/* superior, direito, inferior e esquerdo */
+.configurações-formulario{
+	margin: 0 auto;
+	color: white;
 }
 
-.configurações-formulario {
+#configurações{
+	background: rgba(0, 0, 0, 0.6);
+	padding-bottom: 40px;
+}
+
+/* ==== SENHA ==== */
+#senha{
+	background: rgba(0, 0, 0, 0.6);
+	padding-bottom: 0px;
+}
+
+.senha-formulario{
+	margin: 0 auto;
 	color: white;
+}	
+
+.page-senha {
+	color: white;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+.btn-senha {
+	background: black;
+	margin-top: 3px;
+	color: white;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	padding: 5px 15px;
+	transition: background 0.4s, color 0.4s;
 }
 
 
@@ -307,37 +346,41 @@ section.flat button.active {
 #s-analise {
 	color: white;
 	background: rgba(0, 0, 0, 0.4);
-	padding-bottom: 120px;
+	padding-bottom: 100px;
 }
 
 
 #s-historico {
 	color: white;
 	background: rgba(0, 0, 0, 0.6);
-	padding-bottom: 120px;
+	padding-bottom: 100px;
 }
 
 #s-configuracoes {
 	color: white;
 	background: rgba(0, 0, 0, 0.8);
-	padding-bottom: 80px;
+	padding-bottom: 73px;
 }
 
 .analise {
-	padding: 10px 0px 15px 385px;
-
-	/* superior, direito, inferior e esquerdo */
+	text-align: center;
 }
 
 .historico {
-	padding: 10px 0px 15px 455px;
+	text-align: center;
 }
 
 .configuracoes {
-	padding: 6px 0px 10px 460px;
+	text-align: center;
 }
 
+#perfil {
+	margin-top: 170px;
+}
 
+a:link{
+	text-decoration: none;
+}
 
 /* ==== CADASTRO ==== */
 
@@ -512,6 +555,10 @@ h2{
 
 #analise-rede h4{
 	color: #FF7F50;
+}
+
+#page-configurações h2{
+	text-align: center;
 }
 
 
