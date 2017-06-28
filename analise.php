@@ -86,16 +86,9 @@
             </div>
 
              <div class="modal-body">
-              
-            
-
-            
-           
             </div>
 
-             <div class="modal-footer">
-
-              
+             <div class="modal-footer">  
 
               <button type="submit" class="btn btn-login btn-white">Enviar avaliação</a>
 
@@ -106,13 +99,47 @@
       </form>
 <!-- /Modal de avaliação -->
 
-     <div class="capa">
-      <div class="texto-capa">
-        <h1>Análise de rede</h1>
+    <div class="container">
+
+   <section id="analise-rede">
+      <div class="container">
+        <div class="row">
+          
+          <!-- MAPA -->
+          <div class="col-md-8">
+            <div class="a-mapa">
+              MAPAAAAA!!!!!!!!
+            </div>
+          </div>
+
+          <!-- OPÇÕES DE ANALISE -->
+          <div class="col-md-4"> 
+          <div class="o-analise">
+              <h3>A internet aqui é avaliada em:</h3>
+              <h4>******************</h4>
+              <h5>Isso significa que aqui você consegue: Instalar Apps, Baixar Vídeos e Assistir Netflix!</h5>
+              <br>
+              <br>
+              <br>
+              
+              <h4>Para mais Informações da Internet:</h4>
+                <a href="tabela.php" type="button" class="btn btn-avançado btn-border">Avançado</a>
+               <br> 
+               <br>
+              <h4>Avalie a Internet que você está utilizando agora:</h4>  
+                <a href="#" class="btn btn-avançado btn-border" data-toggle="modal" data-target="#janela">Avaliação</a>
+             
+
+          </div>    
+          </div>
+
+        </div>
+      </div>     
+   </section>
 
 
-      </div>
-    </div>
+
+
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

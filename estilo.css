@@ -123,7 +123,7 @@ nav.navbar-transparente-user{
 }
 
 .navbar-inverse-user .navbar-nav>li>a:hover{
-	color: #BA55D3;
+	color:  #FF6347;
 }
 
 
@@ -227,6 +227,21 @@ nav.navbar-transparente-user{
 	/* superior, direito, inferior e esquerdo */
 }
 
+.btn-avançado {
+	text-align: center;
+	color: white;
+	border-radius: 100px;
+}
+
+.btn-border {
+	border: 2px solid white;
+}
+
+.btn-border:hover {
+	background-color: white;
+	color: black;
+}
+
 section.flat button {
   color: white;
   background-color: rgba(0, 0, 0, 0.4);
@@ -295,6 +310,7 @@ section.flat button.active {
 	padding-bottom: 120px;
 }
 
+
 #s-historico {
 	color: white;
 	background: rgba(0, 0, 0, 0.6);
@@ -345,6 +361,24 @@ section.flat button.active {
 
 .botao {
 	padding: 0px 0px 0px 470px;
+}
+
+
+/* ==== ANALISE DE REDE ==== */
+
+#analise-rede{
+	margin-top: 110px;
+}
+
+.o-analise {
+	color: white;
+	background: rgba(0, 0, 0, 0.6);
+	text-align: center;
+	padding: 10px 0px 40px 0px;
+}
+
+.a-mapa{
+	border: 2px solid white;
 }
 
 /* ==== secao nos ==== */
@@ -463,6 +497,10 @@ h2{
 
 #s-configuracoes h3, a{
 	color: white;
+}
+
+#analise-rede h4{
+	color: #FF7F50;
 }
 
 
