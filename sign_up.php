@@ -149,38 +149,6 @@
 
 
 
-        <!-- Mensagem de erro matricula  -->
-
-
-  
-       <?php 
-            if (isset($_GET['erro'])) 
-            {
-              $erro = $_GET['erro'];
-
-              if($erro == 1)
-              {
-                ?>
-                <div class="container">
-                <div class="page-header">
-                </div>
-               <div class="alert alert-danger">
-            <button type="button" class="close" data-dismiss="alert">
-            <span>&times;</span>
-            </button>
-            <strong> EPA! </strong> Tem algo errado ai!
-              </div>
-
-              </div>
-          <?php 
-              } 
-            }
-          ?>
-
-
-          <!-- // Mensagem de erro -->
-
-
           <!-- Mensagem de erro matricula já cadastrada -->
        <?php 
             if (isset($_GET['erro'])) 
@@ -258,6 +226,35 @@
             }
           ?>
           <!-- // Mensagem de erro email e matricula já cadastrados --> 
+
+
+          <!-- Mensagem de erro no banco de dados -->
+       <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 5)
+              {
+                ?>
+                <div class="container">
+                <div class="page-header">
+                </div>
+               <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            <strong> OPS! </strong> Tivemos algum problema.
+              </div>
+
+              </div>
+          <?php 
+              } 
+            }
+          ?>
+          <!-- // Mensagem de erro no banco de dados -->
+
+
   <div class="container">
         <div class="cadastro" class="row">
           <h1>Cadastre-se</h1>
