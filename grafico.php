@@ -12,6 +12,8 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="estilo.css" rel="stylesheet">
 
+    <!-- Chart.js -->
+    <script src="Chart.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,8 +50,6 @@
         <div class="collapse navbar-collapse" id="barra-navegacao">
            <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
-            <li><a href="">Sobre</a></li>
-            <li><a href="">Contato</a></li>
             <li><a href="analise.php"> Análise de Rede</a></li>
             <li class="divisor" role="separator"></li>
             <li><a href="sign_up.php">Registre-se</a></li>
@@ -88,7 +88,7 @@
               <button type="button" class="close" data-dismiss="modal">
                 <span>&times;</span>
               </button> 
-              <h4 class="modal-tittle" style="color: purple">LOGIN</h4>             
+              <h4 class="modal-tittle" style="color: #FF6347">LOGIN</h4>             
             </div>
 
              <div class="modal-body">
@@ -143,16 +143,69 @@
           ?>
           <!-- // Mensagem de erro -->
 
+          <section id="grafico">
+          <div class="container">
+          <div class="row">
+          <canvas id="chartl" widht="400" height="100"></canvas>
 
-<body>
-  <div class="capa">
-      <div class="texto-capa">
-        <h1>Teste sua velocidade </h1>
+          <script>
+            var ctx = document.getElementById("chartl");
+            var data = {
+              labels: ["Upload", "Download"],
+              datasets: [{
+                label: 'Internet Atual',
+                data: [20,10],
 
-          <div align="center"> <iframe name="Teste de Velocidade da Internet" height="160" width="160" scrolling="no" frameborder="0" longdesc="" src="http://www.minhaconexao.com.br/mini-velocimetro/velocimetro.php?model=2&width=160&height=160"></iframe><br /><font size="2" face="Arial"><a  rel="nofollow" target="_blank" style="text-decoration:none"></a></font></div>
+                backgroundColor: [
+                  'rgba(255,127,80,0.7)',
+                  'rgba(255,127,80,0.7)',
+                ],
+                borderColor: [
+                  'rgba(255,127,80,1)'
+                ],
+                borderWidth: 1
 
-      </div>
-  </div>
+              },
+              {
+                label: 'Internet Mais Próxima com Melhor Qualidade',
+                data: [70,50],
+                backgroundColor: [
+                  'rgba(0,128,128,0.7)',
+                  'rgba(0,128,128,0.7)',
+                ],
+                borderColor: [
+                  'rgba(0,128,128,1)'
+                ],
+                borderWidth: 1
+              } 
+              ] 
+            };
+
+            var options = {
+              scales: {
+                yAxes: [{
+                  ticks: {
+                    beginAtZero:true
+                  }
+                }]
+              }
+
+
+            }; 
+
+            var chartl = new Chart(ctx, {
+              type:'bar',
+              data: data,
+              options: options
+            });
+          </script>
+          </div>
+          <br>
+          <h4>Para achar o local mais próximo com a melhor internet, faça seu login!</h4>
+          <a href="#" class="btn btn-avançado btn-border" data-toggle="modal" data-target="#janela">Login</a>
+
+          </div>
+          </section>
   
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -160,3 +213,4 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
+

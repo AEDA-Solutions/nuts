@@ -51,9 +51,6 @@
         <div class="collapse navbar-collapse" id="barra-navegacao">
            <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
-            <li><a href="">Sobre</a></li>
-            <li><a href="">Contato</a></li>
-            <li><a href="analise.php"> Análise de Rede</a></li>
             <li class="divisor" role="separator"></li>
             <li><a href="sign_up.php">Registre-se</a></li>
             <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Login</a></li>

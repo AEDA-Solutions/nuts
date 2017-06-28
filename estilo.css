@@ -132,7 +132,7 @@ nav.navbar-transparente-user{
 .capa {
 	display: table;
 	width: 100%;
-	padding-bottom: 140px;
+	padding-bottom: 150px;
 }
 
 .texto-capa {
@@ -361,6 +361,17 @@ section.flat button.active {
 
 .botao {
 	padding: 0px 0px 0px 470px;
+}
+
+
+/* ==== GRAFICO ==== */
+#grafico {
+	color: white;
+	text-align: center;
+	margin-top: 130px;
+	padding-bottom: 10px;
+	background: rgba(0,0,0,0.8);
+	
 }
 
 

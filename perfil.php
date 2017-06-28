@@ -46,7 +46,7 @@
         <!-- nav -->
         <div class="collapse navbar-collapse" id="barra-navegacao">
            <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.php">Home</a></li>
+            <li><a href="perfil.php">Home</a></li>
             <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Análise de Rede<b class="caret"></b></a>
               <ul class="dropdown-menu">
