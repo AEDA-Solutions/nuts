@@ -308,17 +308,17 @@ section.flat button.active {
 }
 
 .analise {
-	/*padding: 10px 0px 15px 385px;*/
+	padding: 10px 0px 15px 385px;
 
 	/* superior, direito, inferior e esquerdo */
 }
 
 .historico {
-	/*padding: 10px 0px 15px 455px;*/
+	padding: 10px 0px 15px 455px;
 }
 
 .configuracoes {
-	/*padding: 6px 0px 10px 460px;*/
+	padding: 6px 0px 10px 460px;
 }
 
 
