@@ -1,3 +1,10 @@
+<?php
+require_once('NetController.php');  
+$NC = new NetController();
+$user_data = $NC->get_last_data();
+//$nearby_data = $NC->get_nearby_data($user_data['latitude'],$user_data['longitude']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head class="page-header">
@@ -153,8 +160,8 @@
             var data = {
               labels: ["Upload", "Download"],
               datasets: [{
-                label: 'Internet Atual',
-                data: [20,10],
+                label: 'Localização Atual',
+                data: [200,<?= $user_data['download_speed']?>], // nesse campo 200 vai ser a velocidade de upload do usuário
 
                 backgroundColor: [
                   'rgba(255,127,80,0.7)',
@@ -167,8 +174,8 @@
 
               },
               {
-                label: 'Internet Mais Próxima com Melhor Qualidade',
-                data: [70,50],
+                label: 'Localização mais próxima com melhor qualidade',
+                data: [125,100],  //no campo 125 vai ficar a velocidade de upload do melhor lugar próximo do usuário,e no campo 100 a velocidade de donwload do melhor lugar
                 backgroundColor: [
                   'rgba(0,128,128,0.7)',
                   'rgba(0,128,128,0.7)',
