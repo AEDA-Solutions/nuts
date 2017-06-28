@@ -218,7 +218,7 @@
           <input type="text" class="form-control" id="assunto" placeholder="Assunto" required oninvalid="setCustomValidity('Por favor, preencha com um assunto')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com um assunto">
 
           <label for="Mensagem"></label>
-          <textarea class="form-control" id="Mensagem" rows="3" placeholder="Mensagem" required oninvalid="setCustomValidity('Por favor, preencha com um mensagem')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com uma mensagem"></textarea>
+          <textarea class="form-control" id="Mensagem" placeholder="Mensagem" required oninvalid="setCustomValidity('Por favor, preencha com um mensagem')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com uma mensagem"></textarea>
         
           <br>   
             <div class="botao-contato">

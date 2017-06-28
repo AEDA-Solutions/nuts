@@ -484,6 +484,11 @@ a:link{
 	margin-left: 275px;
 }
 
+#Mensagem{
+	width: 385px; 
+	height: 150px; 
+	resize: none;
+}
 
 
 /* ==== rodape ==== */
