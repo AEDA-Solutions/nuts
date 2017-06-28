@@ -121,6 +121,37 @@
         </div>
       </form>
       <!-- /Login  -->    
+
+
+
+
+<!-- Mensagem de sucesso   -->
+
+       <?php 
+            if (isset($_GET['sucesso'])) 
+            {
+              $sucesso = $_GET['sucesso'];
+
+              if($sucesso == 1)
+              {
+                ?>
+
+               <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            <strong> UHUL! </strong> Tá tudo certinho!
+              </div>
+          <?php 
+              } 
+            }
+          ?>
+
+
+<!-- // Mensagem de sucesso  -->
+
+
+
         <!-- Mensagem de erro matricula  -->
 
 
