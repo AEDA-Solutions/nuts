@@ -2,6 +2,7 @@
 
 <?php
 session_start();
+require_once('UserController.php');
 ?>
 
 <html lang="en">
