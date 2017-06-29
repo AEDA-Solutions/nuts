@@ -1,23 +1,45 @@
-var http = new XMLHttpRequest();
-var startTime, endTime;
-var url = "script_that_whill_handle_post.php";
-var myData = "d="; // the raw data you will send
-for(var i = 0 ; i < 1022 ; i++) //if you want to send 1 kb (2 + 1022 bytes = 1024b = 1kb). change it the way you want
-{
-    myData += "k"; // add one byte of data;
-}
+function checkUploadSpeed( iterations, update ) {
+    var average = 0,
+        index = 0,
+        timer = window.setInterval( check, 20000 ); //check every 2 seconds
+    check();
+    
+    function check() {
+        var xhr = new XMLHttpRequest(),
+            url = '?cache=' + Math.floor( Math.random() * 10000 ), //prevent url cache
+            data = getRandomString( 1 ), //1 meg POST size handled by all servers
+            startTime,
+            speed = 0;
+        xhr.onreadystatechange = function ( event ) {
+            if( xhr.readyState == 4 ) {
+                speed = Math.round(1024 / ( ( new Date() - startTime ) / 1000 ) );
+                average == 0 
+                    ? average = speed 
+                    : average = Math.round( ( average + speed ) / 2 );
+                update( speed, average );
+                index++;
+                if( index == iterations ) {
+                    window.clearInterval( timer );
+                };
+            };
+        };
+        xhr.open( 'POST', url, true );
+        startTime = new Date();
+        xhr.send( data );
+    };
+    
+    function getRandomString( sizeInMb ) {
+        var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()_+`-=[]\{}|;':,/<>?", //random data prevents gzip effect
+            iterations = sizeInMb * 1024 * 1024, //get byte count
+            result = '';
+        for( var index = 0; index < iterations; index++ ) {
+            result += chars.charAt( Math.floor( Math.random() * chars.length ) );
+        };     
+        return result;
+    };
+};
 
-http.open("POST", url, true);
-
-http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-http.setRequestHeader("Content-length", myData .length);
-http.setRequestHeader("Connection", "close");
-
-http.onreadystatechange = function() {
-    if(http.readyState == 4 && http.status == 200) {
-        endTime = (new Date()).getTime();
-        ShowData();
-    }
-}
-startTime = (new Date()).getTime();
-http.send(myData);
+checkUploadSpeed( 30, function ( speed, average ) {
+    document.getElementById( 'speed' ).textContent = speed + ' Kbps';
+    document.getElementById( 'average' ).textContent = 'average: ' + average + 'kbs';
+} );
