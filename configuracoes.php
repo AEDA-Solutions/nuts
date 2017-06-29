@@ -244,8 +244,8 @@ require_once('UserController.php');
           
             <div class="configurações-formulario" class="row">
             <div class="col-md-6 col-md-push-3">
-
-            <form method = "post" action = "change_user_data.php">
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <form method = "post" action = "change_user_data.php" id="formID">
 
           <!-- Configurações de usuário --> 
 
