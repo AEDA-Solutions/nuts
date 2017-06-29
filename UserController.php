@@ -12,9 +12,9 @@
  		
  		public function login($reg,$password){
  			
+
  			$user_data = $this->UserDatabase->search_by_reg_and_password($reg,$password);
- 			echo $user_data;
- 			
+ 		
  			if(isset($user_data['reg'])){
  				//usuario foi encontrado
  				//validar session tbm na home.php

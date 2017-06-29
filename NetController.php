@@ -19,6 +19,7 @@
 		//para que os dados sejam inseridos na tabela de qualidade de rede permanente
 		public function run_net_test(){
 			
+
 			if($ping = $this->check_ping("matriculaweb.unb.br", 80, 10)){}
 			else{
 				return false;}
@@ -123,8 +124,11 @@
         		//throw new \Exception('Packet loss not found.');
     		}
 
-    
     		return $packetLoss;
+		}
+
+		public function getDataOrderedByDate(){
+			return $this->NetDatabase->get_date_ordered_by_date();
 		}
 
 		public function get_netdata(){
@@ -138,6 +142,94 @@
 		public function get_last_data(){
 			$net_data = $this->get_netdata();
 			return end($net_data);
+		}
+
+		public function weightData(){
+
+			$weightArray = array();
+			$data = $this->NetDatabase->get_data_ordered_by_date();
+			$DateWeight = sizeof($data);
+			for($i = 0; $i < $DateWeight; $i++){
+				
+				$DownloadWeight = $this->weightDownloadSpeed($data[$i]['download_speed']);
+				$PingWeight = $this->weightPing($data[$i]['ping']);
+				$JitterWeight = $this->weightJitter($data[$i]['jitter']);
+
+				if(isset($date[$i]['user_avaliation'])){ // a avaliação do usuário varia de 0 a 5
+					$FinalWeight = ($DownloadWeight*0.75 + $PingWeight*0.15 + $JitterWeight*0.1)*($this->getDateWeight($i,$DateWeight))*0.7 + ($date[i]['user_avaliation'])*0.3*2 ;
+
+				}
+				
+				else{
+					$FinalWeight = ($DownloadWeight*0.75 + $PingWeight*0.15 + $JitterWeight*0.1)*($this->getDateWeight($i,$DateWeight));
+				}
+
+				array_push($weightArray,$FinalWeight);
+			}
+
+			return $weightArray;
+		}
+
+		private function getDateWeight($i,$DateWeight){
+
+			if(($i >= 0) && ($i<($DateWeight/3))){return (1/3);}
+			if(($i >=($DateWeight/3)) && ($i<(2)*($DateWeight/3))){return (2/3);}
+			if($i >= (2)*($DateWeight/3)){return 1;}
+		}
+
+		public function weightCordinates(){
+			$coords_array = array();
+			$data = $this->NetDatabase->get_data_ordered_by_date();
+			$DateWeight = sizeof($data);
+			for($i = 0; $i < $DateWeight; $i++){
+				$temp = array($data[$i]['latitude'],$data[$i]['longitude']);
+				array_push($coords_array,$temp);
+			}
+
+			return $coords_array;
+
+		}
+
+		private function weightDownloadSpeed($download_speed){
+
+			if($download_speed < 0.5){ return 10;}
+			else if(($download_speed >= 0.5) && ($download_speed < 0.7)){ return 20;}
+			else if(($download_speed >= 0.7) && ($download_speed < 1)){ return 30;}
+			else if(($download_speed >= 1) && ($download_speed < 1.8)){ return 40;}
+			else if(($download_speed >= 1.8) && ($download_speed < 2.4)){ return 50;}
+			else if(($download_speed >= 2.4) && ($download_speed < 3.9)){ return 60;}
+			else if(($download_speed >= 3.9) && ($download_speed < 6)){ return 70;}
+			else if(($download_speed >= 6) && ($download_speed < 7.5)){ return 80;}
+			else if(($download_speed >= 7.5) && ($download_speed < 8)){ return 90;}
+			else{ return 10;}
+
+		}
+
+		private function weightPing($ping){
+			if($ping > 150){ return 1;}
+			else if(($ping <= 150) && ($ping > 130)){ return 2;}
+			else if(($ping <= 130) && ($ping > 120)){ return 3;}
+			else if(($ping <= 120) && ($ping > 100)){ return 4;}
+			else if(($ping <= 100) && ($ping > 80)){ return 5;}
+			else if(($ping <= 70) && ($ping > 60)){ return 6;}
+			else if(($ping <= 60) && ($ping > 45)){ return 7;}
+			else if(($ping <= 45) && ($ping > 30)){ return 8;}
+			else if(($ping <= 30) && ($ping > 20)){ return 9;}
+			else { return 10;}
+
+		}
+
+		private function weightJitter($jitter){
+			if($jitter > 150){ return 1;}
+			else if(($jitter <= 150) && ($jitter  > 130)){ return 2;}
+			else if(($jitter <= 130) && ($jitter  > 120)){ return 3;}
+			else if(($jitter <= 120) && ($jitter > 100)){ return 4;}
+			else if(($jitter <= 100) && ($jitter > 80)){ return 5;}
+			else if(($jitter <= 70) && ($jitter > 60)){ return 6;}
+			else if(($jitter <= 60) && ($jitter > 45)){ return 7;}
+			else if(($jitter <= 45) && ($jitter > 30)){ return 8;}
+			else if(($jitter <= 30) && ($jitter > 20)){ return 9;}
+			else { return 10;}
 		}
 	}
 ?>
