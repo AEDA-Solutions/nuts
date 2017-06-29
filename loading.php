@@ -8,6 +8,20 @@
     <title>NUTS</title>
     <link rel="icon" href="images/favicon.png">
 
+
+<!-- jquery -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<!-- bootstrap -->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- chamada da função -->
+<script type="text/javascript">
+$(window).load(function() {
+    $('#janelaloading').modal('show');
+});
+</script>
+
+
+
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="estilo.css" rel="stylesheet">
@@ -80,7 +94,7 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">
+              
                 <span>&times;</span>
               </button> 
               <h4 class="modal-tittle" style="color: #FF6347"></h4>
