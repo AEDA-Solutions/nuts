@@ -142,16 +142,18 @@
       </form>
 <!-- /Modal de avaliação -->
 
-<!-- MODAL DE AVALIAÇÃO OBRIGATÓRIA -->
 
-<form class="modal fade" id="janelaavalicao" name = "janelaavaliacao" method = "post">
+
+<!-- MODAL DE AVALIAÇÃO OBRIGATÓRIA -->
+<form class="modal fade" id="janelaavalicao" method = "post" >
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
                 <span>&times;</span>
               </button> 
-              <center> <h4 class="modal-tittle" style="color: #FF6347">AVALIE SEU LOCAL!</h4> </center>
+              <center> <h4 class="modal-tittle" style="color: #FF6347">COLABORE COM ESSA INICIATIVA!</h4> </center>
+              <center>Para termos um mapa cada vez mais completo, precisamos da sua opinião. Avalie a situação da sua rede onde você está de 1 a 5 estrelas para atualizarmos nosso banco de dados!</center>
               <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
               
             </div>
