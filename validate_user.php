@@ -16,7 +16,7 @@
 	}
 
 	else if($errorCode == 2){ // matricula encontrada, mas senha errada
-		header('Location: index.php?erro=2');
+		header('Location: index.php?erro=6');
 	}
 ?>
 

@@ -60,11 +60,8 @@
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
          
-          <!-- Login  --> 
-          <form class="modal fade" id="janela" method = "post" action = "validate_user.php">
-
-
-          <?php 
+         <!-- MENSAGEM DE ERRO MATRICULA NÃO ENCONTRADA  -->
+  <?php 
             if (isset($_GET['erro'])) 
             {
               $erro = $_GET['erro'];
@@ -73,12 +70,69 @@
               {
                 ?>
                 <div class="alert alert-danger" role="alert">
-                <strong>ERRO!</strong> <a href="#" class="alert-link"> Essa matrícula não existe</a> Digite-a corretamente ou faça nosso cadastro!
+                <strong>ERRO!</strong> <a href="#" class="alert-link"> Essa matrícula não foi encontrada</a> Digite-a corretamente ou faça nosso cadastro!
                 </div>
           <?php 
               } 
             }
           ?>
+
+<!-- MENSAGEM DE ERRO MATRICULA NÃO ENCONTRADA  -->
+  <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 1)
+              {
+                ?>
+                <div class="container">
+                <div class="page-header">
+                </div>
+               <div class="alert alert-danger" role="alert">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+                <strong>ERRO!</strong> <a href="#" class="alert-link"> Essa matrícula não foi encontrada</a> Digite-a corretamente ou faça nosso cadastro!
+                </div>
+                </div>
+          <?php 
+              } 
+            }
+          ?>
+
+<!-- /MENSAGEM DE ERRO MATRICULA NÃO ENCONTRADA  -->
+
+<!-- MENSAGEM DE ERRO SENHA ERRADA  -->
+  <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 6)
+              {
+                ?>
+                <div class="container">
+                <div class="page-header">
+                </div>
+               <div class="alert alert-danger" role="alert">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+                <strong>ERRO!</strong> <a href="#" class="alert-link"> Matrícula encontrada,</a> mas senha foi digitada errada, tente novamente
+                </div>
+                </div>
+          <?php 
+              } 
+            }
+          ?>
+
+<!-- /MENSAGEM DE ERRO SENHA ERRADA -->
+
+          <!-- Login  --> 
+          <form class="modal fade" id="janela" method = "post" action = "validate_user.php">
+
+
 
 
 
@@ -117,31 +171,7 @@
         </div>
       </form>
 
-      <!-- Mensagem de erro matricula  -->  
-       <?php 
-            if (isset($_GET['erro'])) 
-            {
-              $erro = $_GET['erro'];
-
-              if($erro == 1)
-              {
-                ?>
-                <div class="container">
-                <div class="page-header">
-                </div>
-               <div class="alert alert-danger">
-            <button type="button" class="close" data-dismiss="alert">
-            <span>&times;</span>
-            </button>
-            <strong> EPA! </strong> Essa matrícula não está cadastrada!
-              </div>
-
-              </div>
-          <?php 
-              } 
-            }
-          ?>
-          <!-- // Mensagem de erro -->
+      
 
 
 <body>
