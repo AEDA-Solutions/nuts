@@ -325,8 +325,6 @@ section.flat button.active {
 	border: 1px;
 }
 
-
-
 .page-header {
 	border:none;
 	padding-bottom: 10px;
@@ -472,6 +470,13 @@ a:link{
 	
 }
 
+/* ==== HISTORICO ==== */
+.o-historico {
+	color: white;
+	background: rgba(0, 0, 0, 0.6);
+	text-align: center;
+	padding: 10px 0px 20px 0px;
+}
 
 /* ==== ANALISE DE REDE ==== */
 

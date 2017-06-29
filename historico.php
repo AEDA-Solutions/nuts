@@ -113,6 +113,31 @@
         </div>
       </form>
 <!-- /Modal de avaliação -->
+
+
+
+  <section id="analise-rede">
+      <div class="container">
+        <div class="row">
+          
+          <!-- MAPA -->
+          <div class="col-md-10">
+            <div class="a-mapa">
+              MAPAAAAA!!!!!!!!
+            </div>
+          </div>
+
+          <!-- OPÇÕES DE ANALISE -->
+          <div class="col-md-2"> 
+          <div class="o-historico">
+              <h4>Para ver suas últimas avaliações na NUTS passe o mouse no mapa!</h4>
+              
+          </div>    
+          </div>
+
+        </div>
+      </div>     
+   </section>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
