@@ -121,7 +121,7 @@ require_once('UserController.php');
 <!-- /Modal de avaliação -->
 
 <!-- modal de excluir conta -->
-<form class="modal fade" id="janelaexcluir" method = "post" action="UserController.php">
+<form class="modal fade" id="janelaexcluir" method = "post" action="delete_user.php">
 
 
         <div class="modal-dialog modal-sm">

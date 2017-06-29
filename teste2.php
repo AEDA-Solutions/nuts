@@ -8,7 +8,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    
+
 <script src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="https://www.google.com/jsapi"></script>
 
@@ -34,7 +34,7 @@
     <h3>My Google Maps Demo</h3>
     <div id="map"></div>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNixx9oyAv-BE-q2s39NBBHEjfFJYASeg&libraries=visualization,geometry">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNixx9oyAv-BE-q2s39NBBHEjfFJYASeg&libraries=visualization,geometry&&callback=initMap">
     </script>
     <script>
     // **************** Funções para manter o raio de influencia em metros ou para manter o zoom *****************
@@ -212,10 +212,6 @@ for (i = 0; i< data.length; i++) {
          //alert(heatMapData.length());
     
 }
-
-google.maps.event.addListenerOnce(map, 'idle', function(){
-   initMap(); // do something only the first time the map is loaded
-});
 
     </script>
     
