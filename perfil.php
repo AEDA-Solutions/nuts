@@ -115,6 +115,51 @@
         </div>
       </form>
 <!-- /Modal de avaliação -->
+
+<!-- MODAL DE AVALIAÇÃO OBRIGATÓRIA -->
+
+<form class="modal fade" id="janelaavalicao" method = "post">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span>&times;</span>
+              </button> 
+              <center> <h4 class="modal-tittle" style="color: #FF6347">AVALIE SEU LOCAL!</h4> </center>
+              <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+              
+            </div>
+
+             <div class="modal-body">
+             <div class="estrelas">
+              <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+              <label for="cm_star-1"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-1" name="fb" value="1"/>
+              <label for="cm_star-2"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-2" name="fb" value="2"/>
+              <label for="cm_star-3"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-3" name="fb" value="3"/>
+              <label for="cm_star-4"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-4" name="fb" value="4"/>
+              <label for="cm_star-5"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-5" name="fb" value="5"/>
+              </div>
+           
+            </div>
+
+             <div class="modal-footer">
+
+              
+
+              <button type="submit" class="btn btn-login btn-white">Enviar avaliação</a>
+
+            </div>
+
+          </div>
+        </div>
+      </form>
+<!--MODAL DE AVALIAÇÃO OBRIGATÓRIA -->
+
 <section id=perfil>      
   <div class="container">
       <section id="s-analise">
@@ -148,5 +193,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <?php 
+            if (isset($_GET['sucesso'])) 
+            {
+              $sucesso = $_GET['sucesso'];
+
+              if($sucesso == 1)
+              {
+                ?>
+
+               
+            <!-- jquery -->
+            <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+            <!-- bootstrap -->
+            <script type="text/javascript" src="js/bootstrap.js"></script>
+            <!-- chamada da função -->
+            <script type="text/javascript">
+            $(window).load(function() {
+            $('#janelaloading').modal('show');
+            });
+           </script>
+
+          <?php 
+              } 
+            }
+          ?>
             </body>
 </html>
