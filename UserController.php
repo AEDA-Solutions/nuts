@@ -13,7 +13,8 @@
  		public function login($reg,$password){
  			
  			$user_data = $this->UserDatabase->search_by_reg_and_password($reg,$password);
- 
+ 			echo $user_data;
+ 			
  			if(isset($user_data['reg'])){
  				//usuario foi encontrado
  				//validar session tbm na home.php
@@ -24,13 +25,17 @@
 				$_SESSION['password'] = $user_data['password'];
 				$_SESSION['name'] = $user_data['name'];
 				
-				return true;
+				return 3;
  			}
 
- 			else{
- 			//usuario nao existe
+ 			else if($user_data == 1){
+ 			//matricula nao encontrada no db
 			//Erro pode ser recuperado via $_GET['erro'] no index.php
-			return false;
+			return 1;
+ 			}
+
+ 			else if($user_data == 2){ // matricula encontrada, mas senha errada
+ 				return 2;
  			}
 
  		}

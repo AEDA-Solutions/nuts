@@ -93,15 +93,25 @@
 		public function search_by_reg_and_password($reg,$password){
 			//usada para o login do usuario
 			$connection = $this->Dbcon->connect_mysql();
-			$sql = "SELECT * FROM users WHERE reg ='$reg' AND password = '$password'";
+			$sql = "SELECT * FROM users WHERE reg ='$reg'";
 			if($result = mysqli_query($connection,$sql)){
-				$user_data = mysqli_fetch_assoc($result);
-				return $user_data;
-			}
-			else{
-				echo "Houve um erro na verificacao, contate o administrador";
-				return false;
-				//erro ao acessar o banco de dados
+				$test_data = mysqli_fetch_assoc($result);
+				if(isset($test_data['reg'])){
+					$sql2 = "SELECT * FROM users WHERE reg ='$reg' AND password = '$password'";
+					if($result2 = mysqli_query($connection,$sql2)){
+						$user_data = mysqli_fetch_assoc($result2);
+						if(isset($user_data['reg'])){
+							return $user_data;
+						}
+
+						else{// matricula foi encontrada, mas senha invalida
+							return 2;
+						}
+					}
+				}
+				else{ // matricula nao encontrada no db
+					return 1;
+				}
 			}
 		}
 	}
