@@ -475,6 +475,35 @@ a:link{
 	border: 2px solid white;
 }
 
+/* ==== TABELAS ==== */
+#tabelas{
+	color: white;
+	background: rgba(0,0,0,0.5);
+	margin: 0 auto;
+	display: table; 
+}	
+
+.tabelas-titulos{
+	text-align: center;
+}
+
+.tabelas-subtitulos{
+	text-align: center;
+}
+
+.table-hover{
+	text-decoration: none;
+}
+
+.table-hover tbody tr:hover > th {
+  background-color: #FF7F50;
+}
+
+.table-hover tbody tr:hover > td {
+  background-color: #FF7F50;
+}
+
+
 /* ==== secao nos ==== */
 #nos {
 	background: rgba(0,0,0,0.8);
@@ -604,6 +633,10 @@ h2{
 
 #page-configurações h2{
 	text-align: center;
+}
+
+.tabelas-titulos h4{
+	color: #FF7F50;
 }
 
 
