@@ -75,8 +75,6 @@
 
 <!-- modal de avaliação-->
 <form class="modal fade" id="janela" method = "post" action ="validate_user.php">
-
-
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -101,10 +99,6 @@
             </div>
 
              <div class="modal-body">
-              
-            
-
-            
            
             </div>
 

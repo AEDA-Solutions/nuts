@@ -297,16 +297,20 @@ section.flat button.active {
 }
 
 .btn-primary {
+	text-decoration: none;
 	background-color: #FF7F50; 
 	border-color: #FF7F50;
 	border: 1px;
 }
 
 .btn-primary:hover {
+	text-decoration: none;
 	background-color: #FF6347; 
 	border-color: #FF6347;
 	border: 1px;
 }
+
+
 
 .page-header {
 	border:none;
