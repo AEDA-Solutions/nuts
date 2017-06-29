@@ -28,6 +28,7 @@ function validate_data($d){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>NUTS</title>
+    <script language="javascript" src="upload.js"> </script>
     <link rel="icon" href="images/favicon.png">
 
     <!-- Bootstrap -->
@@ -171,7 +172,7 @@ function validate_data($d){
                     
           <tr>
           <th scope="row">Ping</th>
-          <td> <?= $user_data['ping']?></td>
+          <td> <?= $user_data['ping']?> ms</td>
           </tr>
 
           <tr>
@@ -180,18 +181,18 @@ function validate_data($d){
           </tr>
 
            <tr>
-           <th scope="row">Velocidade download</th>
-           <td> <?= $user_data['download_speed']?></td>
+           <th scope="row">Velocidade de download</th>
+           <td> <?= $user_data['download_speed']?> Mbps</td>
            </tr>
 
            <tr>
-           <th scope="row">Velocidade upload</th>
-           <td></td>
+           <th scope="row">Velocidade de upload</th>
+           <td><div id="speed"></div></td>
            </tr>
 
            <tr>
            <th scope="row">Jitter</th>
-           <td> <?= $user_data['jitter']?></td>
+           <td> <?= $user_data['jitter']?> ms
            </tr>
 
             </tbody>
