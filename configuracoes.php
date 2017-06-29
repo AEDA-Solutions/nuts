@@ -120,8 +120,8 @@ require_once('UserController.php');
       </form>
 <!-- /Modal de avaliação -->
 
-<!-- modal de excluir conta-->
-<form class="modal fade" id="janelaexcluir" method = "post" >
+<!-- modal de excluir conta -->
+<form class="modal fade" id="janelaexcluir" method = "post" action="UserController.php">
 
 
         <div class="modal-dialog modal-lg">
@@ -151,7 +151,7 @@ require_once('UserController.php');
           </div>
         </div>
       </form>
-<!-- /Modal de excluir conta -->
+ <--/Modal de excluir conta -->
 
     <div class="container">
     <header class="row">
