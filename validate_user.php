@@ -8,7 +8,7 @@
 	$UserController = new UserController();
 	$errorCode = $UserController->login($reg,$password);
 	if($errorCode == 3){ // sucesso no login
-		header('Location: perfil.php');
+		header('Location: perfil.php?sucesso=1');
 		
 	}				 
 	else if($errorCode == 1){ // matricula nao encontrada

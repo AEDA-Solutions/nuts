@@ -73,7 +73,7 @@
     </nav>  <!-- /nav -->
 
 <!-- modal de avaliação-->
-<form class="modal fade" id="janela" method = "post" action ="validate_user.php">
+<form class="modal fade" id="janela" method = "post" >
 
 
         <div class="modal-dialog modal-sm">

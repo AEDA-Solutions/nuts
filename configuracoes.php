@@ -78,7 +78,7 @@ require_once('UserController.php');
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
 <!-- modal de avaliação-->
-<form class="modal fade" id="janela" method = "post" action ="validate_user.php">
+<form class="modal fade" id="janela" method = "post" >
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">

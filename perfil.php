@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+      <?php 
+            if (isset($_GET['sucesso'])) 
+            {
+              $sucesso = $_GET['sucesso'];
+
+              if($sucesso == 1)
+              {
+                ?>
+
+               
+            <!-- jquery -->
+            <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+            <!-- bootstrap -->
+            <script type="text/javascript" src="js/bootstrap.js"></script>
+            <!-- chamada da função -->
+            <script type="text/javascript">
+            $(window).load(function() {
+            $('#janelaavalicao').modal('show');
+            });
+           </script>
+
+          <?php 
+              } 
+            }
+          ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,7 +100,7 @@
 
 
 <!-- modal de avaliação-->
-<form class="modal fade" id="janela" method = "post" action ="validate_user.php">
+<form class="modal fade" id="janela" method = "post" >
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
@@ -118,7 +144,7 @@
 
 <!-- MODAL DE AVALIAÇÃO OBRIGATÓRIA -->
 
-<form class="modal fade" id="janelaavalicao" method = "post">
+<form class="modal fade" id="janelaavalicao" name = "janelaavaliacao" method = "post">
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
@@ -193,30 +219,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <?php 
-            if (isset($_GET['sucesso'])) 
-            {
-              $sucesso = $_GET['sucesso'];
 
-              if($sucesso == 1)
-              {
-                ?>
 
-               
-            <!-- jquery -->
-            <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-            <!-- bootstrap -->
-            <script type="text/javascript" src="js/bootstrap.js"></script>
-            <!-- chamada da função -->
-            <script type="text/javascript">
-            $(window).load(function() {
-            $('#janelaloading').modal('show');
-            });
-           </script>
 
-          <?php 
-              } 
-            }
-          ?>
             </body>
 </html>

@@ -66,7 +66,7 @@ $(window).load(function() {
               <ul class="dropdown-menu">
                 <li><a href="analise.php">Mapa</a></li>
                 <li><a href="tabela.php">Avançado</a></li>
-               <li><a href="#" class="btn" data-toggle="modal" data-target="#janelaloading">Avaliação</a></li>
+               <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Avaliação</a></li>
               </ul>
             </li>       
             <li>
