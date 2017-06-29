@@ -184,7 +184,7 @@
           </div>
         </div>
       </form>
-<!--MODAL DE AVALIAÇÃO OBRIGATÓRIA -->
+<!--//MODAL DE AVALIAÇÃO OBRIGATÓRIA -->
 
 <section id=perfil>      
   <div class="container">
