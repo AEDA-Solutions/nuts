@@ -53,7 +53,7 @@
             <li><a href="index.php">Home</a></li>
             <li class="divisor" role="separator"></li>
             <li><a href="sign_up.php">Registre-se</a></li>
-            <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Login</a></li>
+            <li><a href="#" class="btn" data-toggle="modal" data-target="#janelalogin">Login</a></li>
           </ul>
 
         </div>
@@ -131,7 +131,7 @@
 
 
           <!-- Login  --> 
-          <form class="modal fade" id="janela" method = "post" action = "validate_user.php">
+          <form class="modal fade" id="janelalogin" method = "post" action = "validate_user.php">
 
         <div class="modal-dialog modal-lg">
           <div class="modal-content">

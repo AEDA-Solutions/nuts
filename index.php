@@ -53,32 +53,17 @@
             <li><a class="page-scroll" href="#page-top">Home</a></li>
             <li><a class="page-scroll" href="#nos">Sobre</a></li>
             <li><a class="page-scroll" href="#contato">Contato</a></li>
-            <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Análise de Rede</a></li>
+            <li><a href="#" class="btn" data-toggle="modal" data-target="#janelalogin">Análise de Rede</a></li>
             <li class="divisor" role="separator"></li>
             <li><a href="sign_up.php">Registre-se</a></li>
-            <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Login</a></li>
+            <li><a href="#" class="btn" data-toggle="modal" data-target="#janelalogin">Login</a></li>
           </ul>
 
         </div>
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
 
-<!-- MENSAGEM DE ERRO MATRICULA NÃO ENCONTRADA  -->
-  <?php 
-            if (isset($_GET['erro'])) 
-            {
-              $erro = $_GET['erro'];
 
-              if($erro == 1)
-              {
-                ?>
-                <div class="alert alert-danger" role="alert">
-                <strong>ERRO!</strong> <a href="#" class="alert-link"> Essa matrícula não foi encontrada</a> Digite-a corretamente ou faça nosso cadastro!
-                </div>
-          <?php 
-              } 
-            }
-          ?>
 
 <!-- MENSAGEM DE ERRO MATRICULA NÃO ENCONTRADA  -->
   <?php 
@@ -137,7 +122,7 @@
             <!-- Login  --> 
 
             
-          <form class="modal fade" id="janela" method = "post" action ="validate_user.php">
+          <form class="modal fade" id="janelalogin" method = "post" action ="validate_user.php">
 
 
         <div class="modal-dialog modal-lg">
