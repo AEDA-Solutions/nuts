@@ -150,7 +150,7 @@ function validate_data($d){
               <table class="table table-inverse table-hover">
         <thead>
       <tr>
-      <th>Dados</th>
+      <th style="font-size: 25px;" >Dados</th>
       <th></th>
       </tr>
         </thead>
