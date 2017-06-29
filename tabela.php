@@ -16,10 +16,6 @@ function validate_data($d){
 }
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -187,7 +183,7 @@ function validate_data($d){
 
            <tr>
            <th scope="row">Velocidade de upload</th>
-           <td><div id="speed"></div></td>
+           <td> <?= $user_data['upload_speed']?> Kbps</td>
            </tr>
 
            <tr>

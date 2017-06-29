@@ -10,6 +10,7 @@
 		private $latitude;
 		private $longitude;
 		private $download_speed;
+		private $upload_speed;
 
 		public function __construct(){
 			$this->NetDatabase = new NetDatabase();
@@ -23,14 +24,14 @@
 			else{
 				return false;}
 
-			if($packetloss = $this->check_packet_loss('www.youtube.com', 10)){}
+			if($packetloss = $this->check_packet_loss('www.google.com.br', 10)){}
 			else{
 			}
 			if($jitter = $this->check_jitter("matriculaweb.unb.br", 80, 10)){}
 			else{
 				return false;}
 			
-			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss,$this->download_speed,$jitter)){
+			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss,$this->download_speed,$jitter,$upload_speed)){
 
 				return true;
 			}
@@ -49,7 +50,35 @@
  		 	$fP = fSockOpen($host, $port, $errno, $errstr, $timeout); 
 		 	if (!$fP) { return false; } 
  			$tA = microtime(true); 
-			return round((($tA - $tB) * 1000), 0); 
+			$ping = round((($tA - $tB) * 1000), 0); 
+			return $ping;
+			$i = 10;
+
+			$ping1 = ping("google.com.br", 80, 10); 
+			sleep(0.002);
+			$ping2 = ping("google.com.br", 80, 10); 
+			sleep(0.002);
+			$ping3 = ping("google.com.br", 80, 10); 
+			sleep(0.002);
+			$ping4 = ping("google.com.br", 80, 10); 
+			sleep(0.002);
+			$ping5 = ping("google.com.br", 80, 10); 
+			sleep(0.002);
+			$ping6 = ping("google.com.br", 80, 10); 
+			sleep(0.002);
+			$ping7 = ping("google.com.br", 80, 10); 
+			sleep(0.002);
+			$ping8 = ping("google.com.br", 80, 10); 
+			sleep(0.002);
+			$ping9 = ping("google.com.br", 80, 10); 
+			sleep(0.002);
+			$ping10 = ping("google.com.br", 80, 10); 
+			sleep(0.002);
+
+			$soma = $ping1+$ping2+$ping3+$ping4+$ping5+$ping6+$ping7+$ping8+$ping9+$ping10;
+			$media = $soma/$i;
+
+			return $media;
 		}
 
 		function check_jitter($host, $port, $timeout) { 
@@ -61,8 +90,8 @@
 			$fP = fSockOpen($host, $port, $errno, $errstr, $timeout); 
 			if (!$fP) { return "down"; } 
 			$tA = microtime(true); 
-			$ping1 = round((($tA - $tB) * 1000), 0); 
-			return $ping1;
+			$ping = round((($tA - $tB) * 1000), 0); 
+			return $ping;
 			$i = 10;
 
 			$ping1 = jitter("google.com.br", 80, 10); 
@@ -108,6 +137,9 @@
 			$this->download_speed = $download_speed;
 		}
 
+		function set_upload_speed($upload_speed){
+			$this->upload_speed = $upload_speed;
+		}
 
 		function check_packet_loss($host, $count) {
     		$command = 'ping -c %d %s';

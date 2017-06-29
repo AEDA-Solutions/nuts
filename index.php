@@ -251,7 +251,7 @@
             <button type="submit" class="btn btn-default btn-lg btn-white btn-contato">Enviar</button>
             </div> 
         </div>
-
+-->
         </form>
         </div>
 
@@ -271,8 +271,9 @@
               (61) 9xxxx-xxxx
             </p>
              <h3>Email</h3>
+             equipenuts@gmail.com
             <p>
-              equipenuts@gmail.com
+              
             </p>
          </div>
 

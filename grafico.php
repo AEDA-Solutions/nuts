@@ -158,11 +158,10 @@ $user_data = $NC->get_last_data();
           <script>
             var ctx = document.getElementById("chartl");
             var data = {
-              labels: ["Upload", "Download"],
+              labels: ["Upload (Kbps)", "Download (Mbps)"],
               datasets: [{
                 label: 'Localização Atual',
-                data: [200,<?= $user_data['download_speed']?>], // nesse campo 200 vai ser a velocidade de upload do usuário
-
+                data: [<?= $user_data['upload_speed']?>,<?= $user_data['download_speed']?>],
                 backgroundColor: [
                   'rgba(255,127,80,0.7)',
                   'rgba(255,127,80,0.7)',

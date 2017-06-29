@@ -11,7 +11,7 @@
 
 		public function insert_net_data($latitude,$longitude,$ping,$packetloss,$download_speed,$jitter){
  			$connection = $this->Dbcon->connect_mysql();
- 			$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed,jitter) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed','$jitter')";
+ 			$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed,jitter,upload_speed) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed','$jitter','$upload_speed')";
 			if(mysqli_query($connection,$sql)){
 				//dados registrados com sucesso
 				return true;
@@ -62,6 +62,7 @@
        						z.ping, 
       						z.packetloss,
       						z.download_speed,
+      						z.upload_speed,
        						p.radius,
        					 	p.distance_unit
        					 	z.jitter
