@@ -4,6 +4,15 @@
  * Licensed under the MIT license
  */
 
+ var formID = document.getElementById("formID");
+var send = $("#send");
+
+$(formID).submit(function(event){
+  if (formID.checkValidity()) {
+    send.attr('disabled', 'disabled');
+  }
+});
+
  function seleciona(name, indice) {
    var imgs = document.querySelectorAll('img[name=' + name + ']');
   

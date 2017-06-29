@@ -302,6 +302,7 @@
         <div class="cadastro-formulario" class="row">
           <div class="col-md-6 col-md-push-3">
 
+            
             <form method = "post" action = "register_user.php">
             <div class="form-group">
             <label for="nome">Nome</label>
