@@ -230,9 +230,11 @@
      <div class="container">
       <div class="row">
         <!-- Texto Contato --> 
-        <div class="col-md-6">
-        <h2>Contato</h2>
+        <div class="col-md-3">
+         <h3>Contato</h3>
         <form>
+         <p>equipenuts@gmail.com</p>
+        <!--
         <div class="col-md-9">
           <label class="sr-only" for="nome">Nome</label>
           <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="nome" placeholder="Nome" required oninvalid="setCustomValidity('Por favor, preencha o nome')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com o seu nome ">
@@ -251,7 +253,7 @@
             <button type="submit" class="btn btn-default btn-lg btn-white btn-contato">Enviar</button>
             </div> 
         </div>
--->
+        -->
         </form>
         </div>
 
@@ -269,11 +271,6 @@
             <h3>Telefone</h3>
             <p>
               (61) 9xxxx-xxxx
-            </p>
-             <h3>Email</h3>
-             equipenuts@gmail.com
-            <p>
-              
             </p>
          </div>
 

@@ -115,7 +115,7 @@
           <div class="o-analise">
               <h3>A internet aqui é avaliada em:</h3>
               <h4>******************</h4>
-              <h5>Isso significa que aqui você consegue: Instalar Apps, Baixar Vídeos e Assistir Netflix!</h5>
+              <h5>Isso significa que aqui você consegue: Instalar Apps, Assistir vídeos no YouTube, Baixar músicas!</h5>
               <br>
               <br>
               <br>
@@ -148,11 +148,13 @@
   <input type="hidden" id="latitude" name="latitude" value=""/>
   <input type="hidden" id="longitude" name="longitude" value=""/>
   <input type="hidden" id="download_speed" name="download_speed" value=""/>
+  <input type="hidden" id="upload_speed" name="upload_speed" value=""/>
 </form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="get_location.js"></script>
 <script src="download_speed.js"></script>
+<script src="upload_speed.js"></script>
 <script type="text/javascript">
 
   window.onload = getLocation(function (x){
