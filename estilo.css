@@ -22,8 +22,17 @@ header {
 }
 
 footer {
-	padding-top: 50px;
+	padding-top: 10px;
+	padding-bottom: 8px;
+	background: black;
+	color: white;
+	text-align: center;
 }
+
+footer p{
+	margin-top: 4px;
+}
+
 
 
 .sing-up-page {
@@ -126,6 +135,10 @@ nav.navbar-transparente-user{
 	color:  #FF6347;
 }
 
+/* -- MODAL -- */
+
+
+
 
 /* -- Imagem de capa -- */
 
@@ -179,14 +192,6 @@ nav.navbar-transparente-user{
 	color: white;
 }
 
-.btn-cadastro {
-	border-radius: 300px;
-	-webkit-border-radius: 300px;
-	-moz-border-radius:300px;
-	padding: 3px 20px;
-	transition: background 0.4s, color 0.4s;
-}
-
 .btn-white {
 	border:2px solid white;
 }
@@ -196,13 +201,33 @@ nav.navbar-transparente-user{
 	color: white;
 }
 
+.btn-cadastro {
+	border-radius: 300px;
+	-webkit-border-radius: 300px;
+	-moz-border-radius:300px;
+	padding: 5px 10px;
+	transition: background 0.4s, color 0.4s;
+}
+
+
 .btn-login {
 	color: black;
 	background: white;
 	border-radius: 500px;
 	-webkit-border-radius: 500px;
 	-moz-border-radius:400px;
-	padding: 10px 20px;
+	padding: 5px 10px;
+	transition: background 0.4s, color 0.4s;
+}
+
+
+.btn-cancelar {
+	color: white;
+	background: black;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	padding: 2px 5px;
 	transition: background 0.4s, color 0.4s;
 }
 
@@ -272,16 +297,6 @@ section.flat button.active {
 }
 
 
-.btn-cancelar {
-	color: white;
-	background: black;
-	border-radius: 500px;
-	-webkit-border-radius: 500px;
-	-moz-border-radius:400px;
-	padding: 10px 20px;
-	transition: background 0.4s, color 0.4s;
-}
-
 .btn-alterações {
 	background: transparent;
 	color: white;
@@ -309,8 +324,6 @@ section.flat button.active {
 	border-color: #FF6347;
 	border: 1px;
 }
-
-
 
 .page-header {
 	border:none;
@@ -457,6 +470,13 @@ a:link{
 	
 }
 
+/* ==== HISTORICO ==== */
+.o-historico {
+	color: white;
+	background: rgba(0, 0, 0, 0.6);
+	text-align: center;
+	padding: 10px 0px 20px 0px;
+}
 
 /* ==== ANALISE DE REDE ==== */
 
@@ -524,8 +544,7 @@ a:link{
 /* ==== contato ==== */
 #contato {
 	background: rgba(0, 0, 0, 0.8);
-	padding-top: 30px;
-	padding-bottom: 40px;
+	padding-bottom: 30px;
 }	
 
 
@@ -589,7 +608,7 @@ h2{
 
 
 #contato h3{
-	margin-top: 90px;
+	margin-top: 30px;
 	color: #FF7F50;
 }
 

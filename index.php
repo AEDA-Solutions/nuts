@@ -125,7 +125,7 @@
           <form class="modal fade" id="janelalogin" method = "post" action ="validate_user.php">
 
 
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
@@ -151,10 +151,12 @@
              <div class="modal-footer">
 
               <a href="sign_up.php" type="button" class=" btn btn-login btn-white">Cadastrar</a> 
+
+              <button type="submit" class="btn btn-login btn-white">Login</a>
               
               <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">Cancelar</button>      
 
-              <button type="submit" class="btn btn-login btn-white">Login</a>
+              
                          
             </div>
 
@@ -230,9 +232,11 @@
      <div class="container">
       <div class="row">
         <!-- Texto Contato --> 
-        <div class="col-md-6">
-        <h2>Contato</h2>
+        <div class="col-md-3">
+         <h3>Contato</h3>
         <form>
+         <p>equipenuts@gmail.com</p>
+        <!--
         <div class="col-md-9">
           <label class="sr-only" for="nome">Nome</label>
           <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="nome" placeholder="Nome" required oninvalid="setCustomValidity('Por favor, preencha o nome')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com o seu nome ">
@@ -251,28 +255,24 @@
             <button type="submit" class="btn btn-default btn-lg btn-white btn-contato">Enviar</button>
             </div> 
         </div>
-
+        -->
         </form>
         </div>
 
 
           <!-- Endereço --> 
-         <div class="col-md-3">
-         <h3>Endereço</h3>
+         <div class="col-md-4">
+         <h3>Telefone</h3>
             <p>
-              Campus Universitário Darcy Ribeiro, Faculdade de Tecnologia Universidade de Brasília – UnB, Asa Norte, Brasília - DF
+              (61) 9xxxx-xxxx
             </p>
          </div>
 
          <!-- Telefone --> 
-         <div class="col-md-3">
-            <h3>Telefone</h3>
+         <div class="col-md-4">
+            <h3>Endereço</h3>
             <p>
-              (61) 9xxxx-xxxx
-            </p>
-             <h3>Email</h3>
-            <p>
-              equipenuts@gmail.com
+            Campus Universitário Darcy Ribeiro, Faculdade de Tecnologia Universidade de Brasília – UnB, Asa Norte, Brasília - DF
             </p>
          </div>
 
@@ -281,6 +281,11 @@
       </div>
      </div>
      </section>
+
+
+     <footer>
+       <p>NUTS</p>
+     </footer>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

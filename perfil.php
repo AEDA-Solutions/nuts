@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+      <?php 
+            if (isset($_GET['sucesso'])) 
+            {
+              $sucesso = $_GET['sucesso'];
+
+              if($sucesso == 1)
+              {
+                ?>
+
+               
+            <!-- jquery -->
+            <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+            <!-- bootstrap -->
+            <script type="text/javascript" src="js/bootstrap.js"></script>
+            <!-- chamada da função -->
+            <script type="text/javascript">
+            $(window).load(function() {
+            $('#janela').modal('show');
+            });
+           </script>
+
+          <?php 
+              } 
+            }
+          ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -73,15 +99,20 @@
     </nav>  <!-- /nav -->
 
 
-<!-- modal de avaliação-->
-<form class="modal fade" id="janela" method = "post" action ="validate_user.php">
-        <div class="modal-dialog modal-lg">
+
+
+
+
+<!-- MODAL DE AVALIAÇÃO OBRIGATÓRIA -->
+<form class="modal fade" id="janela" method = "post" >
+        <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
                 <span>&times;</span>
               </button> 
-              <center> <h4 class="modal-tittle" style="color: #FF6347">AVALIE SEU LOCAL!</h4> </center>
+              <center> <h4 class="modal-tittle" style="color: #FF6347">COLABORE COM ESSA INICIATIVA!</h4> </center>
+              <center>Para termos um mapa cada vez mais completo, precisamos da sua opinião. Avalie a situação da sua rede onde você está de 1 a 5 estrelas para atualizarmos nosso banco de dados!</center>
               <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
               
             </div>
@@ -114,7 +145,8 @@
           </div>
         </div>
       </form>
-<!-- /Modal de avaliação -->
+<!--//MODAL DE AVALIAÇÃO OBRIGATÓRIA -->
+
 <section id=perfil>      
   <div class="container">
       <section id="s-analise">
@@ -148,5 +180,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+
             </body>
 </html>

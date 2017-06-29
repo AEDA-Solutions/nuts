@@ -57,7 +57,6 @@ $user_data = $NC->get_last_data();
         <div class="collapse navbar-collapse" id="barra-navegacao">
            <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
-            <li><a href="analise.php"> Análise de Rede</a></li>
             <li class="divisor" role="separator"></li>
             <li><a href="sign_up.php">Registre-se</a></li>
             <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Login</a></li>
@@ -89,7 +88,7 @@ $user_data = $NC->get_last_data();
 
 
 
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
@@ -112,11 +111,13 @@ $user_data = $NC->get_last_data();
 
              <div class="modal-footer">
 
-              <a href="sign_up.php" type="button" class=" btn btn-login btn-white">Cadastrar</a> 
+              <a href="sign_up.php" type="button" class=" btn btn-login btn-white">Cadastrar</a>
+
+              <button type="submit" class="btn btn-login btn-white">Login</a> 
               
               <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">Cancelar</button>      
 
-              <button type="submit" class="btn btn-login btn-white">Login</a>
+              
                          
             </div>
 
@@ -158,11 +159,10 @@ $user_data = $NC->get_last_data();
           <script>
             var ctx = document.getElementById("chartl");
             var data = {
-              labels: ["Upload", "Download"],
+              labels: ["Upload (Kbps)", "Download (Mbps)"],
               datasets: [{
                 label: 'Localização Atual',
-                data: [200,<?= $user_data['download_speed']?>], // nesse campo 200 vai ser a velocidade de upload do usuário
-
+                data: [<?= $user_data['upload_speed']?>,<?= $user_data['download_speed']?>],
                 backgroundColor: [
                   'rgba(255,127,80,0.7)',
                   'rgba(255,127,80,0.7)',

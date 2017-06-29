@@ -78,8 +78,8 @@ require_once('UserController.php');
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
 <!-- modal de avaliação-->
-<form class="modal fade" id="janela" method = "post" action ="validate_user.php">
-        <div class="modal-dialog modal-lg">
+<form class="modal fade" id="janela" method = "post" >
+        <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
@@ -124,7 +124,7 @@ require_once('UserController.php');
 <form class="modal fade" id="janelaexcluir" method = "post" action="UserController.php">
 
 
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
@@ -143,7 +143,6 @@ require_once('UserController.php');
             </div>
 
              <div class="modal-footer">
-
               <button type="submit" class="btn btn-login btn-white">Excluir</a>
 
             </div>
@@ -151,7 +150,7 @@ require_once('UserController.php');
           </div>
         </div>
       </form>
- <--/Modal de excluir conta -->
+ <!--/Modal de excluir conta -->
 
     <div class="container">
     <header class="row">

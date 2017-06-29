@@ -118,7 +118,7 @@
           <!-- Login  --> 
           <form class="modal fade" id="janelalogin" method = "post" action = "validate_user.php">
 
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
@@ -144,10 +144,11 @@
              <div class="modal-footer">
 
               <a href="sign_up.php" type="button" class=" btn btn-login btn-white">Cadastrar</a> 
+
+              <button type="submit" class="btn btn-login btn-white">Login</a>
               
               <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">Cancelar</button>      
 
-              <button type="submit" class="btn btn-login btn-white">Login</a>
                          
             </div>
 

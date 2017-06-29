@@ -16,10 +16,6 @@ function validate_data($d){
 }
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -102,10 +98,10 @@ function validate_data($d){
     </nav>  <!-- /nav -->
     
     <!-- modal de avaliação-->
-<form class="modal fade" id="janela" method = "post" action ="validate_user.php">
+<form class="modal fade" id="janela" method = "post" >
 
 
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
@@ -154,7 +150,7 @@ function validate_data($d){
               <table class="table table-inverse table-hover">
         <thead>
       <tr>
-      <th>Dados</th>
+      <th style="font-size: 25px;" >Dados</th>
       <th></th>
       </tr>
         </thead>
@@ -172,7 +168,7 @@ function validate_data($d){
                     
           <tr>
           <th scope="row">Ping</th>
-          <td> <?= $user_data['ping']?></td>
+          <td> <?= $user_data['ping']?> ms</td>
           </tr>
 
           <tr>
@@ -187,12 +183,12 @@ function validate_data($d){
 
            <tr>
            <th scope="row">Velocidade de upload</th>
-           <td><div id="speed"></div></td>
+           <td> <?= $user_data['upload_speed']?> Kbps</td>
            </tr>
 
            <tr>
            <th scope="row">Jitter</th>
-           <td> <?= $user_data['jitter']?>
+           <td> <?= $user_data['jitter']?> ms
            </tr>
 
             </tbody>

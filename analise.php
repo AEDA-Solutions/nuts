@@ -73,22 +73,38 @@
     </nav>  <!-- /nav -->
 
 <!-- modal de avaliação-->
-<form class="modal fade" id="janela" method = "post" action ="validate_user.php">
-
-
-        <div class="modal-dialog modal-lg">
+<form class="modal fade" id="janela" method = "post" >
+        <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
                 <span>&times;</span>
               </button> 
-              <h4 class="modal-tittle" style="color: #FF6347">AVALIE SEU LOCAL!</h4>             
+              <center> <h4 class="modal-tittle" style="color: #FF6347">AVALIE SEU LOCAL!</h4> </center>
+              <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+              
             </div>
 
              <div class="modal-body">
+             <div class="estrelas">
+              <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+              <label for="cm_star-1"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-1" name="fb" value="1"/>
+              <label for="cm_star-2"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-2" name="fb" value="2"/>
+              <label for="cm_star-3"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-3" name="fb" value="3"/>
+              <label for="cm_star-4"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-4" name="fb" value="4"/>
+              <label for="cm_star-5"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-5" name="fb" value="5"/>
+              </div>
+           
             </div>
 
-             <div class="modal-footer">  
+             <div class="modal-footer">
+
+              
 
               <button type="submit" class="btn btn-login btn-white">Enviar avaliação</a>
 
@@ -115,7 +131,7 @@
           <div class="o-analise">
               <h3>A internet aqui é avaliada em:</h3>
               <h4>******************</h4>
-              <h5>Isso significa que aqui você consegue: Instalar Apps, Baixar Vídeos e Assistir Netflix!</h5>
+              <h5>Isso significa que aqui você consegue: Instalar Apps, Assistir vídeos no YouTube, Baixar músicas!</h5>
               <br>
               <br>
               <br>
@@ -148,11 +164,13 @@
   <input type="hidden" id="latitude" name="latitude" value=""/>
   <input type="hidden" id="longitude" name="longitude" value=""/>
   <input type="hidden" id="download_speed" name="download_speed" value=""/>
+  <input type="hidden" id="upload_speed" name="upload_speed" value=""/>
 </form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="get_location.js"></script>
 <script src="download_speed.js"></script>
+<script src="upload_speed.js"></script>
 <script type="text/javascript">
 
   window.onload = getLocation(function (x){
