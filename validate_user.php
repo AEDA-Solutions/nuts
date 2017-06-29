@@ -6,13 +6,17 @@
 	$password = md5($_POST['password']);
 		
 	$UserController = new UserController();
-	if($UserController->login($reg,$password)){
+	$errorCode = $UserController->login($reg,$password);
+	if($errorCode == 3){ // sucesso no login
 		header('Location: perfil.php');
 		
 	}				 
-	else{
+	else if($errorCode == 1){ // matricula nao encontrada
 		header('Location: index.php?erro=1');
 	}
 
+	else if($errorCode == 2){ // matricula encontrada, mas senha errada
+		header('Location: index.php?erro=2');
+	}
 ?>
 
