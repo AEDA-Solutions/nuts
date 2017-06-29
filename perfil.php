@@ -104,7 +104,7 @@
 
 
 <!-- MODAL DE AVALIAÇÃO OBRIGATÓRIA -->
-<form class="modal fade" id="janela" method = "post" >
+<form class="modal fade" id="janela" method = "post" action = "user_avaliation1.php">
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
