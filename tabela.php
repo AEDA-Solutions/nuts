@@ -172,7 +172,7 @@ function validate_data($d){
                     
           <tr>
           <th scope="row">Ping</th>
-          <td> <?= $user_data['ping']?></td>
+          <td> <?= $user_data['ping']?> ms</td>
           </tr>
 
           <tr>
@@ -192,7 +192,7 @@ function validate_data($d){
 
            <tr>
            <th scope="row">Jitter</th>
-           <td> <?= $user_data['jitter']?>
+           <td> <?= $user_data['jitter']?> ms
            </tr>
 
             </tbody>
