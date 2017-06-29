@@ -261,18 +261,18 @@
 
 
           <!-- Endereço --> 
-         <div class="col-md-3">
-         <h3>Endereço</h3>
+         <div class="col-md-4">
+         <h3>Telefone</h3>
             <p>
-              Campus Universitário Darcy Ribeiro, Faculdade de Tecnologia Universidade de Brasília – UnB, Asa Norte, Brasília - DF
+              (61) 9xxxx-xxxx
             </p>
          </div>
 
          <!-- Telefone --> 
-         <div class="col-md-3">
-            <h3>Telefone</h3>
+         <div class="col-md-4">
+            <h3>Endereço</h3>
             <p>
-              (61) 9xxxx-xxxx
+            Campus Universitário Darcy Ribeiro, Faculdade de Tecnologia Universidade de Brasília – UnB, Asa Norte, Brasília - DF
             </p>
          </div>
 
@@ -281,6 +281,11 @@
       </div>
      </div>
      </section>
+
+
+     <footer>
+       <p>NUTS</p>
+     </footer>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

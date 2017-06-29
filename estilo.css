@@ -22,8 +22,17 @@ header {
 }
 
 footer {
-	padding-top: 50px;
+	padding-top: 10px;
+	padding-bottom: 8px;
+	background: black;
+	color: white;
+	text-align: center;
 }
+
+footer p{
+	margin-top: 4px;
+}
+
 
 
 .sing-up-page {
@@ -530,8 +539,7 @@ a:link{
 /* ==== contato ==== */
 #contato {
 	background: rgba(0, 0, 0, 0.8);
-	padding-top: 30px;
-	padding-bottom: 40px;
+	padding-bottom: 30px;
 }	
 
 
@@ -595,7 +603,7 @@ h2{
 
 
 #contato h3{
-	margin-top: 90px;
+	margin-top: 30px;
 	color: #FF7F50;
 }
 
