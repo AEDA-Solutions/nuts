@@ -101,7 +101,7 @@ function validate_data($d){
 <form class="modal fade" id="janela" method = "post" action ="validate_user.php">
 
 
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
@@ -168,7 +168,7 @@ function validate_data($d){
                     
           <tr>
           <th scope="row">Ping</th>
-          <td> <?= $user_data['ping']?></td>
+          <td> <?= $user_data['ping']?> ms</td>
           </tr>
 
           <tr>
@@ -188,7 +188,7 @@ function validate_data($d){
 
            <tr>
            <th scope="row">Jitter</th>
-           <td> <?= $user_data['jitter']?>
+           <td> <?= $user_data['jitter']?> ms
            </tr>
 
             </tbody>
