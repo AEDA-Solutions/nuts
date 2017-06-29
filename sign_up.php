@@ -51,6 +51,7 @@
         <div class="collapse navbar-collapse" id="barra-navegacao">
            <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">Home</a></li>
+            <li><a href="#" class="btn" data-toggle="modal" data-target="#janelalogin">Análise de Rede</a></li>
             <li class="divisor" role="separator"></li>
             <li><a href="sign_up.php">Registre-se</a></li>
             <li><a href="#" class="btn" data-toggle="modal" data-target="#janelalogin">Login</a></li>
@@ -60,22 +61,6 @@
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
     
-<!-- MENSAGEM DE ERRO MATRICULA NÃO ENCONTRADA  -->
-  <?php 
-            if (isset($_GET['erro'])) 
-            {
-              $erro = $_GET['erro'];
-
-              if($erro == 1)
-              {
-                ?>
-                <div class="alert alert-danger" role="alert">
-                <strong>ERRO!</strong> <a href="#" class="alert-link"> Essa matrícula não foi encontrada</a> Digite-a corretamente ou faça nosso cadastro!
-                </div>
-          <?php 
-              } 
-            }
-          ?>
 
 <!-- MENSAGEM DE ERRO MATRICULA NÃO ENCONTRADA  -->
   <?php 

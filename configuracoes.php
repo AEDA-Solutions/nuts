@@ -76,22 +76,34 @@ session_start();
         </div>
       </div> <!-- /container --> 
     </nav>  <!-- /nav -->
-
 <!-- modal de avaliação-->
-<form class="modal fade" id="janela" method = "post" >
-
-
+<form class="modal fade" id="janela" method = "post" action ="validate_user.php">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
                 <span>&times;</span>
               </button> 
-              <h4 class="modal-tittle" style="color: #FF6347">AVALIE SEU LOCAL!</h4>             
+              <center> <h4 class="modal-tittle" style="color: #FF6347">AVALIE SEU LOCAL!</h4> </center>
+              <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+              
             </div>
 
              <div class="modal-body">
-  
+             <div class="estrelas">
+              <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+              <label for="cm_star-1"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-1" name="fb" value="1"/>
+              <label for="cm_star-2"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-2" name="fb" value="2"/>
+              <label for="cm_star-3"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-3" name="fb" value="3"/>
+              <label for="cm_star-4"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-4" name="fb" value="4"/>
+              <label for="cm_star-5"><i class="fa"></i></label>
+              <input type="radio" id="cm_star-5" name="fb" value="5"/>
+              </div>
+           
             </div>
 
              <div class="modal-footer">
