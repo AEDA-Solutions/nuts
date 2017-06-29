@@ -183,14 +183,6 @@ nav.navbar-transparente-user{
 	color: white;
 }
 
-.btn-cadastro {
-	border-radius: 300px;
-	-webkit-border-radius: 300px;
-	-moz-border-radius:300px;
-	padding: 3px 20px;
-	transition: background 0.4s, color 0.4s;
-}
-
 .btn-white {
 	border:2px solid white;
 }
@@ -200,13 +192,33 @@ nav.navbar-transparente-user{
 	color: white;
 }
 
+.btn-cadastro {
+	border-radius: 300px;
+	-webkit-border-radius: 300px;
+	-moz-border-radius:300px;
+	padding: 5px 10px;
+	transition: background 0.4s, color 0.4s;
+}
+
+
 .btn-login {
 	color: black;
 	background: white;
 	border-radius: 500px;
 	-webkit-border-radius: 500px;
 	-moz-border-radius:400px;
-	padding: 10px 20px;
+	padding: 5px 10px;
+	transition: background 0.4s, color 0.4s;
+}
+
+
+.btn-cancelar {
+	color: white;
+	background: black;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	padding: 2px 5px;
 	transition: background 0.4s, color 0.4s;
 }
 
@@ -275,16 +287,6 @@ section.flat button.active {
   background-color: white;
 }
 
-
-.btn-cancelar {
-	color: white;
-	background: black;
-	border-radius: 500px;
-	-webkit-border-radius: 500px;
-	-moz-border-radius:400px;
-	padding: 10px 20px;
-	transition: background 0.4s, color 0.4s;
-}
 
 .btn-alterações {
 	background: transparent;
