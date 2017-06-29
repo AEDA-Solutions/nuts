@@ -118,6 +118,31 @@
 <!-- /MENSAGEM DE ERRO SENHA ERRADA -->
 
 
+<!-- Mensagem de sucesso (CONTA EXCLUIDA)  -->
+
+       <?php 
+            if (isset($_GET['sucesso'])) 
+            {
+              $sucesso = $_GET['sucesso'];
+
+              if($sucesso == 4)
+              {
+                ?>
+
+               <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            Sua conta foi excluída. 
+              </div>
+          <?php 
+              } 
+            }
+          ?>
+
+
+<!-- // Mensagem de sucesso (CONTA EXCLUIDA) -->
+
 
             <!-- Login  --> 
 

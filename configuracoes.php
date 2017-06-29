@@ -236,6 +236,37 @@ require_once('UserController.php');
           ?>
           <!-- // Mensagem de erro email -->
 
+
+
+ <!-- Mensagem de erro senha (EXCLUIR CONTA)  -->
+
+
+  
+       <?php 
+            if (isset($_GET['erro'])) 
+            {
+              $erro = $_GET['erro'];
+
+              if($erro == 2)
+              {
+                ?>
+                <div class="container">
+                <div class="page-header">
+                </div>
+               <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            <strong> EPA! </strong> A senha está errada.
+
+              </div>
+          <?php 
+              } 
+            }
+          ?>
+          <!-- // Mensagem de erro senha (EXCLUIR CONTA) -->
+
+
           <section id=configurações>
           <div class="container">
             <div class="page-configurações" class="row">
