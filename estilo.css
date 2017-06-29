@@ -402,6 +402,22 @@ a:link{
 	text-decoration: none;
 }
 
+/* ==== avaliação nozes ==== */
+.estrelas input[type=radio] {
+  display: none;
+  background-image: url('images/icone-apagado')
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+.estrelas {
+	text-align: center;
+}
+
 /* ==== CADASTRO ==== */
 
 .cadastro {
