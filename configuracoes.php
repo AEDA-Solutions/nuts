@@ -78,7 +78,7 @@ session_start();
     </nav>  <!-- /nav -->
 
 <!-- modal de avaliação-->
-<form class="modal fade" id="janela" method = "post" action ="validate_user.php">
+<form class="modal fade" id="janela" method = "post" >
 
 
         <div class="modal-dialog modal-lg">
@@ -107,6 +107,38 @@ session_start();
       </form>
 <!-- /Modal de avaliação -->
 
+<!-- modal de excluir conta-->
+<form class="modal fade" id="janelaexcluir" method = "post" >
+
+
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span>&times;</span>
+              </button> 
+              <center> <h4 class="modal-tittle" style="color: #FF6347">Você tem certeza? Sentiremos sua falta! </h4>  </center>           
+            </div>
+
+             <div class="modal-body">
+              <center> Se quiser excluir sua conta, digite sua senha para confirmar. </center>
+            <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" class="form-control" id="password" name = "password" minlength="6" placeholder="******" required oninvalid="setCustomValidity('Por favor, preencha com sua senha')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com sua senha. Ela precisa ter no mínimo 6 dígitos">
+            </div>
+
+            </div>
+
+             <div class="modal-footer">
+
+              <button type="submit" class="btn btn-login btn-white">Excluir</a>
+
+            </div>
+
+          </div>
+        </div>
+      </form>
+<!-- /Modal de excluir conta -->
 
     <div class="container">
     <header class="row">
@@ -309,7 +341,9 @@ session_start();
             </div>
                 </div>
                 <br>
-             <button type="submit" class="btn btn-marrom btn-alterações">Salvar alterações</a></button>   
+
+             <button type="submit" class="btn btn-marrom btn-alterações">Salvar alterações</a></button> 
+             <a href="#" type="button" class="btn btn-marrom btn-alterações" data-toggle="modal"  data-target="#janelaexcluir" >Excluir conta</a>   
         </form>
           </div>
             </div>  
