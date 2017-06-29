@@ -143,7 +143,6 @@ require_once('UserController.php');
             </div>
 
              <div class="modal-footer">
-
               <button type="submit" class="btn btn-login btn-white">Excluir</a>
 
             </div>
@@ -151,7 +150,7 @@ require_once('UserController.php');
           </div>
         </div>
       </form>
- <--/Modal de excluir conta -->
+ <!--/Modal de excluir conta -->
 
     <div class="container">
     <header class="row">
