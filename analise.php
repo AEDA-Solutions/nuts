@@ -100,24 +100,21 @@
                 <span>&times;</span>
               </button> 
               <center> <h4 class="modal-tittle" style="color: #FF6347">COLABORE COM ESSA INICIATIVA!</h4> </center>
-              <center>Para termos um mapa cada vez mais completo, precisamos da sua opinião. Avalie a situação da sua rede onde você está de 1 a 5 estrelas para atualizarmos nosso banco de dados!</center>
+              <center>Para termos um mapa cada vez mais completo, precisamos da sua opinião. Avalie a situação da sua rede onde você está de 1 a 5 nozes para atualizarmos nosso banco de dados!</center>
               <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
               
             </div>
 
              <div class="modal-body">
              <div class="estrelas">
-              <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-              <label for="cm_star-1"><i class="fa"></i></label>
-              <input type="radio" id="cm_star-1" name="fb" value="1"/>
-              <label for="cm_star-2"><i class="fa"></i></label>
-              <input type="radio" id="cm_star-2" name="fb" value="2"/>
-              <label for="cm_star-3"><i class="fa"></i></label>
-              <input type="radio" id="cm_star-3" name="fb" value="3"/>
-              <label for="cm_star-4"><i class="fa"></i></label>
-              <input type="radio" id="cm_star-4" name="fb" value="4"/>
-              <label for="cm_star-5"><i class="fa"></i></label>
-              <input type="radio" id="cm_star-5" name="fb" value="5"/>
+              <link href="estilo.css" rel="stylesheet">
+
+
+                <label> <img name="fb" class="apagada"/>  </label>
+                <label> <img name="fb" class="apagada"/>  </label>
+                <label> <img name="fb" class="apagada"/>  </label>
+                <label> <img name="fb" class="apagada"/>  </label>
+                <label> <img name="fb" class="apagada"/>  </label>
               </div>
            
             </div>
@@ -170,6 +167,35 @@
       </div>     
    </section>
 
+
+
+    
+<script type="text/javascript">
+
+  function seleciona(name, indice) {
+   var imgs = document.querySelectorAll('img[name=' + name + ']');
+  
+   for (var i=0; i < imgs.length; i++) {
+       if (i <= indice)
+           imgs[i].className = "destaque";
+       else
+           imgs[i].className = "apagada";
+   }
+}
+
+window.onload = function() {
+   var imgs = document.querySelectorAll('img[name=fb]');
+  
+   for (var i=0; i < imgs.length; i++) {
+       (function(name, i) {
+          imgs[i].addEventListener('click', function () {
+              seleciona(name, i);
+          });
+       })(imgs[i].name, i);
+   }
+}
+
+</script>
 
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

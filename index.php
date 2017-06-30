@@ -180,8 +180,8 @@
           <!-- Texto Nos --> 
          <div class="col-md-6">
            <h2>SOBRE NUTS</h2>
-           <p>Nós da NUT temos como principal objetivo promover um ambiente colaborativo de monitoramento da rede universitária. Somos um grupo de seis estudantes do curso de Engenharia de Redes de Comunicação e um estudante de Engenharia Elétrica da Universidade de Brasília. 
-           <p>No momento, estamos cursando a disciplina Algoritmo e Estrutura de Dados e nos foi dado como objetivo, a implementação de uma plataforma para que você, usuário, leigo ou avançado, consiga obter informações que nem sempre estão dispostas de maneira simplificada sobre sua rede.</p>
+           <p>Nós da NUTS temos como principal objetivo promover um ambiente colaborativo de monitoramento da rede universitária. Somos um grupo de cinco estudantes do curso de Engenharia de Redes de Comunicação e um estudante de Engenharia Elétrica da Universidade de Brasília. 
+           <p>No momento, estamos cursando a disciplina Algoritmos e Estruturas de Dados e nos foi dado como objetivo, a implementação de uma plataforma para que você, usuário, leigo ou avançado, consiga obter informações que nem sempre estão dispostas de maneira simplificada sobre sua rede.</p>
          </div>
 
          <!-- Imagem Nos --> 
@@ -264,8 +264,7 @@
          <div class="col-md-3">
          <h3>Endereço</h3>
             <p>
-              (61) 9xxxx-xxxx
-              
+               Campus Universitário Darcy Ribeiro, Faculdade de Tecnologia Universidade de Brasília – UnB, Asa Norte, Brasília - DF
             </p>
          </div>
 
@@ -273,7 +272,7 @@
          <div class="col-md-3">
             <h3>Telefone</h3>
             <p>
-              Campus Universitário Darcy Ribeiro, Faculdade de Tecnologia Universidade de Brasília – UnB, Asa Norte, Brasília - DF
+              (61) 9xxxx-xxxx
             </p>
          </div>
 
