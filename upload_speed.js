@@ -16,7 +16,7 @@ function checkUploadSpeed( iterations, update ) {
                 average == 0 
                     ? average = speed 
                     : average = Math.round( ( average + speed ) / 2 );
-                update( speed, average );
+                update(average );
                 index++;
                 if( index == iterations ) {
                     window.clearInterval( timer );
@@ -37,9 +37,4 @@ function checkUploadSpeed( iterations, update ) {
         };     
         return result;
     };
-};
-
-checkUploadSpeed( 30, function ( speed, average ) {
-    document.getElementById( 'speed' ).textContent = speed + ' Kbps';
-    document.getElementById( 'average' ).textContent = 'average: ' + average + 'kbs';
-} );
+}

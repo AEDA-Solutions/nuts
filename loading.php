@@ -14,15 +14,13 @@
 <!-- bootstrap -->
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <!-- chamada da função -->
-<script type="text/javascript">
+    <!-- Bootstrap -->
+
+  <script type="text/javascript">
 $(window).load(function() {
     $('#janelaloading').modal('show');
 });
 </script>
-
-
-
-    <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="estilo.css" rel="stylesheet">
 
@@ -129,8 +127,34 @@ $(window).load(function() {
   </body>
 </html>
 
-<form style = "display: hidden" action = "treat_data.php" method = "post" id = "form">
+<form style = "display: hidden" action = "teste.php" method = "post" id = "form">
   <input type="hidden" id="latitude" name="latitude" value=""/>
   <input type="hidden" id="longitude" name="longitude" value=""/>
   <input type="hidden" id="download_speed" name="download_speed" value=""/>
+  <input type="hidden" id="upload_speed" name="upload_speed" value=""/>
 </form>
+
+<script src="get_location.js"></script>
+<script src="download_speed.js"></script>
+<script src="upload_speed.js"></script>
+<script type="text/javascript">
+
+  window.onload = getLocation(function (x){
+  if(x!=false){
+    $("#latitude").val(x['latitude']);
+    $("#longitude").val(x['longitude']);
+    MeasureConnectionSpeed(function (download_speed){
+      $("#download_speed").val(download_speed);
+      $("#form").submit()
+        });
+   checkUploadSpeed(30,function (speed){
+      $("#upload_speed").val(speed);
+    });
+  }
+  else{
+    $("#form").submit();
+  }
+
+  
+});
+</script>
