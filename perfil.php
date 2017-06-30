@@ -76,8 +76,8 @@
             <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Análise de Rede<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="analise.php">Mapa</a></li>
-                <li><a href="tabela.php">Avançado</a></li>
+                <li><a href="loading_map.php">Mapa</a></li>
+                <li><a href="loading_table.php">Avançado</a></li>
                 <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Avaliação</a></li>
               </ul>
             </li>       

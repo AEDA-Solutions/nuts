@@ -19,7 +19,7 @@
 		//todas as funções de obtenção de dados devem ser executadas nessa função
 		//para que os dados sejam inseridos na tabela de qualidade de rede permanente
 		public function run_net_test(){
-
+			
 			session_start();
 			if($ping = $this->check_ping("matriculaweb.unb.br", 80, 10)){}
 			else{
@@ -31,22 +31,17 @@
 			if($jitter = $this->check_jitter("matriculaweb.unb.br", 80, 10)){}
 			else{
 				return false;}
+			
 
 			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss,$this->download_speed,$jitter,$this->upload_speed)){
-<<<<<<< HEAD
 
 				return true;
 			}
-=======
-				
-				return true;}
->>>>>>> 6dfe67412e63d081dde0cf83ea7c3d4b38cfb648
 
 			else{
 				return false;}
+
 		}
-			
-			
 
 		//retorna um float com o valor do ping em ms se o servidor responder
 		//retorna false caso o servidor naoresponda
@@ -204,15 +199,15 @@
 
 		private function weightDownloadSpeed($download_speed){
 
-			if($download_speed < 0.5){ return 10;}
-			else if(($download_speed >= 0.5) && ($download_speed < 0.7)){ return 20;}
-			else if(($download_speed >= 0.7) && ($download_speed < 1)){ return 30;}
-			else if(($download_speed >= 1) && ($download_speed < 1.8)){ return 40;}
-			else if(($download_speed >= 1.8) && ($download_speed < 2.4)){ return 50;}
-			else if(($download_speed >= 2.4) && ($download_speed < 3.9)){ return 60;}
-			else if(($download_speed >= 3.9) && ($download_speed < 6)){ return 70;}
-			else if(($download_speed >= 6) && ($download_speed < 7.5)){ return 80;}
-			else if(($download_speed >= 7.5) && ($download_speed < 8)){ return 90;}
+			if($download_speed < 0.5){ return 1;}
+			else if(($download_speed >= 0.5) && ($download_speed < 0.7)){ return 2;}
+			else if(($download_speed >= 0.7) && ($download_speed < 1)){ return 3;}
+			else if(($download_speed >= 1) && ($download_speed < 1.8)){ return 4;}
+			else if(($download_speed >= 1.8) && ($download_speed < 2.4)){ return 5;}
+			else if(($download_speed >= 2.4) && ($download_speed < 3.9)){ return 6;}
+			else if(($download_speed >= 3.9) && ($download_speed < 6)){ return 7;}
+			else if(($download_speed >= 6) && ($download_speed < 7.5)){ return 8;}
+			else if(($download_speed >= 7.5) && ($download_speed < 8)){ return 9;}
 			else{ return 10;}
 
 		}

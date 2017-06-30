@@ -16,7 +16,7 @@ function checkUploadSpeed( iterations, update ) {
                 average == 0 
                     ? average = speed 
                     : average = Math.round( ( average + speed ) / 2 );
-                update(average );
+                update( average );
                 index++;
                 if( index == iterations ) {
                     window.clearInterval( timer );

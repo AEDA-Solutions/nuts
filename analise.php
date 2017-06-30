@@ -69,8 +69,8 @@
             <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Análise de Rede<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="analise.php">Mapa</a></li>
-                <li><a href="tabela.php">Avançado</a></li>
+                <li><a href="loading_map.php">Mapa</a></li>
+                <li><a href="loading_table.php">Avançado</a></li>
                <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Avaliação</a></li>
               </ul>
             </li>       
@@ -197,7 +197,7 @@ window.onload = function() {
 
 </script>
 
-
+  
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
