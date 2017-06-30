@@ -12,8 +12,8 @@
   <?php
   require_once('NetController.php');
   $NetController = new NetController();
-  $weightArray = $NetController->weightData(); // array com os pesos
-  $data = $NetController->weightCordinates(); // array onde cada elemento é um array com latitude e longitude
+    $weightArray = $NetController->weightData(); // array com os pesos
+  $data = $NetController->get_user_data();
 ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -158,5 +158,147 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    </script>
+
+  
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+    // **************** Funções para manter o raio de influencia em metros ou para manter o zoom *****************
+    // funções encontradas em : http://jsbin.com/qomagupusu/edit?html
+    var TILE_SIZE = 256;
+    var map, heatmap;
+    var heatMapData = new Array();
+    var data = <?php echo json_encode($data);?>;
+    var weightArray =  <?php echo json_encode($weightArray);?>;
+    
+
+function bound(value, opt_min, opt_max){
+  if (opt_min !== null) value = Math.max(value, opt_min);
+  if (opt_max !== null) value = Math.min(value, opt_max);
+  return value;
+}
+function degreesToRadians(deg){
+  return deg * (Math.PI / 180);
+}
+function radiansToDegrees(rad){
+  return rad / (Math.PI / 180);
+}
+function MercatorProjection() {
+  this.pixelOrigin_ = new google.maps.Point(TILE_SIZE / 2,TILE_SIZE / 2);
+  this.pixelsPerLonDegree_ = TILE_SIZE / 360;
+  this.pixelsPerLonRadian_ = TILE_SIZE / (2 * Math.PI);
+}
+MercatorProjection.prototype.fromLatLngToPoint = function (latLng,opt_point){
+  var me = this;
+  var point = opt_point || new google.maps.Point(0, 0);
+  var origin = me.pixelOrigin_;
+
+  point.x = origin.x + latLng.lng() * me.pixelsPerLonDegree_;
+
+  // NOTE(appleton): Truncating to 0.9999 effectively limits latitude to
+  // 89.189.  This is about a third of a tile past the edge of the world
+  // tile.
+  var siny = bound(Math.sin(degreesToRadians(latLng.lat())), - 0.9999,0.9999);
+  point.y = origin.y + 0.5 * Math.log((1 + siny) / (1 - siny)) * -me.pixelsPerLonRadian_;
+  return point;
+};
+MercatorProjection.prototype.fromPointToLatLng = function (point){
+  var me = this;
+  var origin = me.pixelOrigin_;
+  var lng = (point.x - origin.x) / me.pixelsPerLonDegree_;
+  var latRadians = (point.y - origin.y) / -me.pixelsPerLonRadian_;
+  var lat = radiansToDegrees(2 * Math.atan(Math.exp(latRadians)) - Math.PI / 2);
+  return new google.maps.LatLng(lat, lng);
+};
+
+function getNewRadius() {
+          
+        var desiredRadiusPerPointInMeters = 350;
+          var numTiles = 1 << map.getZoom();
+          var center = map.getCenter();
+          var moved = google.maps.geometry.spherical.computeOffset(center, 10000, 90); 
+          var projection = new MercatorProjection();
+          var initCoord = projection.fromLatLngToPoint(center);
+          var endCoord = projection.fromLatLngToPoint(moved);
+          var initPoint = new google.maps.Point(
+            initCoord.x * numTiles,
+            initCoord.y * numTiles);
+           var endPoint = new google.maps.Point(
+            endCoord.x * numTiles,
+            endCoord.y * numTiles);
+        var pixelsPerMeter = (Math.abs(initPoint.x-endPoint.x))/10000.0;
+        var totalPixelSize = Math.floor(desiredRadiusPerPointInMeters*pixelsPerMeter);
+        //console.log(totalPixelSize);
+        return totalPixelSize;
+         
+      }
+
+
+
+    // **************** Funções para manter o raio de influencia em metros ou para manter o zoom *****************
+
+      function heatmapPlot(){
+for (var key in data) {
+          
+          //heatMapData.push(dados);
+          var conteudo  = "<div class='panel panel-primary' id='infowindow'>";  
+  conteudo +=   "<button type='button' class='list-group-item list-group-item active' id='btn-info'><center>Analise feita nessa localização <img src='_images/teste.svg' id='gif_info'></center></button>"; 
+  conteudo +=   "<table class='table table-striped table-bordered table-condensed'>";
+  conteudo +=     "<tr> <td>Download</td> <td id='infodownload'></td>  <td>Mbps</td> </tr>";
+  conteudo +=     "<tr> <td>Upload</td>   <td id='infojitter'>   - </td>  <td>ms</td> </tr>";
+  conteudo +=     "<tr> <td>Ping</td>   <td id='infoping'>     - </td>  <td>ms</td>   </tr>";
+  conteudo +=   "</table";
+  conteudo += "</div>";
+
+  var infowindow = new google.maps.InfoWindow({
+          content: conteudo
+        });
+
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(data[key]['latitude'],data[key]['longitude']),
+          map: map, 
+          title: 'Analise nesta localização'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+        $('#infowindow').click(function(){
+        $('#infodownload').html(10);
+                $('#infojitter').html(data[key]['jitter']);
+                $('#infoping').html(data[key]['ping']);
+        });
+      }
+        
+        //heatMapData.push({location: new google.maps.LatLng(-15., -47.8683), weight: 10});
+
+        /*heatmap = new google.maps.visualization.HeatmapLayer({
+          data: heatMapData,
+          opacity: 0.8,   
+          map: map,
+          radius: getNewRadius(),
+        });
+
+        google.maps.event.addListener(map, 'zoom_changed', function () {
+          heatmap.setOptions({radius:getNewRadius()});
+          });*/
+     }
+      function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center:  {lat: -15.765079, lng: -47.869921},
+          mapTypeControl: false,
+          streetViewControl: false
+        });
+         heatmapPlot();
+}
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNixx9oyAv-BE-q2s39NBBHEjfFJYASeg&libraries=visualization,geometry&&callback=initMap">
+    </script> 
             </body>
 </html>

@@ -46,7 +46,7 @@
 		{
 			session_start();
 			$id = $_SESSION['id'];
-			$user_data = $NetDatabase->get_data_ordered_by_date($id);
+			$user_data = $this->NetDatabase->get_udata_ordered_by_date($id);
 			return $user_data;
 		}
 
@@ -182,6 +182,11 @@
 			}
 
 			return $weightArray;
+		}
+
+		public function getBestData(){
+			$net_data = $this->NetDatabase->get_best_data();
+			return end($net_data);
 		}
 
 		private function getDateWeight($i,$DateWeight){

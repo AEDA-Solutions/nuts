@@ -1,6 +1,6 @@
 <?php
-	require_once('NetDatabase.php');
-	$NetDatabase = new NetDatabase();
-	$d = $NetDatabase->get_current_user(oid)data_ordered_by_date(1);
-	print_r($d);
+	require_once('NetController.php');
+  $NetController = new NetController();
+  $data = $NetController->get_user_data();
+  echo json_encode($data);
 ?>

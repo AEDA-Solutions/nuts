@@ -148,9 +148,24 @@
 			else{
 				//erro ao realizar a verificacao na tabela netdata
 				return false;
-			}	
+			}		
  		}
 
+ 		public function get_best_data(){
+ 			$connection = $this->Dbcon->connect_mysql();
+			$sql = "SELECT * FROM netdata ORDER BY download_speed ";
+			if($result = mysqli_query($connection,$sql)){
+				$netdata = array();
+				foreach($result as $row){
+					array_push($netdata,$row);
+				}
+				return $netdata;
+			}
+			else{
+				//erro ao realizar a verificacao na tabela netdata
+				return false;
+			}
+ 		}
  		public function get_udata_ordered_by_date($id){
 
  			$connection = $this->Dbcon->connect_mysql();

@@ -2,6 +2,7 @@
 require_once('NetController.php');  
 $NC = new NetController();
 $user_data = $NC->get_last_data();
+$best_data = $NC->getBestData();
 //$nearby_data = $NC->get_nearby_data($user_data['latitude'],$user_data['longitude']);
 ?>
 
@@ -159,7 +160,7 @@ $user_data = $NC->get_last_data();
           <script>
             var ctx = document.getElementById("chartl");
             var data = {
-              labels: ["Upload (Kbps)", "Download (Mbps)"],
+              labels: ["Upload (Mbps)", "Download (Mbps)"],
               datasets: [{
                 label: 'Localização Atual',
                 data: [<?= $user_data['upload_speed']?>,<?= $user_data['download_speed']?>],
@@ -175,7 +176,7 @@ $user_data = $NC->get_last_data();
               },
               {
                 label: 'Localização mais próxima com melhor qualidade',
-                data: [125,100],  //no campo 125 vai ficar a velocidade de upload do melhor lugar próximo do usuário,e no campo 100 a velocidade de donwload do melhor lugar
+                data: [<?= $best_data['upload_speed']?>,<?= $best_data['download_speed']?>] , //no campo 125 vai ficar a velocidade de upload do melhor lugar próximo do usuário,e no campo 100 a velocidade de donwload do melhor lugar
                 backgroundColor: [
                   'rgba(0,128,128,0.7)',
                   'rgba(0,128,128,0.7)',

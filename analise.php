@@ -206,6 +206,25 @@ window.onload = function() {
     var heatMapData = new Array();
     var data = <?php echo json_encode($data);?>;
     var weightArray = <?php echo json_encode($weightArray);?>;
+    var gradient = [
+  'rgba(255, 0  , 0  , 0.00)', //Resto do mapa
+
+  'rgba(255, 0  , 0  , 0.70)', //Vermelho
+  'rgba(255, 45 , 0  , 0.70)',
+  'rgba(255, 90 , 0  , 0.73)',
+  'rgba(255, 150, 0  , 0.76)',
+  'rgba(255, 195, 0  , 0.79)',
+  'rgba(255, 225, 0  , 0.82)',
+
+  'rgba(255, 255, 0  , 0.80)', //Amarelo
+
+  'rgba(225, 255, 0  , 0.85)',
+  'rgba(195, 255, 0  , 0.88)',
+  'rgba(150 , 255, 0  ,0.91)',
+  'rgba(90 , 255, 0  , 0.94)',
+  'rgba(45 , 255, 0  , 0.97)',
+  'rgba(0  , 255, 0  , 1.00)'  //Verde
+];
 
 function bound(value, opt_min, opt_max){
   if (opt_min !== null) value = Math.max(value, opt_min);
@@ -282,6 +301,7 @@ for (i = 0; i< weightArray.length; i++) {
 
         heatmap = new google.maps.visualization.HeatmapLayer({
           data: heatMapData,
+         // gradient : gradient,
           opacity: 0.8,   
           map: map,
           radius: getNewRadius(),
