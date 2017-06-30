@@ -306,7 +306,7 @@
             <form method = "post" action = "register_user.php">
             <div class="form-group">
             <label for="nome">Nome</label>
-          <input type="text" class="form-control" name="nome" pattern="[a-z\s]+$" placeholder="Nome" required oninvalid="setCustomValidity('Por favor, preencha o nome')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com o seu nome ">
+          <input type="text" class="form-control" name="nome" id="nome" pattern="[a-Z\s]+$" placeholder="Nome" required oninvalid="setCustomValidity('Por favor, preencha o nome')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com o seu nome ">
           <br>
 
             <div class="form-group">
