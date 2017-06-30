@@ -119,26 +119,23 @@
 
 
 
-            <!-- Login  --> 
+           <!-- Login  --> 
+          <form class="modal fade" id="janelalogin" method = "post" action = "validate_user.php">
 
-            
-          <form class="modal fade" id="janelalogin" method = "post" action ="validate_user.php">
-
-
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
                 <span>&times;</span>
               </button> 
-              <h4 class="modal-tittle" style="color: #FF6347">LOGIN</h4>             
+              <h4 class="modal-tittle" style="color:  #FF6347">LOGIN</h4>             
             </div>
 
              <div class="modal-body">
               
             <div class="form-group">
             <label for="matricula">Matrícula</label>
-            <input type="text" class="form-control" id="matricula" name = "reg" maxlength="9" pattern="[0-9]{2}[0-9]{7}" placeholder="123456789"  required oninvalid="setCustomValidity('Por favor, preencha com uma matrícula válida')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com uma matrícula de 9 dígitos">
+            <input type="text" class="form-control" id="matricula" name = "id"maxlength="9" pattern="[0-9]{2}[0-9]{7}" placeholder="123456789" required oninvalid="setCustomValidity('Por favor, preencha com uma matrícula válida')" onchange="try{setCustomValidity('')}catch(e){}" / title="Preencha aqui com uma matrícula de 9 dígitos">
             </div> 
 
             <div class="form-group">
@@ -151,18 +148,18 @@
              <div class="modal-footer">
 
               <a href="sign_up.php" type="button" class=" btn btn-login btn-white">Cadastrar</a> 
+
+              <button type="submit" class="btn btn-login btn-white">Login</a>
               
               <button type="button" class=" btn btn-cancelar btn-darkviolet" data-dismiss="modal">Cancelar</button>      
 
-              <button type="submit" class="btn btn-login btn-white">Login</a>
                          
             </div>
 
           </div>
         </div>
       </form>
-
-      <!-- /Login  -->
+      <!-- /Login  -->    
 
 
     <div class="capa">
