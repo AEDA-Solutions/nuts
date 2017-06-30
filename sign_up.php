@@ -104,7 +104,7 @@
             <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span>
             </button>
-                <strong>ERRO!</strong> <a href="#" class="alert-link"> Matrícula encontrada,</a> mas senha foi digitada errada, tente novamente
+                <strong>ERRO!</strong> <a href="#" class="alert-link"> Matrícula encontrada,</a> mas senha foi digitada errada, tente novamente!
                 </div>
                 </div>
           <?php 
@@ -175,7 +175,7 @@
             <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span>
             </button>
-            <strong> UHUL! </strong> Tá tudo certinho!
+            <strong> UHUL! </strong> Tá tudo certo!
               </div>
           <?php 
               } 
@@ -229,7 +229,7 @@
             <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span>
             </button>
-            <strong> EPA! </strong> Esse email já foi cadastro! Tente outro!
+            <strong> EPA! </strong> Esse email já foi cadastrado! Tente outro!
               </div>
 
               </div>
@@ -255,7 +255,7 @@
             <button type="button" class="close" data-dismiss="alert">
             <span>&times;</span>
             </button>
-            <strong> EPA! </strong> Esse email  e essa matrícula já foram cadastros! 
+            <strong> EPA! </strong> Esse email e essa matrícula já foram cadastrados! 
               </div>
 
               </div>
