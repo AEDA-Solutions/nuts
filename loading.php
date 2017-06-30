@@ -127,7 +127,7 @@ $(window).load(function() {
   </body>
 </html>
 
-<form style = "display: hidden" action = "teste.php" method = "post" id = "form">
+<form style = "display: hidden" action = "treat_data.php" method = "post" id = "form">
   <input type="hidden" id="latitude" name="latitude" value=""/>
   <input type="hidden" id="longitude" name="longitude" value=""/>
   <input type="hidden" id="download_speed" name="download_speed" value=""/>
