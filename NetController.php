@@ -19,7 +19,7 @@
 		//todas as funções de obtenção de dados devem ser executadas nessa função
 		//para que os dados sejam inseridos na tabela de qualidade de rede permanente
 		public function run_net_test(){
-			
+
 			session_start();
 			if($ping = $this->check_ping("matriculaweb.unb.br", 80, 10)){}
 			else{
@@ -31,16 +31,16 @@
 			if($jitter = $this->check_jitter("matriculaweb.unb.br", 80, 10)){}
 			else{
 				return false;}
-			
 
-			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss,$this->download_speed,$jitter,$this->upload_speed){
-				return true;
-			}
+			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss,$this->download_speed,$jitter,$this->upload_speed)){
+				
+				return true;}
 
 			else{
 				return false;}
-
 		}
+			
+			
 
 		//retorna um float com o valor do ping em ms se o servidor responder
 		//retorna false caso o servidor naoresponda
