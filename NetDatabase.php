@@ -9,15 +9,24 @@
 			$this->Dbcon = new Dbcon();
 		}
 
-		public function insert_net_data($latitude,$longitude,$ping,$packetloss,$download_speed,$jitter){
+		public function insert_net_data($latitude,$longitude,$ping,$packetloss,$download_speed,$jitter,$upload_speed){
 			session_start();
  			$connection = $this->Dbcon->connect_mysql();
- 			if(isset($_SESSION['user_avaliation'])){
- 				$user_avaliation = $_SESSION['user_avaliation'];
- 				$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed,jitter,user_avaliation) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed','$jitter','user_avaliation')";
+ 			if(isset($_SESSION['id'])){
+ 				$id = $_SESSION['id'];
+ 				if(isset($_SESSION['user_avaliation'])){
+ 					$user_avaliation = $_SESSION['user_avaliation'];
+ 					$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed,jitter,user_avaliation,upload_speed,fk_user) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed','$jitter','$user_avaliation','$upload_speed','$id')";
+ 				}
+ 				else{
+ 					$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed,jitter,upload_speed,fk_user) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed','$jitter','$upload_speed','$id')";
+ 				}
  			}
+
  			else{
- 				$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed,jitter) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed','$jitter')";
+
+ 				$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed,jitter,upload_speed) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed','$jitter','$upload_speed')";
+
  			}
 			if(mysqli_query($connection,$sql)){
 				//dados registrados com sucesso

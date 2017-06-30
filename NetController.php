@@ -10,6 +10,7 @@
 		private $latitude;
 		private $longitude;
 		private $download_speed;
+		private $upload_speed;
 
 		public function __construct(){
 			$this->NetDatabase = new NetDatabase();
@@ -19,7 +20,7 @@
 		//para que os dados sejam inseridos na tabela de qualidade de rede permanente
 		public function run_net_test(){
 			
-
+			session_start();
 			if($ping = $this->check_ping("matriculaweb.unb.br", 80, 10)){}
 			else{
 				return false;}
@@ -31,7 +32,8 @@
 			else{
 				return false;}
 			
-			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss,$this->download_speed,$jitter)){
+
+			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss,$this->download_speed,$jitter,$this->upload_speed){
 
 				return true;
 			}
@@ -108,6 +110,11 @@
 		function set_download_speed($download_speed){
 			$this->download_speed = $download_speed;
 		}
+
+		function set_upload_speed($upload_speed){
+			$this->upload_speed = $upload_speed;
+		}
+
 
 
 		function check_packet_loss($host, $count) {
