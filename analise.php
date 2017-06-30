@@ -141,13 +141,6 @@
           <!-- OPÇÕES DE ANALISE -->
           <div class="col-md-4"> 
           <div class="o-analise">
-              <h3>A internet aqui é avaliada em:</h3>
-              <h4>******************</h4>
-              <h5>Isso significa que aqui você consegue: Instalar Apps, Assistir vídeos no YouTube, Baixar músicas!</h5>
-              <br>
-              <br>
-              <br>
-              
               <h4>Para mais Informações da Internet:</h4>
                 <a href="tabela.php" type="button" class="btn btn-avançado btn-border">Avançado</a>
                <br> 

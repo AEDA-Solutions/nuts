@@ -89,7 +89,7 @@ $(window).load(function() {
 <form class="modal fade" id="janelaloading" method = "post" >
 
 
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               
