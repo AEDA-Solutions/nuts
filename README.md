@@ -2,7 +2,7 @@
  
 ## Features ##
 * [Url do diretório](https://github.com/AEDA-Solutions/nuts)
-* [Página que o site funcionará](https://nutsunb.tk)
+* [Página que o site funcionará - Ainda está em versão de testes](https://nutsunb.tk/nuts)
 
 ## Dependências e Linguagens utilizadas ## 
 
