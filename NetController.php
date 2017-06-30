@@ -34,7 +34,6 @@
 			
 
 			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss,$this->download_speed,$jitter,$this->upload_speed){
-
 				return true;
 			}
 
