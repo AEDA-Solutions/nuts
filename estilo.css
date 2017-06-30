@@ -70,6 +70,20 @@ footer p{
     background-size: cover;
 }
 
+.apagada {
+  background-image: url('images/icone-apagado.png');
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.destaque {
+  background-image: url('images/icone-destacado.png');
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
 .capa-indexusuario{
 	background:url('images/fundo10.jpg');
 	padding-bottom: 80px;
