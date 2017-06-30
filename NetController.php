@@ -34,13 +34,20 @@
 			
 
 			if($this->NetDatabase->insert_net_data($this->latitude,$this->longitude,$ping,$packetloss,$this->download_speed,$jitter,$this->upload_speed)){
-
 				return true;
 			}
 
 			else{
 				return false;}
 
+		}
+
+		public function get_user_data()
+		{
+			session_start();
+			$id = $_SESSION['id'];
+			$user_data = $NetDatabase->get_data_ordered_by_date($id);
+			return $user_data;
 		}
 
 		//retorna um float com o valor do ping em ms se o servidor responder
@@ -171,7 +178,7 @@
 					$FinalWeight = ($DownloadWeight*0.75 + $PingWeight*0.15 + $JitterWeight*0.1)*($this->getDateWeight($i,$DateWeight));
 				}
 
-				array_push($weightArray,$FinalWeight);
+				array_push($weightArray,round($FinalWeight,2));
 			}
 
 			return $weightArray;

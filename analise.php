@@ -13,10 +13,6 @@
   $NetController = new NetController();
   $weightArray = $NetController->weightData(); // array com os pesos
   $data = $NetController->weightCordinates(); // array onde cada elemento é um array com latitude e longitude
-  for($i = 0; $i < sizeof($weightArray); $i++){
-    array_push($data[$i],$weightArray[$i]);
-  } 
-
 ?>
 
 
@@ -102,7 +98,7 @@
               <center> <h4 class="modal-tittle" style="color: #FF6347">COLABORE COM ESSA INICIATIVA!</h4> </center>
               <center>Para termos um mapa cada vez mais completo, precisamos da sua opinião. Avalie a situação da sua rede onde você está de 1 a 5 nozes para atualizarmos nosso banco de dados!</center>
               <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-              
+              <input type="hidden" id="user_avaliation" name="user_avaliation" value=""/>
             </div>
 
              <div class="modal-body">
@@ -174,7 +170,7 @@
 
   function seleciona(name, indice) {
    var imgs = document.querySelectorAll('img[name=' + name + ']');
-  
+  $("#user_avaliation").val(indice+1);
    for (var i=0; i < imgs.length; i++) {
        if (i <= indice)
            imgs[i].className = "destaque";
@@ -202,9 +198,6 @@ window.onload = function() {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNixx9oyAv-BE-q2s39NBBHEjfFJYASeg&libraries=visualization,geometry&&callback=initMap">
-    </script> 
     <script>
     // **************** Funções para manter o raio de influencia em metros ou para manter o zoom *****************
     // funções encontradas em : http://jsbin.com/qomagupusu/edit?html
@@ -212,6 +205,7 @@ window.onload = function() {
     var map, heatmap;
     var heatMapData = new Array();
     var data = <?php echo json_encode($data);?>;
+    var weightArray = <?php echo json_encode($weightArray);?>;
 
 function bound(value, opt_min, opt_max){
   if (opt_min !== null) value = Math.max(value, opt_min);
@@ -254,7 +248,7 @@ MercatorProjection.prototype.fromPointToLatLng = function (point){
 
 function getNewRadius() {
           
-        var desiredRadiusPerPointInMeters = 150;
+        var desiredRadiusPerPointInMeters = 350;
           var numTiles = 1 << map.getZoom();
           var center = map.getCenter();
           var moved = google.maps.geometry.spherical.computeOffset(center, 10000, 90); 
@@ -279,49 +273,12 @@ function getNewRadius() {
     // **************** Funções para manter o raio de influencia em metros ou para manter o zoom *****************
 
       function heatmapPlot(){
-  /*$(document).ready( function(){
-    $.ajax({
-      url: 'get_net_data.php',
-      method: 'post',
-      dataType:"json",
-
-      success: function(data){
-
-        for (i = 0; i< data.length; i++) {
-          dados = {location: new google.maps.LatLng(data[i][0][0], data[i][0][1]), weight: data[i][1]};
+for (i = 0; i< weightArray.length; i++) {
+          dados = {location: new google.maps.LatLng(data[i][0],data[i][1]), weight: (i*10)*weightArray[i]};
           heatMapData.push(dados);
-         
         }
-        
 
-
-        heatmap = new google.maps.visualization.HeatmapLayer({
-          data: heatMapData,
-          opacity: 0.6,   
-          map: map,
-          radius: getNewRadius(),
-        });
-
-        google.maps.event.addListener(map, 'zoom_changed', function () {
-          heatmap.setOptions({radius:getNewRadius()});
-          });
-
-            },
-         });
-       });*/
-
-for (i = 0; i< data.length; i++) {
-          //alert(data[i][2]);
-          //dados = {location: new google.maps.LatLng(data[i][0],1+ data[i][1])};//, weight: 20,};
-          //heatMapData.push(dados);
-          //alert(data[i][2]);
-          var markerg = new google.maps.Marker({
-          position: new google.maps.LatLng(data[i][0], data[i][1]), 
-          map: map,
-        });
-
-         heatMapData.push({location: new google.maps.LatLng(-15.77, -47.86), weight: 5});
-        }
+        heatMapData.push({location: new google.maps.LatLng(-15., -47.8683), weight: 10});
 
         heatmap = new google.maps.visualization.HeatmapLayer({
           data: heatMapData,
@@ -335,54 +292,19 @@ for (i = 0; i< data.length; i++) {
           });
      }
       function initMap() {
-        //var unb = {lat: -15.765079, lng: -47.869921};
           map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
-          center:  {lat: -15.765079, lng: -47.869921}
+          center:  {lat: -15.765079, lng: -47.869921},
+          mapTypeControl: false,
+          streetViewControl: false
         });
-        var markerg = new google.maps.Marker({
-          position: {lat: -15.765079, lng: -47.869921},
-          map: map,
-        });
-
-         var markert = new google.maps.Marker({
-          position: {lat: -15.7452, lng: -47.8768},
-          map: map,
-        });
-
-          var markery = new google.maps.Marker({
-          position: {lat: -15.7452, lng: -47.8552},
-          map: map,
-        });
-
-           var markeru = new google.maps.Marker({
-          position: {lat: -15.7758, lng: -47.8768},
-          map: map,
-        });
-
-            var markeri = new google.maps.Marker({
-          position: {lat: -15.7758, lng: -47.8552},
-          map: map,
-        });
-
-
-
-       /*heatmap = new google.maps.visualization.HeatmapLayer({
-       data: heatMapData,
-       radius : getNewRadius()     
-      });
-      heatmap.setMap(map);
-
-      google.maps.event.addListener(map, 'zoom_changed', function () {
-         heatmap.setOptions({radius:getNewRadius()});*/
-
          heatmapPlot();
-
-         //alert(heatMapData.length());
-    
 }
 
     </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNixx9oyAv-BE-q2s39NBBHEjfFJYASeg&libraries=visualization,geometry&&callback=initMap">
+    </script> 
   </body>
 </html>
 

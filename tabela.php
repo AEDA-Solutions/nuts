@@ -115,7 +115,7 @@ function validate_data($d){
              <div class="estrelas">
               <link href="estilo.css" rel="stylesheet">
 
-
+              <input type="hidden" id="user_avaliation" name="user_avaliation" value=""/>
                 <label> <img name="fb" class="apagada"/>  </label>
                 <label> <img name="fb" class="apagada"/>  </label>
                 <label> <img name="fb" class="apagada"/>  </label>
@@ -227,7 +227,7 @@ function validate_data($d){
 
   function seleciona(name, indice) {
    var imgs = document.querySelectorAll('img[name=' + name + ']');
-  
+  $("#user_avaliation").val(indice+1);
    for (var i=0; i < imgs.length; i++) {
        if (i <= indice)
            imgs[i].className = "destaque";

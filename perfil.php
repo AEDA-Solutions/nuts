@@ -114,7 +114,7 @@
               <center> <h4 class="modal-tittle" style="color: #FF6347">COLABORE COM ESSA INICIATIVA!</h4> </center>
               <center>Para termos um mapa cada vez mais completo, precisamos da sua opinião. Avalie a situação da sua rede onde você está de 1 a 5 nozes para atualizarmos nosso banco de dados!</center>
               <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-              
+              <input type="hidden" id="user_avaliation" name="user_avaliation" value=""/>
             </div>
 
              <div class="modal-body">
@@ -149,7 +149,7 @@
       <section id="s-analise">
       <div class="analise" class="row">
         <div class="col-md-12">
-         <a href="analise.php"><h2>Análise de Rede</h2></a>
+         <a href="loading_map.php"><h2>Análise de Rede</h2></a>
          </div>
         </div>
       </section>
@@ -181,7 +181,7 @@
 
   function seleciona(name, indice) {
    var imgs = document.querySelectorAll('img[name=' + name + ']');
-  
+        $("#user_avaliation").val(indice+1);
    for (var i=0; i < imgs.length; i++) {
        if (i <= indice)
            imgs[i].className = "destaque";

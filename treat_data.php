@@ -11,7 +11,7 @@ if ($_POST['latitude']){
 	$NetController->set_upload_speed(($_POST['upload_speed'])*0.8*(1/10240));
 
 	if($NetController->run_net_test()){
-		header('Location: analise.php')
+		header('Location: analise.php');
 	}
 	
 	else{

@@ -1,6 +1,6 @@
 <?php
-echo $_POST['download_speed'];
-echo "<br/>";
-echo $_POST['upload_speed']*0.8*0.00009;  
-
+	require_once('NetDatabase.php');
+	$NetDatabase = new NetDatabase();
+	$d = $NetDatabase->get_current_user(oid)data_ordered_by_date(1);
+	print_r($d);
 ?>

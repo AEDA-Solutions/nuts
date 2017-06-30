@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+   <style>
+       #map {
+        height: 500px;
+        width: 100%;
+       }
+    </style>
+
+  <?php
+  require_once('NetController.php');
+  $NetController = new NetController();
+  $weightArray = $NetController->weightData(); // array com os pesos
+  $data = $NetController->weightCordinates(); // array onde cada elemento é um array com latitude e longitude
+?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,7 +64,7 @@
              <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Análise de Rede<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="analise.php">Mapa</a></li>
+                <li><a href="loading_map.php">Mapa</a></li>
                 <li><a href="tabela.php">Avançado</a></li>
                 <li><a href="#" class="btn" data-toggle="modal" data-target="#janela">Avaliação</a></li>
               </ul>
@@ -82,7 +96,7 @@
               <center> <h4 class="modal-tittle" style="color: #FF6347">COLABORE COM ESSA INICIATIVA!</h4> </center>
               <center>Para termos um mapa cada vez mais completo, precisamos da sua opinião. Avalie a situação da sua rede onde você está de 1 a 5 estrelas para atualizarmos nosso banco de dados!</center>
               <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-              
+              <input type="hidden" id="user_avaliation" name="user_avaliation" value=""/>
             </div>
 
              <div class="modal-body">
@@ -123,8 +137,8 @@
           
           <!-- MAPA -->
           <div class="col-md-10">
-            <div class="a-mapa">
-              MAPAAAAA!!!!!!!!
+            <div class="a-mapa" id = "map">
+              
             </div>
           </div>
 
