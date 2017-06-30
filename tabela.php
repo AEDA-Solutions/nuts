@@ -99,24 +99,35 @@ function validate_data($d){
     
     <!-- modal de avaliação-->
 <form class="modal fade" id="janela" method = "post" action="user_avaliation5.php">
-
-
-        <div class="modal-dialog modal-sm">
+ <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">
                 <span>&times;</span>
               </button> 
               <center> <h4 class="modal-tittle" style="color: #FF6347">COLABORE COM ESSA INICIATIVA!</h4> </center>
-              <center>Para termos um mapa cada vez mais completo, precisamos da sua opinião. Avalie a situação da sua rede onde você está de 1 a 5 estrelas para atualizarmos nosso banco de dados!</center>
-              <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">             
+              <center>Para termos um mapa cada vez mais completo, precisamos da sua opinião. Avalie a situação da sua rede onde você está de 1 a 5 nozess para atualizarmos nosso banco de dados!</center>
+              <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+              
             </div>
 
              <div class="modal-body">
+             <div class="estrelas">
+              <link href="estilo.css" rel="stylesheet">
 
+
+                <label> <img name="fb" class="apagada"/>  </label>
+                <label> <img name="fb" class="apagada"/>  </label>
+                <label> <img name="fb" class="apagada"/>  </label>
+                <label> <img name="fb" class="apagada"/>  </label>
+                <label> <img name="fb" class="apagada"/>  </label>
+              </div>
+           
             </div>
 
              <div class="modal-footer">
+
+              
 
               <button type="submit" class="btn btn-login btn-white">Enviar avaliação</a>
 
@@ -207,6 +218,40 @@ function validate_data($d){
 
   </section> <!--section tabelas -->
     
+
+
+
+
+    
+<script type="text/javascript">
+
+  function seleciona(name, indice) {
+   var imgs = document.querySelectorAll('img[name=' + name + ']');
+  
+   for (var i=0; i < imgs.length; i++) {
+       if (i <= indice)
+           imgs[i].className = "destaque";
+       else
+           imgs[i].className = "apagada";
+   }
+}
+
+window.onload = function() {
+   var imgs = document.querySelectorAll('img[name=fb]');
+  
+   for (var i=0; i < imgs.length; i++) {
+       (function(name, i) {
+          imgs[i].addEventListener('click', function () {
+              seleciona(name, i);
+          });
+       })(imgs[i].name, i);
+   }
+}
+
+</script>
+
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
