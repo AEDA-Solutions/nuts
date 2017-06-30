@@ -230,7 +230,7 @@
      <div class="container">
       <div class="row">
         <!-- Texto Contato --> 
-        <div class="col-md-2">
+        <div class="col-md-3">
         <h3>Contato</h3>
           <p>
               equipenuts@gmail.com
@@ -264,7 +264,8 @@
          <div class="col-md-3">
          <h3>Endereço</h3>
             <p>
-              Campus Universitário Darcy Ribeiro, Faculdade de Tecnologia Universidade de Brasília – UnB, Asa Norte, Brasília - DF
+              (61) 9xxxx-xxxx
+              
             </p>
          </div>
 
@@ -272,7 +273,7 @@
          <div class="col-md-3">
             <h3>Telefone</h3>
             <p>
-              (61) 9xxxx-xxxx
+              Campus Universitário Darcy Ribeiro, Faculdade de Tecnologia Universidade de Brasília – UnB, Asa Norte, Brasília - DF
             </p>
          </div>
 
