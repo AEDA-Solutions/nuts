@@ -9,7 +9,7 @@ create table netdata
     id int (11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     latitude float DEFAULT NULL,
     longitude float DEFAULT NULL,
-    usertime datetime NOT NULL DEFAULT GETDATE(),
+    usertime datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
     ping float DEFAULT NULL,
     packetloss float DEFAULT NULL,
     download_speed float DEFAULT NULL,

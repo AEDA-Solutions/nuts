@@ -165,7 +165,7 @@
     <div class="capa">
       <div class="texto-capa">
         <h1>QUALIDADE PARA TODOS</h1>
-        <a href="grafico.php" type="button" class="btn btn-custom btn-marrom btn-lg">Teste sua Velocidade</a>
+        <a href="loading_grafico.php" type="button" class="btn btn-custom btn-marrom btn-lg">Teste sua Velocidade</a>
       </div>
     </div>
 
