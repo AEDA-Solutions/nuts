@@ -175,7 +175,7 @@ $best_data = $NC->getBestData();
 
               },
               {
-                label: 'Localização mais próxima com melhor qualidade',
+                label: 'Localização com melhor qualidade',
                 data: [<?= $best_data['upload_speed']?>,<?= $best_data['download_speed']?>] , //no campo 125 vai ficar a velocidade de upload do melhor lugar próximo do usuário,e no campo 100 a velocidade de donwload do melhor lugar
                 backgroundColor: [
                   'rgba(0,128,128,0.7)',

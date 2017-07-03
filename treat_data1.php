@@ -15,11 +15,11 @@ if ($_POST['latitude']){
 	}
 	
 	else{
-		header('Location: analise.php?erro=1');
+		header('Location: tabela.php');
 	}
 }
 else{
-	header('Location: analise.php?erro=2');
+	header('Location: tabela.php');
 }
 
 ?>
