@@ -197,8 +197,8 @@ window.onload = function() {
     var TILE_SIZE = 256;
     var map, heatmap;
     var heatMapData = new Array();
-    var data = <?php echo json_encode($data);?>;
-    var weightArray = <?php echo json_encode($weightArray);?>;
+    var coords = <?php echo json_encode($data);?>;
+    var weights = <?php echo json_encode($weightArray);?>;
     var gradient = [
   'rgba(255, 0  , 0  , 0.00)', //Resto do mapa
 
@@ -260,7 +260,7 @@ MercatorProjection.prototype.fromPointToLatLng = function (point){
 
 function getNewRadius() {
           
-        var desiredRadiusPerPointInMeters = 350;
+        var desiredRadiusPerPointInMeters = 100;
           var numTiles = 1 << map.getZoom();
           var center = map.getCenter();
           var moved = google.maps.geometry.spherical.computeOffset(center, 10000, 90); 
@@ -284,20 +284,18 @@ function getNewRadius() {
 
     // **************** Funções para manter o raio de influencia em metros ou para manter o zoom *****************
 
-      function heatmapPlot(){
-for (i = 0; i< weightArray.length; i++) {
-          dados = {location: new google.maps.LatLng(data[i][0],data[i][1]), weight: (i*10)*weightArray[i]};
-          heatMapData.push(dados);
-        }
-
-        heatMapData.push({location: new google.maps.LatLng(-15., -47.8683), weight: 10});
-
+function heatmapPlot(){
+  for (i = 0; i< weights.length; i++) {
+    dados = {location: new google.maps.LatLng(coords[i][0],coords[i][1]), weight: weights[i]};
+    heatMapData.push(dados);
+    }
         heatmap = new google.maps.visualization.HeatmapLayer({
           data: heatMapData,
          // gradient : gradient,
-          opacity: 0.8,   
+          opacity: 1,   
           map: map,
           radius: getNewRadius(),
+          maxIntensity: 10
         });
 
         google.maps.event.addListener(map, 'zoom_changed', function () {
@@ -309,7 +307,9 @@ for (i = 0; i< weightArray.length; i++) {
           zoom: 16,
           center:  {lat: -15.765079, lng: -47.869921},
           mapTypeControl: false,
-          streetViewControl: false
+          streetViewControl: false,
+          gradient: gradient
+          //dissipating: false
         });
          heatmapPlot();
 }

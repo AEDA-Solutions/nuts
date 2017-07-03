@@ -196,7 +196,7 @@ function validate_data($d){
 
            <tr>
            <th scope="row">Velocidade de upload</th>
-           <td> <?= $user_data['upload_speed']?> Mbps</td>
+           <td> <?= round($user_data['upload_speed'],2)?> Mbps</td>
            </tr>
 
            <tr>

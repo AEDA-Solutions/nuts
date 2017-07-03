@@ -241,41 +241,46 @@ function getNewRadius() {
     // **************** Funções para manter o raio de influencia em metros ou para manter o zoom *****************
 
       function heatmapPlot(){
-for (var key in data) {
-          
-          //heatMapData.push(dados);
-          var conteudo  = "<div class='panel panel-primary' id='infowindow'>";  
-  conteudo +=   "<button type='button' class='list-group-item list-group-item active' id='btn-info'><center>Analise feita nessa localização <img src='_images/teste.svg' id='gif_info'></center></button>"; 
+
+
+var conteudo  = "<div class='panel panel-primary' id='infowindow'>";  
+  conteudo +=   "<button type='button' class='list-group-item list-group-item active' id='btn-info'><center>Analise feita nessa localização</center></button>"; 
   conteudo +=   "<table class='table table-striped table-bordered table-condensed'>";
-  conteudo +=     "<tr> <td>Download</td> <td id='infodownload'></td>  <td>Mbps</td> </tr>";
-  conteudo +=     "<tr> <td>Upload</td>   <td id='infojitter'>   - </td>  <td>ms</td> </tr>";
-  conteudo +=     "<tr> <td>Ping</td>   <td id='infoping'>     - </td>  <td>ms</td>   </tr>";
+  conteudo +=     "<tr> <td>Download</td>  <td id='infodownload'> </td> <td>Mbps</td> </tr>";
+  conteudo +=     "<tr> <td>Jitter</td>   <td id='infojitter'> - </td>  <td>ms</td> </tr>";
+  conteudo +=     "<tr> <td>Ping</td>   <td id='infoping'> - </td>  <td>ms</td>   </tr>";
   conteudo +=   "</table";
   conteudo += "</div>";
-
-  var infowindow = new google.maps.InfoWindow({
+        var infowindow = new google.maps.InfoWindow({
           content: conteudo
         });
+for (var key in data) { 
+          
+
+          var conteudo  = "<div class='panel panel-primary' id='infowindow'>";  
+  conteudo +=   "<button type='button' class='list-group-item list-group-item active' id='btn-info'><center>Analise feita nessa localização</center></button>"; 
+  conteudo +=   "<table class='table table-striped table-bordered table-condensed'>";
+  conteudo +=     "<tr> <td>Download</td>  <td id='infodownload'>"+ data[key]['download_speed']+" </td> <td>Mbps</td> </tr>";
+  conteudo +=     "<tr> <td>Jitter</td>   <td id='infojitter'> "+data[key]['jitter']+" </td>  <td>ms</td> </tr>";
+  conteudo +=     "<tr> <td>Ping</td>   <td id='infoping'>"+data[key]['ping']+"</td>  <td>ms</td>   </tr>";
+  conteudo +=   "</table";
+  conteudo += "</div>";
 
         var marker = new google.maps.Marker({
           position: new google.maps.LatLng(data[key]['latitude'],data[key]['longitude']),
           map: map, 
           title: 'Analise nesta localização'
         });
-        marker.addListener('click', function() {
+        /*marker.addListener('click', function() {
           infowindow.open(map, marker);
-        });
+        });*/
 
-        $('#infowindow').click(function(){
-        $('#infodownload').html(10);
-                $('#infojitter').html(data[key]['jitter']);
-                $('#infoping').html(data[key]['ping']);
-        });
-      }
+       // alert(data[key]['jitter']);
+
         
-        //heatMapData.push({location: new google.maps.LatLng(-15., -47.8683), weight: 10});
+        /*eatMapData.push({location: new google.maps.LatLng(-15., -47.8683), weight: 10});
 
-        /*heatmap = new google.maps.visualization.HeatmapLayer({
+        heatmap = new google.maps.visualization.HeatmapLayer({
           data: heatMapData,
           opacity: 0.8,   
           map: map,
@@ -284,15 +289,35 @@ for (var key in data) {
 
         google.maps.event.addListener(map, 'zoom_changed', function () {
           heatmap.setOptions({radius:getNewRadius()});
-          });*/
+          });
      }
+
+*/  
+
+    google.maps.event.addListener(marker,'click', (function(marker,conteudo,infowindow){ 
+    return function() {
+        infowindow.setContent(conteudo);
+        infowindow.open(map,marker);
+    };
+
+
+})(marker,conteudo,infowindow));  
+    }
+$('#btn-info').click(function(){
+        alert('bla');
+        /*$('#infodownload').html('bls');
+          $('#infojitter').html(data[key]['jitter'].toString());
+           $('#infoping').html(data[key]['ping']);*/
+    });
+
+  }
       function initMap() {
           map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
           center:  {lat: -15.765079, lng: -47.869921},
           mapTypeControl: false,
           streetViewControl: false
-        });
+        }); 
          heatmapPlot();
 }
 

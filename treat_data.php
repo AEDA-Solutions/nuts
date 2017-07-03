@@ -12,13 +12,14 @@ if ($_POST['latitude']){
 
 	if($NetController->run_net_test()){
 		header('Location: analise.php');
+		
 	}
 	
-	else{
+	else{ // erro ao realizar o teste
 		header('Location: analise.php?erro=1');
 	}
 }
-else{
+else{ // localização não fornecida
 	header('Location: analise.php?erro=2');
 }
 

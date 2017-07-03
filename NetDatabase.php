@@ -16,11 +16,11 @@
  				$id = $_SESSION['id'];
  				if(isset($_SESSION['user_avaliation'])){
  					$user_avaliation = $_SESSION['user_avaliation'];
- 					$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed,jitter,upload_speed) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed','$jitter','$upload_speed')"; 	
+ 					$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed,jitter,upload_speed,user_avaliation,fk_user) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed','$jitter','$upload_speed','$user_avaliation','$id')"; 	
  								
  				}
  				else{
- 					$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed,jitter,upload_speed,fk_user) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed','$jitter','$upload_speed','$id'";
+ 					$sql = "INSERT INTO netdata(id,latitude,longitude,ping,packetloss,download_speed,jitter,upload_speed,fk_user) VALUES(NULL,'$latitude','$longitude','$ping','$packetloss','$download_speed','$jitter','$upload_speed','$id')";
  				}
  			}
 
@@ -72,16 +72,18 @@
  			//Caso sejam adicionados mais campos a tabela netdata, a querry
  			//dessa função deverá ser atualizada para obter tambem esse novos campos		
  			$connection = $this->Dbcon->connect_mysql();
-			$sql = "SELECT latitude, longitude, ping, packetloss,download_speed, distance, jitter
+			$sql = "SELECT latitude, longitude, ping, packetloss,download_speed,upload_speed,jitter, distance
   					FROM (
  					SELECT z.latitude,
        						z.longitude,
        						z.ping, 
       						z.packetloss,
       						z.download_speed,
+      						z.jitter,
+      						z.user_avaliation,
+      						z.upload_speed,
        						p.radius,
-       					 	p.distance_unit,
-       					 	z.jitter
+       					 	p.distance_unit
                  			* DEGREES(ACOS(COS(RADIANS(p.latpoint))
                  			* COS(RADIANS(z.latitude))
                  			* COS(RADIANS(p.longpoint - z.longitude))
@@ -102,7 +104,7 @@
  					) AS d
  					WHERE distance <= radius
  					ORDER BY distance
- 					LIMIT 10";
+ 					LIMIT 1";
 			
 			if($result = mysqli_query($connection,$sql)){
 				$netdata = array();
