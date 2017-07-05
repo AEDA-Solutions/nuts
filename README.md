@@ -37,7 +37,4 @@ No momento, estamos cursando a disciplina Algoritmo e Estrutura de Dados e nos f
 No seu servidor de aplicação, abra o arquivo index.php.
 A partir dele você tem acesso aos outros arquivos devido a relação entre eles, cadastro, login, análise de rede e etc.
 
-
-
-
-
+:)
